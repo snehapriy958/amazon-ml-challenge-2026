@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Competition data
+data/raw/
+data/processed/
+
+# Trained models
+models/
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.h5
+*.keras
+
+# Generated submissions
+submissions/*.csv
+
+# Environment/secrets
+.env
+.aws/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
