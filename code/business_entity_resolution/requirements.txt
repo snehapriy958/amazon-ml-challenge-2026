@@ -1,0 +1,9 @@
+# Pinned dependencies for Amazon ML Challenge 2026 Business Entity Resolution
+pandas==3.0.6
+pyarrow==23.0.1
+RapidFuzz==3.14.6
+xgboost==3.4.1
+scikit-learn==1.9.1
+numpy==2.5.3
+scipy==1.18.1
+joblib==1.6.0

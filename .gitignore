@@ -1,39 +1,26 @@
+# Challenge datasets
+dataset/
+
+# Generated submission/output files
+output/
+
+# Scratch work, logs, checkpoints and temporary artifacts
+scratch/
+
+# Generated training artifacts
+training_features_chunks/
+
+# Local ML models/artifacts
+models/
+
 # Python
 __pycache__/
-*.py[cod]
-
-# Virtual environments
+*.pyc
 .venv/
-venv/
-env/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Competition data
-data/raw/
-data/processed/
-
-# Trained models
-models/
-*.pkl
-*.joblib
-*.pt
-*.pth
-*.h5
-*.keras
-
-# Generated submissions
-submissions/*.csv
-
-# Environment/secrets
-.env
-.aws/
-
-# IDE
-.vscode/
-.idea/
-
-# OS
+# OS/editor
 .DS_Store
 Thumbs.db
