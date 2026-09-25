@@ -37,3 +37,4 @@ submissions/*.csv
 # OS
 .DS_Store
 Thumbs.db
+dataset/
