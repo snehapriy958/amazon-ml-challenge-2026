@@ -1,0 +1,2752 @@
+{
+  "experiment": "V5_Offline_Prototype_and_Ablation",
+  "frozen_v4_leaderboard_baseline": 0.917,
+  "seed": 42,
+  "total_runtime_sec": 290.28,
+  "peak_memory_mb": 8577.33,
+  "strict_gates": {
+    "no_final_holdout_f05_loss": true,
+    "no_internal_check_f05_loss": true,
+    "no_substantial_precision_loss": true,
+    "not_dev_only_gain": true,
+    "target_plus_0003_final_holdout": true,
+    "target_plus_0003_combined_5000": true,
+    "delta_final_holdout_f05": 0.00712,
+    "delta_internal_check_f05": 0.00627,
+    "delta_dev_3000_f05": 0.007594,
+    "delta_combined_5000_f05": 0.007234,
+    "OVERALL_V5_GATE_PASS": true
+  },
+  "feature_importance": {
+    "by_group": {
+      "1_building_number": {
+        "num_features": 12,
+        "total_gain": 88328.04,
+        "gain_share_pct": 15.56,
+        "total_splits": 561
+      },
+      "2_abbreviation_brand": {
+        "num_features": 10,
+        "total_gain": 201742.03,
+        "gain_share_pct": 35.54,
+        "total_splits": 476
+      },
+      "3_transliteration": {
+        "num_features": 10,
+        "total_gain": 277644.6,
+        "gain_share_pct": 48.91,
+        "total_splits": 629
+      }
+    },
+    "all_32_v5_features": [
+      {
+        "feature": "v5_translit_addr_token_set",
+        "group": "3_transliteration",
+        "gain": 199114.42,
+        "gain_pct": 35.07,
+        "splits": 247
+      },
+      {
+        "feature": "v5_abbr_addr_token_jaccard",
+        "group": "2_abbreviation_brand",
+        "gain": 162983.52,
+        "gain_pct": 28.71,
+        "splits": 92
+      },
+      {
+        "feature": "v5_translit_acronym_compat",
+        "group": "3_transliteration",
+        "gain": 32535.94,
+        "gain_pct": 5.73,
+        "splits": 44
+      },
+      {
+        "feature": "v5_bldg_num_min_containment",
+        "group": "1_building_number",
+        "gain": 25802.77,
+        "gain_pct": 4.55,
+        "splits": 95
+      },
+      {
+        "feature": "v5_translit_phonetic_edit_ratio",
+        "group": "3_transliteration",
+        "gain": 23040.51,
+        "gain_pct": 4.06,
+        "splits": 99
+      },
+      {
+        "feature": "v5_abbr_distinctive_brand_jaccard",
+        "group": "2_abbreviation_brand",
+        "gain": 17239.56,
+        "gain_pct": 3.04,
+        "splits": 95
+      },
+      {
+        "feature": "v5_bldg_conflict_severity",
+        "group": "1_building_number",
+        "gain": 17000.66,
+        "gain_pct": 2.99,
+        "splits": 104
+      },
+      {
+        "feature": "v5_bldg_num_set_jaccard",
+        "group": "1_building_number",
+        "gain": 16964.5,
+        "gain_pct": 2.99,
+        "splits": 80
+      },
+      {
+        "feature": "v5_bldg_context_agreement",
+        "group": "1_building_number",
+        "gain": 15053.9,
+        "gain_pct": 2.65,
+        "splits": 67
+      },
+      {
+        "feature": "v5_abbr_name_char_3gram_jaccard",
+        "group": "2_abbreviation_brand",
+        "gain": 11305.73,
+        "gain_pct": 1.99,
+        "splits": 118
+      },
+      {
+        "feature": "v5_translit_name_char_3gram_jaccard",
+        "group": "3_transliteration",
+        "gain": 10697.09,
+        "gain_pct": 1.88,
+        "splits": 45
+      },
+      {
+        "feature": "v5_bldg_conflict_resolved",
+        "group": "1_building_number",
+        "gain": 6529.55,
+        "gain_pct": 1.15,
+        "splits": 56
+      },
+      {
+        "feature": "v5_translit_phonetic_token_jaccard",
+        "group": "3_transliteration",
+        "gain": 5527.05,
+        "gain_pct": 0.97,
+        "splits": 63
+      },
+      {
+        "feature": "v5_translit_name_edit_ratio",
+        "group": "3_transliteration",
+        "gain": 4626.55,
+        "gain_pct": 0.81,
+        "splits": 70
+      },
+      {
+        "feature": "v5_bldg_exact_num_overlap",
+        "group": "1_building_number",
+        "gain": 4181.72,
+        "gain_pct": 0.74,
+        "splits": 65
+      },
+      {
+        "feature": "v5_abbr_name_token_set",
+        "group": "2_abbreviation_brand",
+        "gain": 4048.93,
+        "gain_pct": 0.71,
+        "splits": 16
+      },
+      {
+        "feature": "v5_abbr_addr_token_set",
+        "group": "2_abbreviation_brand",
+        "gain": 2209.35,
+        "gain_pct": 0.39,
+        "splits": 50
+      },
+      {
+        "feature": "v5_abbr_acronym_compat",
+        "group": "2_abbreviation_brand",
+        "gain": 2093.07,
+        "gain_pct": 0.37,
+        "splits": 54
+      },
+      {
+        "feature": "v5_abbr_name_token_jaccard",
+        "group": "2_abbreviation_brand",
+        "gain": 1813.28,
+        "gain_pct": 0.32,
+        "splits": 46
+      },
+      {
+        "feature": "v5_bldg_norm_num_agreement",
+        "group": "1_building_number",
+        "gain": 1353.26,
+        "gain_pct": 0.24,
+        "splits": 24
+      },
+      {
+        "feature": "v5_translit_name_token_jaccard",
+        "group": "3_transliteration",
+        "gain": 1221.78,
+        "gain_pct": 0.22,
+        "splits": 46
+      },
+      {
+        "feature": "v5_translit_name_token_set",
+        "group": "3_transliteration",
+        "gain": 783.94,
+        "gain_pct": 0.14,
+        "splits": 10
+      },
+      {
+        "feature": "v5_bldg_street_locality_sim",
+        "group": "1_building_number",
+        "gain": 638.34,
+        "gain_pct": 0.11,
+        "splits": 19
+      },
+      {
+        "feature": "v5_bldg_type_match",
+        "group": "1_building_number",
+        "gain": 615.34,
+        "gain_pct": 0.11,
+        "splits": 39
+      },
+      {
+        "feature": "v5_bldg_diff_slot_flag",
+        "group": "1_building_number",
+        "gain": 122.34,
+        "gain_pct": 0.02,
+        "splits": 7
+      },
+      {
+        "feature": "v5_translit_has_non_ascii",
+        "group": "3_transliteration",
+        "gain": 97.32,
+        "gain_pct": 0.02,
+        "splits": 5
+      },
+      {
+        "feature": "v5_bldg_india_noisy_num_resolved",
+        "group": "1_building_number",
+        "gain": 65.66,
+        "gain_pct": 0.01,
+        "splits": 5
+      },
+      {
+        "feature": "v5_abbr_initial_token_compat",
+        "group": "2_abbreviation_brand",
+        "gain": 48.59,
+        "gain_pct": 0.01,
+        "splits": 5
+      },
+      {
+        "feature": "v5_bldg_severe_conflict_flag",
+        "group": "1_building_number",
+        "gain": 0.0,
+        "gain_pct": 0.0,
+        "splits": 0
+      },
+      {
+        "feature": "v5_abbr_distinctive_brand_conflict",
+        "group": "2_abbreviation_brand",
+        "gain": 0.0,
+        "gain_pct": 0.0,
+        "splits": 0
+      },
+      {
+        "feature": "v5_abbr_generic_name_diff_branch_conflict",
+        "group": "2_abbreviation_brand",
+        "gain": 0.0,
+        "gain_pct": 0.0,
+        "splits": 0
+      },
+      {
+        "feature": "v5_translit_brand_or_state_conflict",
+        "group": "3_transliteration",
+        "gain": 0.0,
+        "gain_pct": 0.0,
+        "splits": 0
+      }
+    ]
+  },
+  "pools": {
+    "DEV_3000": {
+      "retrieval": {
+        "v3_top500_baseline": {
+          "candidate_pairs": 1509035,
+          "avg_candidates_per_s1": 503.01,
+          "total_gt_links": 10528,
+          "retrieved_gt_links": 10125,
+          "micro_recall": 0.961721,
+          "macro_recall": 0.962815,
+          "s2_total_gt": 5104,
+          "s2_retrieved_gt": 4905,
+          "s2_recall": 0.961011,
+          "s3_total_gt": 5424,
+          "s3_retrieved_gt": 5220,
+          "s3_recall": 0.962389
+        },
+        "v4_rescued_baseline": {
+          "candidate_pairs": 1510731,
+          "avg_candidates_per_s1": 503.58,
+          "total_gt_links": 10528,
+          "retrieved_gt_links": 10173,
+          "micro_recall": 0.96628,
+          "macro_recall": 0.966999,
+          "s2_total_gt": 5104,
+          "s2_retrieved_gt": 4923,
+          "s2_recall": 0.964538,
+          "s3_total_gt": 5424,
+          "s3_retrieved_gt": 5250,
+          "s3_recall": 0.96792
+        },
+        "v5_rescued": {
+          "candidate_pairs": 1519889,
+          "avg_candidates_per_s1": 506.63,
+          "total_gt_links": 10528,
+          "retrieved_gt_links": 10198,
+          "micro_recall": 0.968655,
+          "macro_recall": 0.9695,
+          "s2_total_gt": 5104,
+          "s2_retrieved_gt": 4934,
+          "s2_recall": 0.966693,
+          "s3_total_gt": 5424,
+          "s3_retrieved_gt": 5264,
+          "s3_recall": 0.970501
+        },
+        "v5_vs_top500": {
+          "candidates_added_total": 10854,
+          "candidates_added_s2": 4772,
+          "candidates_added_s3": 6082,
+          "gt_positives_recovered_total": 73,
+          "gt_positives_recovered_s2": 29,
+          "gt_positives_recovered_s3": 44
+        },
+        "v5_vs_v4_incremental": {
+          "candidates_added_total": 9158,
+          "candidates_added_s2": 4177,
+          "candidates_added_s3": 4981,
+          "gt_positives_recovered_total": 25,
+          "gt_positives_recovered_s2": 11,
+          "gt_positives_recovered_s3": 14
+        },
+        "marginal_by_channel_vs_top500": {
+          "abbreviation_token_retrieval": {
+            "candidates_added_total": 535,
+            "candidates_added_s2": 164,
+            "candidates_added_s3": 371,
+            "gt_positives_recovered_total": 58,
+            "gt_positives_recovered_s2": 21,
+            "gt_positives_recovered_s3": 37,
+            "micro_recall_with_channel": 0.96723,
+            "s2_recall_with_channel": 0.965125,
+            "s3_recall_with_channel": 0.969211,
+            "runtime_sec": 0.0028
+          },
+          "char_3_4_gram_retrieval": {
+            "candidates_added_total": 6129,
+            "candidates_added_s2": 2885,
+            "candidates_added_s3": 3244,
+            "gt_positives_recovered_total": 73,
+            "gt_positives_recovered_s2": 29,
+            "gt_positives_recovered_s3": 44,
+            "micro_recall_with_channel": 0.968655,
+            "s2_recall_with_channel": 0.966693,
+            "s3_recall_with_channel": 0.970501,
+            "runtime_sec": 0.0369
+          },
+          "numeric_address_retrieval": {
+            "candidates_added_total": 1304,
+            "candidates_added_s2": 609,
+            "candidates_added_s3": 695,
+            "gt_positives_recovered_total": 63,
+            "gt_positives_recovered_s2": 24,
+            "gt_positives_recovered_s3": 39,
+            "micro_recall_with_channel": 0.967705,
+            "s2_recall_with_channel": 0.965713,
+            "s3_recall_with_channel": 0.96958,
+            "runtime_sec": 0.0079
+          },
+          "reverse_target_to_s1_retrieval": {
+            "candidates_added_total": 9599,
+            "candidates_added_s2": 4408,
+            "candidates_added_s3": 5191,
+            "gt_positives_recovered_total": 73,
+            "gt_positives_recovered_s2": 29,
+            "gt_positives_recovered_s3": 44,
+            "micro_recall_with_channel": 0.968655,
+            "s2_recall_with_channel": 0.966693,
+            "s3_recall_with_channel": 0.970501,
+            "runtime_sec": 0.0072
+          },
+          "transliteration_retrieval": {
+            "candidates_added_total": 416,
+            "candidates_added_s2": 74,
+            "candidates_added_s3": 342,
+            "gt_positives_recovered_total": 42,
+            "gt_positives_recovered_s2": 14,
+            "gt_positives_recovered_s3": 28,
+            "micro_recall_with_channel": 0.96571,
+            "s2_recall_with_channel": 0.963754,
+            "s3_recall_with_channel": 0.967552,
+            "runtime_sec": 0.0026
+          }
+        },
+        "incremental_by_channel_sequence": {
+          "abbreviation_token_retrieval": {
+            "incremental_candidates_added_total": 535,
+            "incremental_candidates_added_s2": 164,
+            "incremental_candidates_added_s3": 371,
+            "incremental_gt_positives_recovered_total": 58,
+            "incremental_gt_positives_recovered_s2": 21,
+            "incremental_gt_positives_recovered_s3": 37,
+            "cumulative_micro_recall": 0.96723,
+            "cumulative_s2_recall": 0.965125,
+            "cumulative_s3_recall": 0.969211
+          },
+          "char_3_4_gram_retrieval": {
+            "incremental_candidates_added_total": 5624,
+            "incremental_candidates_added_s2": 2732,
+            "incremental_candidates_added_s3": 2892,
+            "incremental_gt_positives_recovered_total": 15,
+            "incremental_gt_positives_recovered_s2": 8,
+            "incremental_gt_positives_recovered_s3": 7,
+            "cumulative_micro_recall": 0.968655,
+            "cumulative_s2_recall": 0.966693,
+            "cumulative_s3_recall": 0.970501
+          },
+          "numeric_address_retrieval": {
+            "incremental_candidates_added_total": 374,
+            "incremental_candidates_added_s2": 112,
+            "incremental_candidates_added_s3": 262,
+            "incremental_gt_positives_recovered_total": 0,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 0,
+            "cumulative_micro_recall": 0.968655,
+            "cumulative_s2_recall": 0.966693,
+            "cumulative_s3_recall": 0.970501
+          },
+          "reverse_target_to_s1_retrieval": {
+            "incremental_candidates_added_total": 3876,
+            "incremental_candidates_added_s2": 1759,
+            "incremental_candidates_added_s3": 2117,
+            "incremental_gt_positives_recovered_total": 0,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 0,
+            "cumulative_micro_recall": 0.968655,
+            "cumulative_s2_recall": 0.966693,
+            "cumulative_s3_recall": 0.970501
+          },
+          "transliteration_retrieval": {
+            "incremental_candidates_added_total": 1,
+            "incremental_candidates_added_s2": 1,
+            "incremental_candidates_added_s3": 0,
+            "incremental_gt_positives_recovered_total": 0,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 0,
+            "cumulative_micro_recall": 0.968655,
+            "cumulative_s2_recall": 0.966693,
+            "cumulative_s3_recall": 0.970501
+          }
+        },
+        "total_rescue_runtime_sec": 184.542
+      },
+      "ablations": {
+        "A_V4_Baseline": {
+          "threshold": "A. V4 Baseline",
+          "macro_f05": 0.9076502665914981,
+          "macro_precision": 0.9449055555555557,
+          "macro_recall": 0.833868253968254,
+          "predicted_pairs": 9061,
+          "tp": 8709,
+          "fp": 352,
+          "fn": 1819,
+          "predicted_empty_s1_count": 221,
+          "empty_s1_accuracy": 0.9506172839506173,
+          "singleton_fp_rate": 0.04938271604938271,
+          "s2_metrics": {
+            "tp": 4206,
+            "fp": 117,
+            "fn": 898,
+            "micro_prec": 0.9729354614850798,
+            "micro_rec": 0.8240595611285266,
+            "micro_f05": 0.9390069655295589
+          },
+          "s3_metrics": {
+            "tp": 4503,
+            "fp": 235,
+            "fn": 921,
+            "micro_prec": 0.9504010130856901,
+            "micro_rec": 0.8301991150442478,
+            "micro_f05": 0.9236544141778799
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 1224,
+              "macro_f05": 0.88283,
+              "macro_precision": 0.948271,
+              "macro_recall": 0.818426,
+              "tp": 3516,
+              "fp": 227,
+              "fn": 820
+            },
+            "us": {
+              "s1_count": 1776,
+              "macro_f05": 0.924756,
+              "macro_precision": 0.980312,
+              "macro_recall": 0.849015,
+              "tp": 5193,
+              "fp": 125,
+              "fn": 999
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9506172839506173,
+            "single_match_s1_f05": 0.7549799973473738,
+            "multi_match_s1_f05": 0.9143510505446252
+          },
+          "eval_runtime_sec": 3.817,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 3,
+            "excess_assignments_removed": 3,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 3
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.0,
+            "delta_macro_precision": 0.0,
+            "delta_macro_recall": 0.0,
+            "delta_tp": 0,
+            "delta_fp": 0,
+            "delta_fn": 0,
+            "delta_s2_f05": 0.0,
+            "delta_s3_f05": 0.0,
+            "delta_india_f05": 0.0,
+            "delta_us_f05": 0.0
+          }
+        },
+        "B_V4_plus_Building": {
+          "threshold": "B. V4 + Building Features",
+          "macro_f05": 0.9107946577498464,
+          "macro_precision": 0.9451888888888889,
+          "macro_recall": 0.8420444444444444,
+          "predicted_pairs": 9158,
+          "tp": 8805,
+          "fp": 353,
+          "fn": 1723,
+          "predicted_empty_s1_count": 220,
+          "empty_s1_accuracy": 0.9506172839506173,
+          "singleton_fp_rate": 0.04938271604938271,
+          "s2_metrics": {
+            "tp": 4267,
+            "fp": 117,
+            "fn": 837,
+            "micro_prec": 0.9733120437956204,
+            "micro_rec": 0.8360109717868338,
+            "micro_f05": 0.9423586572438162
+          },
+          "s3_metrics": {
+            "tp": 4538,
+            "fp": 236,
+            "fn": 886,
+            "micro_prec": 0.9505655634687893,
+            "micro_rec": 0.8366519174041298,
+            "micro_f05": 0.9253670473083198
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 1224,
+              "macro_f05": 0.88558,
+              "macro_precision": 0.948284,
+              "macro_recall": 0.826672,
+              "tp": 3555,
+              "fp": 227,
+              "fn": 781
+            },
+            "us": {
+              "s1_count": 1776,
+              "macro_f05": 0.928172,
+              "macro_precision": 0.980218,
+              "macro_recall": 0.857144,
+              "tp": 5250,
+              "fp": 126,
+              "fn": 942
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9506172839506173,
+            "single_match_s1_f05": 0.7549799973473738,
+            "multi_match_s1_f05": 0.9178774705352963
+          },
+          "eval_runtime_sec": 3.244,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 3,
+            "excess_assignments_removed": 3,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 3
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.003144,
+            "delta_macro_precision": 0.000283,
+            "delta_macro_recall": 0.008176,
+            "delta_tp": 96,
+            "delta_fp": 1,
+            "delta_fn": -96,
+            "delta_s2_f05": 0.003352,
+            "delta_s3_f05": 0.001713,
+            "delta_india_f05": 0.00275,
+            "delta_us_f05": 0.003416
+          }
+        },
+        "C_V4_plus_Abbreviation": {
+          "threshold": "C. V4 + Abbreviation Features",
+          "macro_f05": 0.9114224544967489,
+          "macro_precision": 0.9467444444444445,
+          "macro_recall": 0.8417738095238095,
+          "predicted_pairs": 9151,
+          "tp": 8792,
+          "fp": 359,
+          "fn": 1736,
+          "predicted_empty_s1_count": 214,
+          "empty_s1_accuracy": 0.9506172839506173,
+          "singleton_fp_rate": 0.04938271604938271,
+          "s2_metrics": {
+            "tp": 4255,
+            "fp": 123,
+            "fn": 849,
+            "micro_prec": 0.9719049794426678,
+            "micro_rec": 0.8336598746081505,
+            "micro_f05": 0.940705695083127
+          },
+          "s3_metrics": {
+            "tp": 4537,
+            "fp": 236,
+            "fn": 887,
+            "micro_prec": 0.9505552063691599,
+            "micro_rec": 0.8364675516224189,
+            "micro_f05": 0.9253140806004243
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 1224,
+              "macro_f05": 0.889857,
+              "macro_precision": 0.948148,
+              "macro_recall": 0.829646,
+              "tp": 3562,
+              "fp": 229,
+              "fn": 774
+            },
+            "us": {
+              "s1_count": 1776,
+              "macro_f05": 0.926285,
+              "macro_precision": 0.979561,
+              "macro_recall": 0.854637,
+              "tp": 5230,
+              "fp": 130,
+              "fn": 962
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9506172839506173,
+            "single_match_s1_f05": 0.7733849053228339,
+            "multi_match_s1_f05": 0.9174600463262147
+          },
+          "eval_runtime_sec": 3.206,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 2,
+            "excess_assignments_removed": 2,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 2
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.003772,
+            "delta_macro_precision": 0.001839,
+            "delta_macro_recall": 0.007906,
+            "delta_tp": 83,
+            "delta_fp": 7,
+            "delta_fn": -83,
+            "delta_s2_f05": 0.001699,
+            "delta_s3_f05": 0.00166,
+            "delta_india_f05": 0.007027,
+            "delta_us_f05": 0.001529
+          }
+        },
+        "D_V4_plus_Transliteration": {
+          "threshold": "D. V4 + Transliteration Features",
+          "macro_f05": 0.9085376082418468,
+          "macro_precision": 0.9451777777777778,
+          "macro_recall": 0.8358349206349206,
+          "predicted_pairs": 9081,
+          "tp": 8732,
+          "fp": 349,
+          "fn": 1796,
+          "predicted_empty_s1_count": 221,
+          "empty_s1_accuracy": 0.9506172839506173,
+          "singleton_fp_rate": 0.04938271604938271,
+          "s2_metrics": {
+            "tp": 4223,
+            "fp": 117,
+            "fn": 881,
+            "micro_prec": 0.9730414746543778,
+            "micro_rec": 0.8273902821316614,
+            "micro_f05": 0.9399483618233618
+          },
+          "s3_metrics": {
+            "tp": 4509,
+            "fp": 232,
+            "fn": 915,
+            "micro_prec": 0.9510651761231808,
+            "micro_rec": 0.8313053097345132,
+            "micro_f05": 0.9244300475643759
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 1224,
+              "macro_f05": 0.884231,
+              "macro_precision": 0.94902,
+              "macro_recall": 0.820496,
+              "tp": 3525,
+              "fp": 223,
+              "fn": 811
+            },
+            "us": {
+              "s1_count": 1776,
+              "macro_f05": 0.925289,
+              "macro_precision": 0.980255,
+              "macro_recall": 0.850911,
+              "tp": 5207,
+              "fp": 126,
+              "fn": 985
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9506172839506173,
+            "single_match_s1_f05": 0.7549799973473738,
+            "multi_match_s1_f05": 0.9153462000590349
+          },
+          "eval_runtime_sec": 3.189,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 3,
+            "excess_assignments_removed": 3,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 3
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.000887,
+            "delta_macro_precision": 0.000272,
+            "delta_macro_recall": 0.001967,
+            "delta_tp": 23,
+            "delta_fp": -3,
+            "delta_fn": -23,
+            "delta_s2_f05": 0.000941,
+            "delta_s3_f05": 0.000776,
+            "delta_india_f05": 0.001401,
+            "delta_us_f05": 0.000533
+          }
+        },
+        "E_V4_plus_All_Three": {
+          "threshold": "E. V4 + All Three (B+C+D)",
+          "macro_f05": 0.9142123985933652,
+          "macro_precision": 0.9471666666666667,
+          "macro_recall": 0.8485611111111111,
+          "predicted_pairs": 9228,
+          "tp": 8871,
+          "fp": 357,
+          "fn": 1657,
+          "predicted_empty_s1_count": 213,
+          "empty_s1_accuracy": 0.9506172839506173,
+          "singleton_fp_rate": 0.04938271604938271,
+          "s2_metrics": {
+            "tp": 4301,
+            "fp": 123,
+            "fn": 803,
+            "micro_prec": 0.9721971066907775,
+            "micro_rec": 0.8426724137931034,
+            "micro_f05": 0.9432017543859649
+          },
+          "s3_metrics": {
+            "tp": 4570,
+            "fp": 234,
+            "fn": 854,
+            "micro_prec": 0.9512905911740216,
+            "micro_rec": 0.842551622418879,
+            "micro_f05": 0.927353896103896
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 1224,
+              "macro_f05": 0.892369,
+              "macro_precision": 0.948502,
+              "macro_recall": 0.836353,
+              "tp": 3593,
+              "fp": 226,
+              "fn": 743
+            },
+            "us": {
+              "s1_count": 1776,
+              "macro_f05": 0.929267,
+              "macro_precision": 0.979467,
+              "macro_recall": 0.861479,
+              "tp": 5278,
+              "fp": 131,
+              "fn": 914
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9506172839506173,
+            "single_match_s1_f05": 0.7733849053228339,
+            "multi_match_s1_f05": 0.9205889555934482
+          },
+          "eval_runtime_sec": 3.175,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 2,
+            "excess_assignments_removed": 2,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 2
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.006562,
+            "delta_macro_precision": 0.002261,
+            "delta_macro_recall": 0.014693,
+            "delta_tp": 162,
+            "delta_fp": 5,
+            "delta_fn": -162,
+            "delta_s2_f05": 0.004195,
+            "delta_s3_f05": 0.003699,
+            "delta_india_f05": 0.009539,
+            "delta_us_f05": 0.004511
+          }
+        },
+        "F_V5_Full_Prototype_with_Rescue": {
+          "threshold": "F. V5 Full (E + V5 5-Ch Rescue)",
+          "macro_f05": 0.9152438870568496,
+          "macro_precision": 0.947961111111111,
+          "macro_recall": 0.850134126984127,
+          "predicted_pairs": 9243,
+          "tp": 8886,
+          "fp": 357,
+          "fn": 1642,
+          "predicted_empty_s1_count": 211,
+          "empty_s1_accuracy": 0.9506172839506173,
+          "singleton_fp_rate": 0.04938271604938271,
+          "s2_metrics": {
+            "tp": 4307,
+            "fp": 122,
+            "fn": 797,
+            "micro_prec": 0.9724542786181982,
+            "micro_rec": 0.8438479623824452,
+            "micro_f05": 0.9436897458369851
+          },
+          "s3_metrics": {
+            "tp": 4579,
+            "fp": 235,
+            "fn": 845,
+            "micro_prec": 0.9511840465309513,
+            "micro_rec": 0.8442109144542773,
+            "micro_f05": 0.927674230145867
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 1224,
+              "macro_f05": 0.893441,
+              "macro_precision": 0.948502,
+              "macro_recall": 0.837987,
+              "tp": 3599,
+              "fp": 227,
+              "fn": 737
+            },
+            "us": {
+              "s1_count": 1776,
+              "macro_f05": 0.93027,
+              "macro_precision": 0.979683,
+              "macro_recall": 0.86301,
+              "tp": 5287,
+              "fp": 130,
+              "fn": 905
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9506172839506173,
+            "single_match_s1_f05": 0.7856548439731408,
+            "multi_match_s1_f05": 0.9209981015338045
+          },
+          "eval_runtime_sec": 3.276,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 2,
+            "excess_assignments_removed": 2,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 2
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.007594,
+            "delta_macro_precision": 0.003056,
+            "delta_macro_recall": 0.016266,
+            "delta_tp": 177,
+            "delta_fp": 5,
+            "delta_fn": -177,
+            "delta_s2_f05": 0.004683,
+            "delta_s3_f05": 0.00402,
+            "delta_india_f05": 0.010611,
+            "delta_us_f05": 0.005514
+          }
+        }
+      }
+    },
+    "INTERNAL_CHECK_1000": {
+      "retrieval": {
+        "v3_top500_baseline": {
+          "candidate_pairs": 506099,
+          "avg_candidates_per_s1": 506.1,
+          "total_gt_links": 3436,
+          "retrieved_gt_links": 3292,
+          "micro_recall": 0.958091,
+          "macro_recall": 0.960835,
+          "s2_total_gt": 1653,
+          "s2_retrieved_gt": 1595,
+          "s2_recall": 0.964912,
+          "s3_total_gt": 1783,
+          "s3_retrieved_gt": 1697,
+          "s3_recall": 0.951767
+        },
+        "v4_rescued_baseline": {
+          "candidate_pairs": 506598,
+          "avg_candidates_per_s1": 506.6,
+          "total_gt_links": 3436,
+          "retrieved_gt_links": 3322,
+          "micro_recall": 0.966822,
+          "macro_recall": 0.968793,
+          "s2_total_gt": 1653,
+          "s2_retrieved_gt": 1608,
+          "s2_recall": 0.972777,
+          "s3_total_gt": 1783,
+          "s3_retrieved_gt": 1714,
+          "s3_recall": 0.961301
+        },
+        "v5_rescued": {
+          "candidate_pairs": 510736,
+          "avg_candidates_per_s1": 510.74,
+          "total_gt_links": 3436,
+          "retrieved_gt_links": 3327,
+          "micro_recall": 0.968277,
+          "macro_recall": 0.970043,
+          "s2_total_gt": 1653,
+          "s2_retrieved_gt": 1610,
+          "s2_recall": 0.973987,
+          "s3_total_gt": 1783,
+          "s3_retrieved_gt": 1717,
+          "s3_recall": 0.962984
+        },
+        "v5_vs_top500": {
+          "candidates_added_total": 4637,
+          "candidates_added_s2": 2034,
+          "candidates_added_s3": 2603,
+          "gt_positives_recovered_total": 35,
+          "gt_positives_recovered_s2": 15,
+          "gt_positives_recovered_s3": 20
+        },
+        "v5_vs_v4_incremental": {
+          "candidates_added_total": 4138,
+          "candidates_added_s2": 1862,
+          "candidates_added_s3": 2276,
+          "gt_positives_recovered_total": 5,
+          "gt_positives_recovered_s2": 2,
+          "gt_positives_recovered_s3": 3
+        },
+        "marginal_by_channel_vs_top500": {
+          "abbreviation_token_retrieval": {
+            "candidates_added_total": 122,
+            "candidates_added_s2": 54,
+            "candidates_added_s3": 68,
+            "gt_positives_recovered_total": 27,
+            "gt_positives_recovered_s2": 10,
+            "gt_positives_recovered_s3": 17,
+            "micro_recall_with_channel": 0.965949,
+            "s2_recall_with_channel": 0.970962,
+            "s3_recall_with_channel": 0.961301,
+            "runtime_sec": 0.0007
+          },
+          "char_3_4_gram_retrieval": {
+            "candidates_added_total": 2831,
+            "candidates_added_s2": 1227,
+            "candidates_added_s3": 1604,
+            "gt_positives_recovered_total": 34,
+            "gt_positives_recovered_s2": 15,
+            "gt_positives_recovered_s3": 19,
+            "micro_recall_with_channel": 0.967986,
+            "s2_recall_with_channel": 0.973987,
+            "s3_recall_with_channel": 0.962423,
+            "runtime_sec": 0.001
+          },
+          "numeric_address_retrieval": {
+            "candidates_added_total": 390,
+            "candidates_added_s2": 176,
+            "candidates_added_s3": 214,
+            "gt_positives_recovered_total": 30,
+            "gt_positives_recovered_s2": 13,
+            "gt_positives_recovered_s3": 17,
+            "micro_recall_with_channel": 0.966822,
+            "s2_recall_with_channel": 0.972777,
+            "s3_recall_with_channel": 0.961301,
+            "runtime_sec": 0.0014
+          },
+          "reverse_target_to_s1_retrieval": {
+            "candidates_added_total": 4296,
+            "candidates_added_s2": 1955,
+            "candidates_added_s3": 2341,
+            "gt_positives_recovered_total": 35,
+            "gt_positives_recovered_s2": 15,
+            "gt_positives_recovered_s3": 20,
+            "micro_recall_with_channel": 0.968277,
+            "s2_recall_with_channel": 0.973987,
+            "s3_recall_with_channel": 0.962984,
+            "runtime_sec": 0.0014
+          },
+          "transliteration_retrieval": {
+            "candidates_added_total": 267,
+            "candidates_added_s2": 99,
+            "candidates_added_s3": 168,
+            "gt_positives_recovered_total": 24,
+            "gt_positives_recovered_s2": 11,
+            "gt_positives_recovered_s3": 13,
+            "micro_recall_with_channel": 0.965076,
+            "s2_recall_with_channel": 0.971567,
+            "s3_recall_with_channel": 0.959058,
+            "runtime_sec": 0.001
+          }
+        },
+        "incremental_by_channel_sequence": {
+          "abbreviation_token_retrieval": {
+            "incremental_candidates_added_total": 122,
+            "incremental_candidates_added_s2": 54,
+            "incremental_candidates_added_s3": 68,
+            "incremental_gt_positives_recovered_total": 27,
+            "incremental_gt_positives_recovered_s2": 10,
+            "incremental_gt_positives_recovered_s3": 17,
+            "cumulative_micro_recall": 0.965949,
+            "cumulative_s2_recall": 0.970962,
+            "cumulative_s3_recall": 0.961301
+          },
+          "char_3_4_gram_retrieval": {
+            "incremental_candidates_added_total": 2716,
+            "incremental_candidates_added_s2": 1177,
+            "incremental_candidates_added_s3": 1539,
+            "incremental_gt_positives_recovered_total": 7,
+            "incremental_gt_positives_recovered_s2": 5,
+            "incremental_gt_positives_recovered_s3": 2,
+            "cumulative_micro_recall": 0.967986,
+            "cumulative_s2_recall": 0.973987,
+            "cumulative_s3_recall": 0.962423
+          },
+          "numeric_address_retrieval": {
+            "incremental_candidates_added_total": 135,
+            "incremental_candidates_added_s2": 49,
+            "incremental_candidates_added_s3": 86,
+            "incremental_gt_positives_recovered_total": 0,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 0,
+            "cumulative_micro_recall": 0.967986,
+            "cumulative_s2_recall": 0.973987,
+            "cumulative_s3_recall": 0.962423
+          },
+          "reverse_target_to_s1_retrieval": {
+            "incremental_candidates_added_total": 1531,
+            "incremental_candidates_added_s2": 753,
+            "incremental_candidates_added_s3": 778,
+            "incremental_gt_positives_recovered_total": 1,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 1,
+            "cumulative_micro_recall": 0.968277,
+            "cumulative_s2_recall": 0.973987,
+            "cumulative_s3_recall": 0.962984
+          },
+          "transliteration_retrieval": {
+            "incremental_candidates_added_total": 0,
+            "incremental_candidates_added_s2": 0,
+            "incremental_candidates_added_s3": 0,
+            "incremental_gt_positives_recovered_total": 0,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 0,
+            "cumulative_micro_recall": 0.968277,
+            "cumulative_s2_recall": 0.973987,
+            "cumulative_s3_recall": 0.962984
+          }
+        },
+        "total_rescue_runtime_sec": 71.587
+      },
+      "ablations": {
+        "A_V4_Baseline": {
+          "threshold": "A. V4 Baseline",
+          "macro_f05": 0.9207655899454551,
+          "macro_precision": 0.9592333333333334,
+          "macro_recall": 0.8397837301587301,
+          "predicted_pairs": 2903,
+          "tp": 2859,
+          "fp": 44,
+          "fn": 577,
+          "predicted_empty_s1_count": 71,
+          "empty_s1_accuracy": 0.9791666666666666,
+          "singleton_fp_rate": 0.02083333333333337,
+          "s2_metrics": {
+            "tp": 1386,
+            "fp": 18,
+            "fn": 267,
+            "micro_prec": 0.9871794871794872,
+            "micro_rec": 0.838475499092559,
+            "micro_f05": 0.9533635988444078
+          },
+          "s3_metrics": {
+            "tp": 1473,
+            "fp": 26,
+            "fn": 310,
+            "micro_prec": 0.9826551034022681,
+            "micro_rec": 0.826135726303982,
+            "micro_f05": 0.9467797917470112
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.892413,
+              "macro_precision": 0.977887,
+              "macro_recall": 0.803236,
+              "tp": 1125,
+              "fp": 23,
+              "fn": 291
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.940225,
+              "macro_precision": 0.986903,
+              "macro_recall": 0.866554,
+              "tp": 1734,
+              "fp": 21,
+              "fn": 286
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9791666666666666,
+            "single_match_s1_f05": 0.7529239766081871,
+            "multi_match_s1_f05": 0.9321271321041471
+          },
+          "eval_runtime_sec": 1.089,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.0,
+            "delta_macro_precision": 0.0,
+            "delta_macro_recall": 0.0,
+            "delta_tp": 0,
+            "delta_fp": 0,
+            "delta_fn": 0,
+            "delta_s2_f05": 0.0,
+            "delta_s3_f05": 0.0,
+            "delta_india_f05": 0.0,
+            "delta_us_f05": 0.0
+          }
+        },
+        "B_V4_plus_Building": {
+          "threshold": "B. V4 + Building Features",
+          "macro_f05": 0.9237674594619772,
+          "macro_precision": 0.9606500000000001,
+          "macro_recall": 0.8471527777777779,
+          "predicted_pairs": 2933,
+          "tp": 2885,
+          "fp": 48,
+          "fn": 551,
+          "predicted_empty_s1_count": 68,
+          "empty_s1_accuracy": 0.9791666666666666,
+          "singleton_fp_rate": 0.02083333333333337,
+          "s2_metrics": {
+            "tp": 1402,
+            "fp": 19,
+            "fn": 251,
+            "micro_prec": 0.9866291344123856,
+            "micro_rec": 0.8481548699334543,
+            "micro_f05": 0.9554313752214804
+          },
+          "s3_metrics": {
+            "tp": 1483,
+            "fp": 29,
+            "fn": 300,
+            "micro_prec": 0.9808201058201058,
+            "micro_rec": 0.8317442512619181,
+            "micro_f05": 0.9468777933852638
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.898026,
+              "macro_precision": 0.974611,
+              "macro_recall": 0.813848,
+              "tp": 1140,
+              "fp": 26,
+              "fn": 276
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.941435,
+              "macro_precision": 0.986481,
+              "macro_recall": 0.871698,
+              "tp": 1745,
+              "fp": 22,
+              "fn": 275
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9791666666666666,
+            "single_match_s1_f05": 0.7660818713450293,
+            "multi_match_s1_f05": 0.9344123712782593
+          },
+          "eval_runtime_sec": 1.13,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.003002,
+            "delta_macro_precision": 0.001417,
+            "delta_macro_recall": 0.007369,
+            "delta_tp": 26,
+            "delta_fp": 4,
+            "delta_fn": -26,
+            "delta_s2_f05": 0.002068,
+            "delta_s3_f05": 9.8e-05,
+            "delta_india_f05": 0.005613,
+            "delta_us_f05": 0.00121
+          }
+        },
+        "C_V4_plus_Abbreviation": {
+          "threshold": "C. V4 + Abbreviation Features",
+          "macro_f05": 0.9236583130848888,
+          "macro_precision": 0.9593333333333333,
+          "macro_recall": 0.848718253968254,
+          "predicted_pairs": 2940,
+          "tp": 2888,
+          "fp": 52,
+          "fn": 548,
+          "predicted_empty_s1_count": 68,
+          "empty_s1_accuracy": 0.9791666666666666,
+          "singleton_fp_rate": 0.02083333333333337,
+          "s2_metrics": {
+            "tp": 1400,
+            "fp": 24,
+            "fn": 253,
+            "micro_prec": 0.9831460674157303,
+            "micro_rec": 0.8469449485783425,
+            "micro_f05": 0.9525105456524696
+          },
+          "s3_metrics": {
+            "tp": 1488,
+            "fp": 28,
+            "fn": 295,
+            "micro_prec": 0.9815303430079155,
+            "micro_rec": 0.8345485137408861,
+            "micro_f05": 0.9481330444755955
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.89701,
+              "macro_precision": 0.972768,
+              "macro_recall": 0.814477,
+              "tp": 1139,
+              "fp": 28,
+              "fn": 277
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.941948,
+              "macro_precision": 0.985526,
+              "macro_recall": 0.873906,
+              "tp": 1749,
+              "fp": 24,
+              "fn": 271
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9791666666666666,
+            "single_match_s1_f05": 0.7485380116959064,
+            "multi_match_s1_f05": 0.9358098449726026
+          },
+          "eval_runtime_sec": 1.15,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.002893,
+            "delta_macro_precision": 0.0001,
+            "delta_macro_recall": 0.008935,
+            "delta_tp": 29,
+            "delta_fp": 8,
+            "delta_fn": -29,
+            "delta_s2_f05": -0.000853,
+            "delta_s3_f05": 0.001353,
+            "delta_india_f05": 0.004597,
+            "delta_us_f05": 0.001723
+          }
+        },
+        "D_V4_plus_Transliteration": {
+          "threshold": "D. V4 + Transliteration Features",
+          "macro_f05": 0.9211623182171834,
+          "macro_precision": 0.9592333333333334,
+          "macro_recall": 0.8411920634920634,
+          "predicted_pairs": 2908,
+          "tp": 2864,
+          "fp": 44,
+          "fn": 572,
+          "predicted_empty_s1_count": 71,
+          "empty_s1_accuracy": 0.9791666666666666,
+          "singleton_fp_rate": 0.02083333333333337,
+          "s2_metrics": {
+            "tp": 1390,
+            "fp": 18,
+            "fn": 263,
+            "micro_prec": 0.9872159090909091,
+            "micro_rec": 0.8408953418027828,
+            "micro_f05": 0.9540150995195606
+          },
+          "s3_metrics": {
+            "tp": 1474,
+            "fp": 26,
+            "fn": 309,
+            "micro_prec": 0.9826666666666667,
+            "micro_rec": 0.8266965787997756,
+            "micro_f05": 0.946935628934858
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.892088,
+              "macro_precision": 0.977273,
+              "macro_recall": 0.804362,
+              "tp": 1127,
+              "fp": 24,
+              "fn": 289
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.941117,
+              "macro_precision": 0.987324,
+              "macro_recall": 0.868156,
+              "tp": 1737,
+              "fp": 20,
+              "fn": 283
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9791666666666666,
+            "single_match_s1_f05": 0.7529239766081871,
+            "multi_match_s1_f05": 0.9325800182590879
+          },
+          "eval_runtime_sec": 1.116,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.000397,
+            "delta_macro_precision": 0.0,
+            "delta_macro_recall": 0.001408,
+            "delta_tp": 5,
+            "delta_fp": 0,
+            "delta_fn": -5,
+            "delta_s2_f05": 0.000652,
+            "delta_s3_f05": 0.000156,
+            "delta_india_f05": -0.000325,
+            "delta_us_f05": 0.000892
+          }
+        },
+        "E_V4_plus_All_Three": {
+          "threshold": "E. V4 + All Three (B+C+D)",
+          "macro_f05": 0.9269348191490737,
+          "macro_precision": 0.96175,
+          "macro_recall": 0.8545039682539682,
+          "predicted_pairs": 2961,
+          "tp": 2908,
+          "fp": 53,
+          "fn": 528,
+          "predicted_empty_s1_count": 65,
+          "empty_s1_accuracy": 0.9791666666666666,
+          "singleton_fp_rate": 0.02083333333333337,
+          "s2_metrics": {
+            "tp": 1411,
+            "fp": 24,
+            "fn": 242,
+            "micro_prec": 0.9832752613240419,
+            "micro_rec": 0.853599516031458,
+            "micro_f05": 0.9542810766941703
+          },
+          "s3_metrics": {
+            "tp": 1497,
+            "fp": 29,
+            "fn": 286,
+            "micro_prec": 0.9809960681520314,
+            "micro_rec": 0.8395961862030286,
+            "micro_f05": 0.9490300494484594
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.903492,
+              "macro_precision": 0.97154,
+              "macro_recall": 0.823246,
+              "tp": 1150,
+              "fp": 29,
+              "fn": 266
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.943024,
+              "macro_precision": 0.985385,
+              "macro_recall": 0.877644,
+              "tp": 1758,
+              "fp": 24,
+              "fn": 262
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9791666666666666,
+            "single_match_s1_f05": 0.7616959064327485,
+            "multi_match_s1_f05": 0.9384085961874256
+          },
+          "eval_runtime_sec": 1.171,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.006169,
+            "delta_macro_precision": 0.002517,
+            "delta_macro_recall": 0.01472,
+            "delta_tp": 49,
+            "delta_fp": 9,
+            "delta_fn": -49,
+            "delta_s2_f05": 0.000917,
+            "delta_s3_f05": 0.00225,
+            "delta_india_f05": 0.011079,
+            "delta_us_f05": 0.002799
+          }
+        },
+        "F_V5_Full_Prototype_with_Rescue": {
+          "threshold": "F. V5 Full (E + V5 5-Ch Rescue)",
+          "macro_f05": 0.9270357806875353,
+          "macro_precision": 0.96175,
+          "macro_recall": 0.854920634920635,
+          "predicted_pairs": 2963,
+          "tp": 2910,
+          "fp": 53,
+          "fn": 526,
+          "predicted_empty_s1_count": 65,
+          "empty_s1_accuracy": 0.9791666666666666,
+          "singleton_fp_rate": 0.02083333333333337,
+          "s2_metrics": {
+            "tp": 1411,
+            "fp": 24,
+            "fn": 242,
+            "micro_prec": 0.9832752613240419,
+            "micro_rec": 0.853599516031458,
+            "micro_f05": 0.9542810766941703
+          },
+          "s3_metrics": {
+            "tp": 1499,
+            "fp": 29,
+            "fn": 284,
+            "micro_prec": 0.981020942408377,
+            "micro_rec": 0.8407178911946158,
+            "micro_f05": 0.9493350221659277
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.903587,
+              "macro_precision": 0.97154,
+              "macro_recall": 0.823655,
+              "tp": 1151,
+              "fp": 29,
+              "fn": 265
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.94313,
+              "macro_precision": 0.985385,
+              "macro_recall": 0.878066,
+              "tp": 1759,
+              "fp": 24,
+              "fn": 261
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9791666666666666,
+            "single_match_s1_f05": 0.7616959064327485,
+            "multi_match_s1_f05": 0.9385238490852129
+          },
+          "eval_runtime_sec": 1.223,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.00627,
+            "delta_macro_precision": 0.002517,
+            "delta_macro_recall": 0.015137,
+            "delta_tp": 51,
+            "delta_fp": 9,
+            "delta_fn": -51,
+            "delta_s2_f05": 0.000917,
+            "delta_s3_f05": 0.002555,
+            "delta_india_f05": 0.011174,
+            "delta_us_f05": 0.002905
+          }
+        }
+      }
+    },
+    "FINAL_HOLDOUT_1000": {
+      "retrieval": {
+        "v3_top500_baseline": {
+          "candidate_pairs": 505107,
+          "avg_candidates_per_s1": 505.11,
+          "total_gt_links": 3430,
+          "retrieved_gt_links": 3322,
+          "micro_recall": 0.968513,
+          "macro_recall": 0.970256,
+          "s2_total_gt": 1680,
+          "s2_retrieved_gt": 1625,
+          "s2_recall": 0.967262,
+          "s3_total_gt": 1750,
+          "s3_retrieved_gt": 1697,
+          "s3_recall": 0.969714
+        },
+        "v4_rescued_baseline": {
+          "candidate_pairs": 505985,
+          "avg_candidates_per_s1": 505.99,
+          "total_gt_links": 3430,
+          "retrieved_gt_links": 3341,
+          "micro_recall": 0.974052,
+          "macro_recall": 0.975733,
+          "s2_total_gt": 1680,
+          "s2_retrieved_gt": 1635,
+          "s2_recall": 0.973214,
+          "s3_total_gt": 1750,
+          "s3_retrieved_gt": 1706,
+          "s3_recall": 0.974857
+        },
+        "v5_rescued": {
+          "candidate_pairs": 510356,
+          "avg_candidates_per_s1": 510.36,
+          "total_gt_links": 3430,
+          "retrieved_gt_links": 3345,
+          "micro_recall": 0.975219,
+          "macro_recall": 0.977067,
+          "s2_total_gt": 1680,
+          "s2_retrieved_gt": 1637,
+          "s2_recall": 0.974405,
+          "s3_total_gt": 1750,
+          "s3_retrieved_gt": 1708,
+          "s3_recall": 0.976
+        },
+        "v5_vs_top500": {
+          "candidates_added_total": 5249,
+          "candidates_added_s2": 2701,
+          "candidates_added_s3": 2548,
+          "gt_positives_recovered_total": 23,
+          "gt_positives_recovered_s2": 12,
+          "gt_positives_recovered_s3": 11
+        },
+        "v5_vs_v4_incremental": {
+          "candidates_added_total": 4371,
+          "candidates_added_s2": 2319,
+          "candidates_added_s3": 2052,
+          "gt_positives_recovered_total": 4,
+          "gt_positives_recovered_s2": 2,
+          "gt_positives_recovered_s3": 2
+        },
+        "marginal_by_channel_vs_top500": {
+          "abbreviation_token_retrieval": {
+            "candidates_added_total": 155,
+            "candidates_added_s2": 75,
+            "candidates_added_s3": 80,
+            "gt_positives_recovered_total": 13,
+            "gt_positives_recovered_s2": 7,
+            "gt_positives_recovered_s3": 6,
+            "micro_recall_with_channel": 0.972303,
+            "s2_recall_with_channel": 0.971429,
+            "s3_recall_with_channel": 0.973143,
+            "runtime_sec": 0.0018
+          },
+          "char_3_4_gram_retrieval": {
+            "candidates_added_total": 3078,
+            "candidates_added_s2": 1632,
+            "candidates_added_s3": 1446,
+            "gt_positives_recovered_total": 21,
+            "gt_positives_recovered_s2": 11,
+            "gt_positives_recovered_s3": 10,
+            "micro_recall_with_channel": 0.974636,
+            "s2_recall_with_channel": 0.97381,
+            "s3_recall_with_channel": 0.975429,
+            "runtime_sec": 0.0102
+          },
+          "numeric_address_retrieval": {
+            "candidates_added_total": 688,
+            "candidates_added_s2": 385,
+            "candidates_added_s3": 303,
+            "gt_positives_recovered_total": 19,
+            "gt_positives_recovered_s2": 10,
+            "gt_positives_recovered_s3": 9,
+            "micro_recall_with_channel": 0.974052,
+            "s2_recall_with_channel": 0.973214,
+            "s3_recall_with_channel": 0.974857,
+            "runtime_sec": 0.0034
+          },
+          "reverse_target_to_s1_retrieval": {
+            "candidates_added_total": 4857,
+            "candidates_added_s2": 2604,
+            "candidates_added_s3": 2253,
+            "gt_positives_recovered_total": 23,
+            "gt_positives_recovered_s2": 12,
+            "gt_positives_recovered_s3": 11,
+            "micro_recall_with_channel": 0.975219,
+            "s2_recall_with_channel": 0.974405,
+            "s3_recall_with_channel": 0.976,
+            "runtime_sec": 0.0042
+          },
+          "transliteration_retrieval": {
+            "candidates_added_total": 110,
+            "candidates_added_s2": 59,
+            "candidates_added_s3": 51,
+            "gt_positives_recovered_total": 12,
+            "gt_positives_recovered_s2": 7,
+            "gt_positives_recovered_s3": 5,
+            "micro_recall_with_channel": 0.972012,
+            "s2_recall_with_channel": 0.971429,
+            "s3_recall_with_channel": 0.972571,
+            "runtime_sec": 0.0014
+          }
+        },
+        "incremental_by_channel_sequence": {
+          "abbreviation_token_retrieval": {
+            "incremental_candidates_added_total": 155,
+            "incremental_candidates_added_s2": 75,
+            "incremental_candidates_added_s3": 80,
+            "incremental_gt_positives_recovered_total": 13,
+            "incremental_gt_positives_recovered_s2": 7,
+            "incremental_gt_positives_recovered_s3": 6,
+            "cumulative_micro_recall": 0.972303,
+            "cumulative_s2_recall": 0.971429,
+            "cumulative_s3_recall": 0.973143
+          },
+          "char_3_4_gram_retrieval": {
+            "incremental_candidates_added_total": 2926,
+            "incremental_candidates_added_s2": 1558,
+            "incremental_candidates_added_s3": 1368,
+            "incremental_gt_positives_recovered_total": 8,
+            "incremental_gt_positives_recovered_s2": 4,
+            "incremental_gt_positives_recovered_s3": 4,
+            "cumulative_micro_recall": 0.974636,
+            "cumulative_s2_recall": 0.97381,
+            "cumulative_s3_recall": 0.975429
+          },
+          "numeric_address_retrieval": {
+            "incremental_candidates_added_total": 192,
+            "incremental_candidates_added_s2": 100,
+            "incremental_candidates_added_s3": 92,
+            "incremental_gt_positives_recovered_total": 0,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 0,
+            "cumulative_micro_recall": 0.974636,
+            "cumulative_s2_recall": 0.97381,
+            "cumulative_s3_recall": 0.975429
+          },
+          "reverse_target_to_s1_retrieval": {
+            "incremental_candidates_added_total": 1776,
+            "incremental_candidates_added_s2": 967,
+            "incremental_candidates_added_s3": 809,
+            "incremental_gt_positives_recovered_total": 2,
+            "incremental_gt_positives_recovered_s2": 1,
+            "incremental_gt_positives_recovered_s3": 1,
+            "cumulative_micro_recall": 0.975219,
+            "cumulative_s2_recall": 0.974405,
+            "cumulative_s3_recall": 0.976
+          },
+          "transliteration_retrieval": {
+            "incremental_candidates_added_total": 0,
+            "incremental_candidates_added_s2": 0,
+            "incremental_candidates_added_s3": 0,
+            "incremental_gt_positives_recovered_total": 0,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 0,
+            "cumulative_micro_recall": 0.975219,
+            "cumulative_s2_recall": 0.974405,
+            "cumulative_s3_recall": 0.976
+          }
+        },
+        "total_rescue_runtime_sec": 364.027
+      },
+      "ablations": {
+        "A_V4_Baseline": {
+          "threshold": "A. V4 Baseline",
+          "macro_f05": 0.9156036267567879,
+          "macro_precision": 0.9516166666666666,
+          "macro_recall": 0.8434357142857143,
+          "predicted_pairs": 2953,
+          "tp": 2872,
+          "fp": 81,
+          "fn": 558,
+          "predicted_empty_s1_count": 81,
+          "empty_s1_accuracy": 0.9666666666666667,
+          "singleton_fp_rate": 0.033333333333333326,
+          "s2_metrics": {
+            "tp": 1404,
+            "fp": 23,
+            "fn": 276,
+            "micro_prec": 0.9838822704975473,
+            "micro_rec": 0.8357142857142857,
+            "micro_f05": 0.9501894964807797
+          },
+          "s3_metrics": {
+            "tp": 1468,
+            "fp": 58,
+            "fn": 282,
+            "micro_prec": 0.9619921363040629,
+            "micro_rec": 0.8388571428571429,
+            "micro_f05": 0.9345556404379932
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.905996,
+              "macro_precision": 0.965473,
+              "macro_recall": 0.829282,
+              "tp": 1174,
+              "fp": 50,
+              "fn": 261
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.922533,
+              "macro_precision": 0.981211,
+              "macro_recall": 0.857085,
+              "tp": 1698,
+              "fp": 31,
+              "fn": 297
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9666666666666667,
+            "single_match_s1_f05": 0.8138138138138138,
+            "multi_match_s1_f05": 0.920763746575711
+          },
+          "eval_runtime_sec": 1.083,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.0,
+            "delta_macro_precision": 0.0,
+            "delta_macro_recall": 0.0,
+            "delta_tp": 0,
+            "delta_fp": 0,
+            "delta_fn": 0,
+            "delta_s2_f05": 0.0,
+            "delta_s3_f05": 0.0,
+            "delta_india_f05": 0.0,
+            "delta_us_f05": 0.0
+          }
+        },
+        "B_V4_plus_Building": {
+          "threshold": "B. V4 + Building Features",
+          "macro_f05": 0.9214014930026593,
+          "macro_precision": 0.9556333333333332,
+          "macro_recall": 0.8528785714285715,
+          "predicted_pairs": 2984,
+          "tp": 2904,
+          "fp": 80,
+          "fn": 526,
+          "predicted_empty_s1_count": 76,
+          "empty_s1_accuracy": 0.95,
+          "singleton_fp_rate": 0.050000000000000044,
+          "s2_metrics": {
+            "tp": 1419,
+            "fp": 25,
+            "fn": 261,
+            "micro_prec": 0.9826869806094183,
+            "micro_rec": 0.8446428571428571,
+            "micro_f05": 0.9515826180257512
+          },
+          "s3_metrics": {
+            "tp": 1485,
+            "fp": 55,
+            "fn": 265,
+            "micro_prec": 0.9642857142857143,
+            "micro_rec": 0.8485714285714285,
+            "micro_f05": 0.9386852085967129
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.911225,
+              "macro_precision": 0.966706,
+              "macro_recall": 0.841454,
+              "tp": 1193,
+              "fp": 48,
+              "fn": 242
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.92874,
+              "macro_precision": 0.98035,
+              "macro_recall": 0.866281,
+              "tp": 1711,
+              "fp": 32,
+              "fn": 284
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.95,
+            "single_match_s1_f05": 0.8213213213213213,
+            "multi_match_s1_f05": 0.9279719575345052
+          },
+          "eval_runtime_sec": 1.132,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.005798,
+            "delta_macro_precision": 0.004017,
+            "delta_macro_recall": 0.009443,
+            "delta_tp": 32,
+            "delta_fp": -1,
+            "delta_fn": -32,
+            "delta_s2_f05": 0.001393,
+            "delta_s3_f05": 0.00413,
+            "delta_india_f05": 0.005229,
+            "delta_us_f05": 0.006207
+          }
+        },
+        "C_V4_plus_Abbreviation": {
+          "threshold": "C. V4 + Abbreviation Features",
+          "macro_f05": 0.9178016759440302,
+          "macro_precision": 0.9517833333333333,
+          "macro_recall": 0.8509476190476192,
+          "predicted_pairs": 2981,
+          "tp": 2898,
+          "fp": 83,
+          "fn": 532,
+          "predicted_empty_s1_count": 81,
+          "empty_s1_accuracy": 0.9666666666666667,
+          "singleton_fp_rate": 0.033333333333333326,
+          "s2_metrics": {
+            "tp": 1420,
+            "fp": 24,
+            "fn": 260,
+            "micro_prec": 0.9833795013850416,
+            "micro_rec": 0.8452380952380952,
+            "micro_f05": 0.9522532188841202
+          },
+          "s3_metrics": {
+            "tp": 1478,
+            "fp": 59,
+            "fn": 272,
+            "micro_prec": 0.9616135328562134,
+            "micro_rec": 0.8445714285714285,
+            "micro_f05": 0.935679918966827
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.907865,
+              "macro_precision": 0.965473,
+              "macro_recall": 0.837141,
+              "tp": 1186,
+              "fp": 51,
+              "fn": 249
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.924967,
+              "macro_precision": 0.981497,
+              "macro_recall": 0.864347,
+              "tp": 1712,
+              "fp": 32,
+              "fn": 283
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9666666666666667,
+            "single_match_s1_f05": 0.8153153153153153,
+            "multi_match_s1_f05": 0.9231736057860241
+          },
+          "eval_runtime_sec": 1.131,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.002198,
+            "delta_macro_precision": 0.000167,
+            "delta_macro_recall": 0.007512,
+            "delta_tp": 26,
+            "delta_fp": 2,
+            "delta_fn": -26,
+            "delta_s2_f05": 0.002064,
+            "delta_s3_f05": 0.001124,
+            "delta_india_f05": 0.001869,
+            "delta_us_f05": 0.002434
+          }
+        },
+        "D_V4_plus_Transliteration": {
+          "threshold": "D. V4 + Transliteration Features",
+          "macro_f05": 0.9162692812777057,
+          "macro_precision": 0.95195,
+          "macro_recall": 0.8448523809523809,
+          "predicted_pairs": 2957,
+          "tp": 2877,
+          "fp": 80,
+          "fn": 553,
+          "predicted_empty_s1_count": 81,
+          "empty_s1_accuracy": 0.9666666666666667,
+          "singleton_fp_rate": 0.033333333333333326,
+          "s2_metrics": {
+            "tp": 1409,
+            "fp": 23,
+            "fn": 271,
+            "micro_prec": 0.9839385474860335,
+            "micro_rec": 0.8386904761904762,
+            "micro_f05": 0.9509989200863931
+          },
+          "s3_metrics": {
+            "tp": 1468,
+            "fp": 57,
+            "fn": 282,
+            "micro_prec": 0.9626229508196721,
+            "micro_rec": 0.8388571428571429,
+            "micro_f05": 0.935031847133758
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.907493,
+              "macro_precision": 0.966269,
+              "macro_recall": 0.832265,
+              "tp": 1178,
+              "fp": 49,
+              "fn": 257
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.922599,
+              "macro_precision": 0.981211,
+              "macro_recall": 0.857372,
+              "tp": 1699,
+              "fp": 31,
+              "fn": 296
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9666666666666667,
+            "single_match_s1_f05": 0.8138138138138138,
+            "multi_match_s1_f05": 0.9215324007569093
+          },
+          "eval_runtime_sec": 1.128,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.000666,
+            "delta_macro_precision": 0.000333,
+            "delta_macro_recall": 0.001417,
+            "delta_tp": 5,
+            "delta_fp": -1,
+            "delta_fn": -5,
+            "delta_s2_f05": 0.000809,
+            "delta_s3_f05": 0.000476,
+            "delta_india_f05": 0.001497,
+            "delta_us_f05": 6.6e-05
+          }
+        },
+        "E_V4_plus_All_Three": {
+          "threshold": "E. V4 + All Three (B+C+D)",
+          "macro_f05": 0.922723761533879,
+          "macro_precision": 0.9552999999999999,
+          "macro_recall": 0.8581642857142857,
+          "predicted_pairs": 3006,
+          "tp": 2924,
+          "fp": 82,
+          "fn": 506,
+          "predicted_empty_s1_count": 76,
+          "empty_s1_accuracy": 0.95,
+          "singleton_fp_rate": 0.050000000000000044,
+          "s2_metrics": {
+            "tp": 1432,
+            "fp": 26,
+            "fn": 248,
+            "micro_prec": 0.9821673525377229,
+            "micro_rec": 0.8523809523809524,
+            "micro_f05": 0.9531416400425986
+          },
+          "s3_metrics": {
+            "tp": 1492,
+            "fp": 56,
+            "fn": 258,
+            "micro_prec": 0.9638242894056848,
+            "micro_rec": 0.8525714285714285,
+            "micro_f05": 0.9393099974817427
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.912647,
+              "macro_precision": 0.966706,
+              "macro_recall": 0.847522,
+              "tp": 1202,
+              "fp": 49,
+              "fn": 233
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.929991,
+              "macro_precision": 0.979776,
+              "macro_recall": 0.871002,
+              "tp": 1722,
+              "fp": 33,
+              "fn": 273
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.95,
+            "single_match_s1_f05": 0.8153153153153153,
+            "multi_match_s1_f05": 0.9300120418020158
+          },
+          "eval_runtime_sec": 1.168,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.00712,
+            "delta_macro_precision": 0.003683,
+            "delta_macro_recall": 0.014729,
+            "delta_tp": 52,
+            "delta_fp": 1,
+            "delta_fn": -52,
+            "delta_s2_f05": 0.002952,
+            "delta_s3_f05": 0.004754,
+            "delta_india_f05": 0.006651,
+            "delta_us_f05": 0.007458
+          }
+        },
+        "F_V5_Full_Prototype_with_Rescue": {
+          "threshold": "F. V5 Full (E + V5 5-Ch Rescue)",
+          "macro_f05": 0.922723761533879,
+          "macro_precision": 0.9552999999999999,
+          "macro_recall": 0.8581642857142857,
+          "predicted_pairs": 3006,
+          "tp": 2924,
+          "fp": 82,
+          "fn": 506,
+          "predicted_empty_s1_count": 76,
+          "empty_s1_accuracy": 0.95,
+          "singleton_fp_rate": 0.050000000000000044,
+          "s2_metrics": {
+            "tp": 1432,
+            "fp": 26,
+            "fn": 248,
+            "micro_prec": 0.9821673525377229,
+            "micro_rec": 0.8523809523809524,
+            "micro_f05": 0.9531416400425986
+          },
+          "s3_metrics": {
+            "tp": 1492,
+            "fp": 56,
+            "fn": 258,
+            "micro_prec": 0.9638242894056848,
+            "micro_rec": 0.8525714285714285,
+            "micro_f05": 0.9393099974817427
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.912647,
+              "macro_precision": 0.966706,
+              "macro_recall": 0.847522,
+              "tp": 1202,
+              "fp": 49,
+              "fn": 233
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.929991,
+              "macro_precision": 0.979776,
+              "macro_recall": 0.871002,
+              "tp": 1722,
+              "fp": 33,
+              "fn": 273
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.95,
+            "single_match_s1_f05": 0.8153153153153153,
+            "multi_match_s1_f05": 0.9300120418020158
+          },
+          "eval_runtime_sec": 1.256,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 0,
+            "excess_assignments_removed": 0,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 0
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.00712,
+            "delta_macro_precision": 0.003683,
+            "delta_macro_recall": 0.014729,
+            "delta_tp": 52,
+            "delta_fp": 1,
+            "delta_fn": -52,
+            "delta_s2_f05": 0.002952,
+            "delta_s3_f05": 0.004754,
+            "delta_india_f05": 0.006651,
+            "delta_us_f05": 0.007458
+          }
+        }
+      }
+    },
+    "COMBINED_5000": {
+      "retrieval": {
+        "v3_top500_baseline": {
+          "candidate_pairs": 2520241,
+          "avg_candidates_per_s1": 504.05,
+          "total_gt_links": 17394,
+          "retrieved_gt_links": 16739,
+          "micro_recall": 0.962343,
+          "macro_recall": 0.963907,
+          "s2_total_gt": 8437,
+          "s2_retrieved_gt": 8125,
+          "s2_recall": 0.96302,
+          "s3_total_gt": 8957,
+          "s3_retrieved_gt": 8614,
+          "s3_recall": 0.961706
+        },
+        "v4_rescued_baseline": {
+          "candidate_pairs": 2523314,
+          "avg_candidates_per_s1": 504.66,
+          "total_gt_links": 17394,
+          "retrieved_gt_links": 16836,
+          "micro_recall": 0.96792,
+          "macro_recall": 0.969105,
+          "s2_total_gt": 8437,
+          "s2_retrieved_gt": 8166,
+          "s2_recall": 0.96788,
+          "s3_total_gt": 8957,
+          "s3_retrieved_gt": 8670,
+          "s3_recall": 0.967958
+        },
+        "v5_rescued": {
+          "candidate_pairs": 2540981,
+          "avg_candidates_per_s1": 508.2,
+          "total_gt_links": 17394,
+          "retrieved_gt_links": 16870,
+          "micro_recall": 0.969875,
+          "macro_recall": 0.971122,
+          "s2_total_gt": 8437,
+          "s2_retrieved_gt": 8181,
+          "s2_recall": 0.969657,
+          "s3_total_gt": 8957,
+          "s3_retrieved_gt": 8689,
+          "s3_recall": 0.970079
+        },
+        "v5_vs_top500": {
+          "candidates_added_total": 20740,
+          "candidates_added_s2": 9507,
+          "candidates_added_s3": 11233,
+          "gt_positives_recovered_total": 131,
+          "gt_positives_recovered_s2": 56,
+          "gt_positives_recovered_s3": 75
+        },
+        "v5_vs_v4_incremental": {
+          "candidates_added_total": 17667,
+          "candidates_added_s2": 8358,
+          "candidates_added_s3": 9309,
+          "gt_positives_recovered_total": 34,
+          "gt_positives_recovered_s2": 15,
+          "gt_positives_recovered_s3": 19
+        },
+        "marginal_by_channel_vs_top500": {
+          "abbreviation_token_retrieval": {
+            "candidates_added_total": 812,
+            "candidates_added_s2": 293,
+            "candidates_added_s3": 519,
+            "gt_positives_recovered_total": 98,
+            "gt_positives_recovered_s2": 38,
+            "gt_positives_recovered_s3": 60,
+            "runtime_sec": 0.0053
+          },
+          "char_3_4_gram_retrieval": {
+            "candidates_added_total": 12038,
+            "candidates_added_s2": 5744,
+            "candidates_added_s3": 6294,
+            "gt_positives_recovered_total": 128,
+            "gt_positives_recovered_s2": 55,
+            "gt_positives_recovered_s3": 73,
+            "runtime_sec": 0.0481
+          },
+          "numeric_address_retrieval": {
+            "candidates_added_total": 2382,
+            "candidates_added_s2": 1170,
+            "candidates_added_s3": 1212,
+            "gt_positives_recovered_total": 112,
+            "gt_positives_recovered_s2": 47,
+            "gt_positives_recovered_s3": 65,
+            "runtime_sec": 0.0127
+          },
+          "reverse_target_to_s1_retrieval": {
+            "candidates_added_total": 18752,
+            "candidates_added_s2": 8967,
+            "candidates_added_s3": 9785,
+            "gt_positives_recovered_total": 131,
+            "gt_positives_recovered_s2": 56,
+            "gt_positives_recovered_s3": 75,
+            "runtime_sec": 0.0128
+          },
+          "transliteration_retrieval": {
+            "candidates_added_total": 793,
+            "candidates_added_s2": 232,
+            "candidates_added_s3": 561,
+            "gt_positives_recovered_total": 78,
+            "gt_positives_recovered_s2": 32,
+            "gt_positives_recovered_s3": 46,
+            "runtime_sec": 0.005
+          }
+        },
+        "incremental_by_channel_sequence": {
+          "abbreviation_token_retrieval": {
+            "incremental_candidates_added_total": 812,
+            "incremental_candidates_added_s2": 293,
+            "incremental_candidates_added_s3": 519,
+            "incremental_gt_positives_recovered_total": 98,
+            "incremental_gt_positives_recovered_s2": 38,
+            "incremental_gt_positives_recovered_s3": 60
+          },
+          "char_3_4_gram_retrieval": {
+            "incremental_candidates_added_total": 11266,
+            "incremental_candidates_added_s2": 5467,
+            "incremental_candidates_added_s3": 5799,
+            "incremental_gt_positives_recovered_total": 30,
+            "incremental_gt_positives_recovered_s2": 17,
+            "incremental_gt_positives_recovered_s3": 13
+          },
+          "numeric_address_retrieval": {
+            "incremental_candidates_added_total": 701,
+            "incremental_candidates_added_s2": 261,
+            "incremental_candidates_added_s3": 440,
+            "incremental_gt_positives_recovered_total": 0,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 0
+          },
+          "reverse_target_to_s1_retrieval": {
+            "incremental_candidates_added_total": 7183,
+            "incremental_candidates_added_s2": 3479,
+            "incremental_candidates_added_s3": 3704,
+            "incremental_gt_positives_recovered_total": 3,
+            "incremental_gt_positives_recovered_s2": 1,
+            "incremental_gt_positives_recovered_s3": 2
+          },
+          "transliteration_retrieval": {
+            "incremental_candidates_added_total": 1,
+            "incremental_candidates_added_s2": 1,
+            "incremental_candidates_added_s3": 0,
+            "incremental_gt_positives_recovered_total": 0,
+            "incremental_gt_positives_recovered_s2": 0,
+            "incremental_gt_positives_recovered_s3": 0
+          }
+        },
+        "total_rescue_runtime_sec": 620.156
+      },
+      "ablations": {
+        "A_V4_Baseline": {
+          "threshold": "A. V4 Baseline",
+          "macro_f05": 0.9119159513472954,
+          "macro_precision": 0.9492133333333331,
+          "macro_recall": 0.8369648412698413,
+          "predicted_pairs": 14916,
+          "tp": 14440,
+          "fp": 476,
+          "fn": 2954,
+          "predicted_empty_s1_count": 373,
+          "empty_s1_accuracy": 0.9592592592592593,
+          "singleton_fp_rate": 0.040740740740740744,
+          "s2_metrics": {
+            "tp": 6996,
+            "fp": 158,
+            "fn": 1441,
+            "micro_prec": 0.977914453452614,
+            "micro_rec": 0.8292046936114733,
+            "micro_f05": 0.9440531131082504
+          },
+          "s3_metrics": {
+            "tp": 7444,
+            "fp": 318,
+            "fn": 1513,
+            "micro_prec": 0.9590311775315641,
+            "micro_rec": 0.8310818354359719,
+            "micro_f05": 0.9303837020372454
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 2050,
+              "macro_f05": 0.889594,
+              "macro_precision": 0.957911,
+              "macro_recall": 0.817629,
+              "tp": 5815,
+              "fp": 299,
+              "fn": 1372
+            },
+            "us": {
+              "s1_count": 2950,
+              "macro_f05": 0.927428,
+              "macro_precision": 0.981814,
+              "macro_recall": 0.85413,
+              "tp": 8625,
+              "fp": 177,
+              "fn": 1582
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9592592592592593,
+            "single_match_s1_f05": 0.7683903642558031,
+            "multi_match_s1_f05": 0.9191925679702085
+          },
+          "eval_runtime_sec": 4.988,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 4,
+            "excess_assignments_removed": 4,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 4
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.0,
+            "delta_macro_precision": 0.0,
+            "delta_macro_recall": 0.0,
+            "delta_tp": 0,
+            "delta_fp": 0,
+            "delta_fn": 0,
+            "delta_s2_f05": 0.0,
+            "delta_s3_f05": 0.0,
+            "delta_india_f05": 0.0,
+            "delta_us_f05": 0.0
+          }
+        },
+        "B_V4_plus_Building": {
+          "threshold": "B. V4 + Building Features",
+          "macro_f05": 0.9155625331947833,
+          "macro_precision": 0.95047,
+          "macro_recall": 0.8452329365079366,
+          "predicted_pairs": 15074,
+          "tp": 14594,
+          "fp": 480,
+          "fn": 2800,
+          "predicted_empty_s1_count": 364,
+          "empty_s1_accuracy": 0.9555555555555556,
+          "singleton_fp_rate": 0.0444444444444444,
+          "s2_metrics": {
+            "tp": 7088,
+            "fp": 161,
+            "fn": 1349,
+            "micro_prec": 0.9777900400055181,
+            "micro_rec": 0.840109043498874,
+            "micro_f05": 0.9467582079982904
+          },
+          "s3_metrics": {
+            "tp": 7506,
+            "fp": 319,
+            "fn": 1451,
+            "micro_prec": 0.9592332268370607,
+            "micro_rec": 0.8380037959138105,
+            "micro_f05": 0.9322602280348758
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 2050,
+              "macro_f05": 0.893419,
+              "macro_precision": 0.95752,
+              "macro_recall": 0.827147,
+              "tp": 5888,
+              "fp": 300,
+              "fn": 1299
+            },
+            "us": {
+              "s1_count": 2950,
+              "macro_f05": 0.93095,
+              "macro_precision": 0.981503,
+              "macro_recall": 0.861869,
+              "tp": 8706,
+              "fp": 180,
+              "fn": 1501
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9555555555555556,
+            "single_match_s1_f05": 0.7733601903118912,
+            "multi_match_s1_f05": 0.9231946856251516
+          },
+          "eval_runtime_sec": 5.084,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 4,
+            "excess_assignments_removed": 4,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 4
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.003647,
+            "delta_macro_precision": 0.001257,
+            "delta_macro_recall": 0.008268,
+            "delta_tp": 154,
+            "delta_fp": 4,
+            "delta_fn": -154,
+            "delta_s2_f05": 0.002705,
+            "delta_s3_f05": 0.001877,
+            "delta_india_f05": 0.003825,
+            "delta_us_f05": 0.003522
+          }
+        },
+        "C_V4_plus_Abbreviation": {
+          "threshold": "C. V4 + Abbreviation Features",
+          "macro_f05": 0.9151974185557811,
+          "macro_precision": 0.95037,
+          "macro_recall": 0.8449974603174604,
+          "predicted_pairs": 15071,
+          "tp": 14578,
+          "fp": 493,
+          "fn": 2816,
+          "predicted_empty_s1_count": 363,
+          "empty_s1_accuracy": 0.9592592592592593,
+          "singleton_fp_rate": 0.040740740740740744,
+          "s2_metrics": {
+            "tp": 7075,
+            "fp": 171,
+            "fn": 1362,
+            "micro_prec": 0.9764007728401877,
+            "micro_rec": 0.8385682114495674,
+            "micro_f05": 0.9453248176157774
+          },
+          "s3_metrics": {
+            "tp": 7503,
+            "fp": 322,
+            "fn": 1454,
+            "micro_prec": 0.9588498402555911,
+            "micro_rec": 0.8376688623423021,
+            "micro_f05": 0.931887622028467
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 2050,
+              "macro_f05": 0.895085,
+              "macro_precision": 0.956821,
+              "macro_recall": 0.828166,
+              "tp": 5887,
+              "fp": 307,
+              "fn": 1300
+            },
+            "us": {
+              "s1_count": 2950,
+              "macro_f05": 0.929174,
+              "macro_precision": 0.981141,
+              "macro_recall": 0.860423,
+              "tp": 8691,
+              "fp": 186,
+              "fn": 1516
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9592592592592593,
+            "single_match_s1_f05": 0.7772650536416746,
+            "multi_match_s1_f05": 0.9222782728071228
+          },
+          "eval_runtime_sec": 4.972,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 3,
+            "excess_assignments_removed": 3,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 3
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.003281,
+            "delta_macro_precision": 0.001157,
+            "delta_macro_recall": 0.008033,
+            "delta_tp": 138,
+            "delta_fp": 17,
+            "delta_fn": -138,
+            "delta_s2_f05": 0.001272,
+            "delta_s3_f05": 0.001504,
+            "delta_india_f05": 0.005491,
+            "delta_us_f05": 0.001746
+          }
+        },
+        "D_V4_plus_Transliteration": {
+          "threshold": "D. V4 + Transliteration Features",
+          "macro_f05": 0.912660832896034,
+          "macro_precision": 0.9494433333333334,
+          "macro_recall": 0.8387098412698412,
+          "predicted_pairs": 14945,
+          "tp": 14473,
+          "fp": 472,
+          "fn": 2921,
+          "predicted_empty_s1_count": 373,
+          "empty_s1_accuracy": 0.9592592592592593,
+          "singleton_fp_rate": 0.040740740740740744,
+          "s2_metrics": {
+            "tp": 7022,
+            "fp": 158,
+            "fn": 1415,
+            "micro_prec": 0.9779944289693593,
+            "micro_rec": 0.8322863577100865,
+            "micro_f05": 0.9449094383292513
+          },
+          "s3_metrics": {
+            "tp": 7451,
+            "fp": 314,
+            "fn": 1506,
+            "micro_prec": 0.9595621377978107,
+            "micro_rec": 0.8318633471028246,
+            "micro_f05": 0.9309793337831421
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 2050,
+              "macro_f05": 0.890672,
+              "macro_precision": 0.958398,
+              "macro_recall": 0.819698,
+              "tp": 5830,
+              "fp": 295,
+              "fn": 1357
+            },
+            "us": {
+              "s1_count": 2950,
+              "macro_f05": 0.927941,
+              "macro_precision": 0.981864,
+              "macro_recall": 0.85565,
+              "tp": 8643,
+              "fp": 177,
+              "fn": 1564
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9592592592592593,
+            "single_match_s1_f05": 0.7683903642558031,
+            "multi_match_s1_f05": 0.9200357664632338
+          },
+          "eval_runtime_sec": 5.135,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 4,
+            "excess_assignments_removed": 4,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 4
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.000745,
+            "delta_macro_precision": 0.00023,
+            "delta_macro_recall": 0.001745,
+            "delta_tp": 33,
+            "delta_fp": -4,
+            "delta_fn": -33,
+            "delta_s2_f05": 0.000856,
+            "delta_s3_f05": 0.000596,
+            "delta_india_f05": 0.001078,
+            "delta_us_f05": 0.000513
+          }
+        },
+        "E_V4_plus_All_Three": {
+          "threshold": "E. V4 + All Three (B+C+D)",
+          "macro_f05": 0.9185111033445577,
+          "macro_precision": 0.95181,
+          "macro_recall": 0.8516703174603175,
+          "predicted_pairs": 15194,
+          "tp": 14703,
+          "fp": 491,
+          "fn": 2691,
+          "predicted_empty_s1_count": 354,
+          "empty_s1_accuracy": 0.9555555555555556,
+          "singleton_fp_rate": 0.0444444444444444,
+          "s2_metrics": {
+            "tp": 7144,
+            "fp": 173,
+            "fn": 1293,
+            "micro_prec": 0.976356430230969,
+            "micro_rec": 0.8467464738651179,
+            "micro_f05": 0.9473544622729081
+          },
+          "s3_metrics": {
+            "tp": 7559,
+            "fp": 318,
+            "fn": 1398,
+            "micro_prec": 0.9596293004951123,
+            "micro_rec": 0.843920955677124,
+            "micro_f05": 0.9340170517731372
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 2050,
+              "macro_f05": 0.898849,
+              "macro_precision": 0.957041,
+              "macro_recall": 0.836034,
+              "tp": 5945,
+              "fp": 303,
+              "fn": 1242
+            },
+            "us": {
+              "s1_count": 2950,
+              "macro_f05": 0.932175,
+              "macro_precision": 0.980718,
+              "macro_recall": 0.866604,
+              "tp": 8758,
+              "fp": 188,
+              "fn": 1449
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9555555555555556,
+            "single_match_s1_f05": 0.7804599418205884,
+            "multi_match_s1_f05": 0.9260293309787062
+          },
+          "eval_runtime_sec": 5.437,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 3,
+            "excess_assignments_removed": 3,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 3
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.006595,
+            "delta_macro_precision": 0.002597,
+            "delta_macro_recall": 0.014705,
+            "delta_tp": 263,
+            "delta_fp": 15,
+            "delta_fn": -263,
+            "delta_s2_f05": 0.003301,
+            "delta_s3_f05": 0.003633,
+            "delta_india_f05": 0.009255,
+            "delta_us_f05": 0.004747
+          }
+        },
+        "F_V5_Full_Prototype_with_Rescue": {
+          "threshold": "F. V5 Full (E + V5 5-Ch Rescue)",
+          "macro_f05": 0.9191501887303406,
+          "macro_precision": 0.9522866666666668,
+          "macro_recall": 0.8526974603174604,
+          "predicted_pairs": 15211,
+          "tp": 14720,
+          "fp": 491,
+          "fn": 2674,
+          "predicted_empty_s1_count": 352,
+          "empty_s1_accuracy": 0.9555555555555556,
+          "singleton_fp_rate": 0.0444444444444444,
+          "s2_metrics": {
+            "tp": 7150,
+            "fp": 172,
+            "fn": 1287,
+            "micro_prec": 0.9765091505053264,
+            "micro_rec": 0.847457627118644,
+            "micro_f05": 0.9476474486414844
+          },
+          "s3_metrics": {
+            "tp": 7570,
+            "fp": 319,
+            "fn": 1387,
+            "micro_prec": 0.9595639498035239,
+            "micro_rec": 0.8451490454393212,
+            "micro_f05": 0.9342680127366525
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 2050,
+              "macro_f05": 0.899508,
+              "macro_precision": 0.957041,
+              "macro_recall": 0.837091,
+              "tp": 5952,
+              "fp": 304,
+              "fn": 1235
+            },
+            "us": {
+              "s1_count": 2950,
+              "macro_f05": 0.9328,
+              "macro_precision": 0.980847,
+              "macro_recall": 0.867611,
+              "tp": 8768,
+              "fp": 187,
+              "fn": 1439
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9555555555555556,
+            "single_match_s1_f05": 0.7868497181784159,
+            "multi_match_s1_f05": 0.9262999732537603
+          },
+          "eval_runtime_sec": 5.235,
+          "decoder_stats": {
+            "decoder_variant": "V4.1-C(m=0.05)",
+            "target_conflicts_before": 3,
+            "excess_assignments_removed": 3,
+            "gt_positives_removed": 0,
+            "gt_negatives_removed": 3
+          },
+          "delta_vs_v4_baseline": {
+            "delta_macro_f05": 0.007234,
+            "delta_macro_precision": 0.003073,
+            "delta_macro_recall": 0.015733,
+            "delta_tp": 280,
+            "delta_fp": 15,
+            "delta_fn": -280,
+            "delta_s2_f05": 0.003594,
+            "delta_s3_f05": 0.003884,
+            "delta_india_f05": 0.009914,
+            "delta_us_f05": 0.005372
+          }
+        }
+      }
+    }
+  }
+}

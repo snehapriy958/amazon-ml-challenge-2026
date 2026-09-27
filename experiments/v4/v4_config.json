@@ -1,0 +1,87 @@
+{
+  "pipeline_version": "V4",
+  "random_seed": 42,
+  "baseline_model": "C_LightGBM_LambdaRank (experiments/v3/models/v3_model_c_lambdarank.joblib)",
+  "v3_feature_count": 88,
+  "v4_extra_pair_feature_count": 12,
+  "v4_competition_feature_count": 18,
+  "v4_total_feature_count": 118,
+  "v4_extra_pair_features": [
+    "v4_exact_abbrev_name",
+    "v4_exact_acronym",
+    "v4_exact_collapsed_name",
+    "v4_exact_abbrev_addr",
+    "v4_abbrev_name_token_jaccard",
+    "v4_abbrev_addr_token_jaccard",
+    "v4_abbrev_name_char_3gram_jaccard",
+    "v4_postal_prefix3_match",
+    "v4_numeric_token_conflict",
+    "v4_retrieval_source_count",
+    "v4_has_exact_channel",
+    "v4_is_rescued_candidate"
+  ],
+  "v4_competition_features": [
+    "v3_raw_score",
+    "v3_base_prob",
+    "s1_rank",
+    "s1_rank_inv",
+    "s1_margin_to_best_prob",
+    "s1_margin_to_second_prob",
+    "s1_margin_to_best_raw",
+    "s1_margin_to_second_raw",
+    "target_rank",
+    "target_rank_inv",
+    "target_margin_to_best_prob",
+    "target_margin_to_second_prob",
+    "target_competitor_count",
+    "target_competitor_count_995",
+    "s1_count_above_050",
+    "s1_count_above_090",
+    "s1_count_above_098",
+    "s1_count_above_995"
+  ],
+  "candidate_rescue": {
+    "channels": [
+      "char_3gram_rescue",
+      "numeric_address_rescue",
+      "reverse_target_to_s1_rescue",
+      "optional_tfidf_svd32_embedding_rescue"
+    ],
+    "embeddings_add_candidates_only": true,
+    "embeddings_never_decide_matches": true,
+    "rescued_confirmation_threshold": 0.999
+  },
+  "normalization": {
+    "unicode_diacritic_folding": true,
+    "indic_iscii_transliteration": true,
+    "acronym_extraction": true,
+    "collapsed_initials": true,
+    "challenge_derived_abbreviations": true,
+    "preserve_original_representation": true
+  },
+  "entity_policy": {
+    "t_us": 0.995,
+    "t_in": 0.995,
+    "t_default": 0.995,
+    "bonus_agree": 0.0,
+    "pen_conflict": 0.0,
+    "pen_branch": 0.0,
+    "max_k": 6,
+    "rescue_floor": 0.965,
+    "rescue_margin": 1.0
+  },
+  "target_exclusivity_decoder": {
+    "variant": "V4.1-C(0.05)",
+    "margin": 0.05,
+    "max_target_multiplicity": 1
+  },
+  "blend_alpha": 0.0,
+  "pre_inference_gates": {
+    "candidate_recall_ge_v3_all_pools": true,
+    "final_holdout_f05_ge_v3": true,
+    "internal_check_no_regression": true,
+    "dev_3000_f05_ge_v3": true,
+    "combined_5000_f05_ge_v3": true,
+    "ALL_GATES_PASSED": true
+  }
+}

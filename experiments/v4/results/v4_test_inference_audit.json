@@ -1,0 +1,42 @@
+{
+  "pipeline_version": "V4",
+  "status": "PASS",
+  "outputs": {
+    "v4_matching_results_path": "experiments\\v4\\output\\v4_matching_results.tsv",
+    "v4_matching_results_size_mb": 84.35,
+    "v4_candidate_pairs_path": "experiments\\v4\\output\\v4_candidate_pairs.tsv",
+    "v4_candidate_pairs_size_mb": 10689.89
+  },
+  "v3_baseline_test_summary": {
+    "total_s1_rows": 1732544,
+    "predicted_links": 5780057,
+    "conflicted_targets": 207403
+  },
+  "v4_test_summary": {
+    "total_s1_rows": 1732544,
+    "predicted_links": 5120064,
+    "distinct_targets_linked": 5120064,
+    "max_target_multiplicity": 1,
+    "remaining_target_conflicts": 0,
+    "s1_with_matches": 1610790,
+    "s1_with_matches_pct": 92.97,
+    "empty_s1_count": 121754,
+    "empty_s1_pct": 7.03,
+    "s2_links": 2446010,
+    "s3_links": 2674054,
+    "total_candidate_pairs": 867800823,
+    "novel_rescued_candidate_pairs": 119,
+    "confirmed_rescued_links": 65,
+    "near_tied_conflicts_model_scored": 41984,
+    "match_count_distribution": {
+      "0": 121754,
+      "1": 194246,
+      "2": 371204,
+      "3": 418098,
+      "4": 322809,
+      "5": 188718,
+      "6": 115715
+    }
+  },
+  "elapsed_sec": 222.7
+}

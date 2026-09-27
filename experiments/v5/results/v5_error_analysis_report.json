@@ -1,0 +1,2263 @@
+{
+  "v4_public_leaderboard_score": 0.917,
+  "pools": {
+    "DEV_3000": {
+      "v4_metrics": {
+        "threshold": "V4_Baseline",
+        "macro_f05": 0.9076502665914981,
+        "macro_precision": 0.9449055555555557,
+        "macro_recall": 0.833868253968254,
+        "predicted_pairs": 9061,
+        "tp": 8709,
+        "fp": 352,
+        "fn": 1819,
+        "predicted_empty_s1_count": 221,
+        "empty_s1_accuracy": 0.9506172839506173,
+        "singleton_fp_rate": 0.04938271604938271,
+        "s2_metrics": {
+          "tp": 4206,
+          "fp": 117,
+          "fn": 898,
+          "micro_prec": 0.9729354614850798,
+          "micro_rec": 0.8240595611285266,
+          "micro_f05": 0.9390069655295589
+        },
+        "s3_metrics": {
+          "tp": 4503,
+          "fp": 235,
+          "fn": 921,
+          "micro_prec": 0.9504010130856901,
+          "micro_rec": 0.8301991150442478,
+          "micro_f05": 0.9236544141778799
+        },
+        "by_country": {
+          "india": {
+            "s1_count": 1224,
+            "macro_f05": 0.8828304768832482,
+            "macro_prec": 0.9188589324618737,
+            "macro_rec": 0.8151581465919701
+          },
+          "us": {
+            "s1_count": 1776,
+            "macro_f05": 0.9247557973363727,
+            "macro_prec": 0.9628566066066065,
+            "macro_rec": 0.8467630577005578
+          }
+        },
+        "by_cardinality": {
+          "empty_s1_f05": 0.9506172839506173,
+          "single_match_s1_f05": 0.7549799973473738,
+          "multi_match_s1_f05": 0.9143510505446252
+        }
+      },
+      "decoder_stats": {
+        "decoder_variant": "V4.1-C(m=0.05)",
+        "target_conflicts_before": 3,
+        "excess_assignments_removed": 3,
+        "gt_positives_removed": 0,
+        "gt_negatives_removed": 3
+      },
+      "fp_total": 352,
+      "fn_total": 1819,
+      "fn_retrieved": 1464,
+      "fn_unretrieved": 355,
+      "fp_by_country": {
+        "india": 227,
+        "us": 125
+      },
+      "fp_by_source": {
+        "S3": 235,
+        "S2": 117
+      },
+      "fn_by_country": {
+        "india": 820,
+        "us": 999
+      },
+      "fn_by_source": {
+        "S2": 898,
+        "S3": 921
+      },
+      "fp_categories": {
+        "wrong branch / same name": 237,
+        "building-number conflict": 38,
+        "target competition": 20,
+        "name collision": 18,
+        "wrong address": 15,
+        "multilingual/transliteration": 9,
+        "abbreviation": 8,
+        "other": 7
+      },
+      "fn_categories": {
+        "building-number conflict": 505,
+        "abbreviation": 395,
+        "retrieval failure": 355,
+        "multilingual/transliteration": 188,
+        "name collision": 142,
+        "other": 141,
+        "wrong address": 52,
+        "wrong branch / same name": 40,
+        "numeric conflict": 1
+      },
+      "top_20_fp_patterns": [
+        {
+          "pattern": "INDIA | S3 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 86
+        },
+        {
+          "pattern": "US | S2 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 54
+        },
+        {
+          "pattern": "US | S3 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 51
+        },
+        {
+          "pattern": "INDIA | S2 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 26
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_conflict | has_other_true_S1_owner",
+          "count": 18
+        },
+        {
+          "pattern": "INDIA | S3 | target competition | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 16
+        },
+        {
+          "pattern": "INDIA | S3 | name collision | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 9
+        },
+        {
+          "pattern": "INDIA | S2 | name collision | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 9
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 7
+        },
+        {
+          "pattern": "INDIA | S3 | wrong branch / same name | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 7
+        },
+        {
+          "pattern": "INDIA | S3 | wrong address | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 6
+        },
+        {
+          "pattern": "INDIA | S2 | multilingual/transliteration | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 5
+        },
+        {
+          "pattern": "INDIA | S3 | other | bldg_match | postal_none | num_agree | unowned_target_in_GT",
+          "count": 5
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_conflict | unowned_target_in_GT",
+          "count": 4
+        },
+        {
+          "pattern": "INDIA | S3 | wrong address | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 4
+        },
+        {
+          "pattern": "US | S3 | wrong address | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 3
+        },
+        {
+          "pattern": "INDIA | S2 | wrong branch / same name | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 3
+        },
+        {
+          "pattern": "INDIA | S3 | wrong branch / same name | bldg_none | postal_none | num_none | unowned_target_in_GT",
+          "count": 3
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | bldg_conflict | postal_none | num_conflict | has_other_true_S1_owner",
+          "count": 3
+        },
+        {
+          "pattern": "INDIA | S3 | multilingual/transliteration | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 2
+        }
+      ],
+      "top_20_fn_patterns": [
+        {
+          "pattern": "INDIA | S2 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 124
+        },
+        {
+          "pattern": "INDIA | S3 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 93
+        },
+        {
+          "pattern": "US | S3 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 87
+        },
+        {
+          "pattern": "US | S3 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 81
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 76
+        },
+        {
+          "pattern": "US | S3 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 57
+        },
+        {
+          "pattern": "US | S2 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 57
+        },
+        {
+          "pattern": "US | S2 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 42
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 40
+        },
+        {
+          "pattern": "INDIA | S3 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 35
+        },
+        {
+          "pattern": "INDIA | S2 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 34
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | below_policy_threshold | p in [0.980,0.990)",
+          "count": 33
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 32
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 31
+        },
+        {
+          "pattern": "US | S3 | abbreviation | below_policy_threshold | p < 0.900",
+          "count": 31
+        },
+        {
+          "pattern": "US | S2 | abbreviation | below_policy_threshold | p < 0.900",
+          "count": 30
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 30
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 29
+        },
+        {
+          "pattern": "INDIA | S3 | name collision | below_policy_threshold | p in [0.900,0.980)",
+          "count": 28
+        },
+        {
+          "pattern": "US | S3 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 28
+        }
+      ],
+      "fp_feature_means": {
+        "model_probability": 0.9974,
+        "raw_model_score": 5.1161,
+        "owner_score": 0.5819,
+        "s1_rank": 3.8097,
+        "target_rank": 1.0,
+        "target_competitor_count": 1.0597,
+        "core_name_token_set": 0.9135,
+        "norm_addr_token_set": 0.2734,
+        "building_number_match_rate": 0.2202,
+        "building_number_conflict_rate": 0.108,
+        "unit_number_conflict_rate": 0.0,
+        "postal_match_rate": 0.0,
+        "postal_conflict_rate": 0.0,
+        "numeric_token_jaccard": 0.2,
+        "v4_numeric_token_conflict_rate": 0.0824,
+        "retrieval_source_count": 2.7358,
+        "rescued_rate": 0.0028,
+        "has_true_owner_in_full_catalog_rate": 0.9176,
+        "s1_has_other_cand_with_stronger_evidence_rate": 0.8438
+      },
+      "fn_retrieved_feature_means": {
+        "model_probability": 0.8563,
+        "raw_model_score": 2.2326,
+        "owner_score": 0.7654,
+        "s1_rank": 4.9536,
+        "core_name_token_set": 0.8275,
+        "norm_addr_token_set": 0.6779,
+        "building_number_match_rate": 0.2766,
+        "building_number_conflict_rate": 0.3449,
+        "postal_match_rate": 0.0007,
+        "postal_conflict_rate": 0.0,
+        "numeric_token_jaccard": 0.3085,
+        "retrieval_source_count": 2.4563
+      },
+      "singleton_empty_s1_analysis": {
+        "total_s1": 3000,
+        "gt_empty_s1": 162,
+        "pred_empty_s1": 221,
+        "true_empty_correctly_predicted_empty": 154,
+        "singleton_fp_s1_count": 8,
+        "false_empty_s1_count": 67
+      },
+      "near_threshold_bands": {
+        "[0.900, 0.950)": {
+          "total_pairs": 1336,
+          "gt_positives": 203,
+          "gt_negatives": 1133,
+          "empirical_precision": 0.1519,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.950, 0.980)": {
+          "total_pairs": 1355,
+          "gt_positives": 285,
+          "gt_negatives": 1070,
+          "empirical_precision": 0.2103,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.980, 0.990)": {
+          "total_pairs": 760,
+          "gt_positives": 234,
+          "gt_negatives": 526,
+          "empirical_precision": 0.3079,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.990, 0.993)": {
+          "total_pairs": 307,
+          "gt_positives": 88,
+          "gt_negatives": 219,
+          "empirical_precision": 0.2866,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.993, 0.995)": {
+          "total_pairs": 244,
+          "gt_positives": 106,
+          "gt_negatives": 138,
+          "empirical_precision": 0.4344,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.995, 0.997)": {
+          "total_pairs": 346,
+          "gt_positives": 173,
+          "gt_negatives": 173,
+          "empirical_precision": 0.5,
+          "predicted_positive_by_v4": 301
+        },
+        "[0.997, 0.999)": {
+          "total_pairs": 622,
+          "gt_positives": 437,
+          "gt_negatives": 185,
+          "empirical_precision": 0.7026,
+          "predicted_positive_by_v4": 574
+        },
+        "[0.999, 1.000]": {
+          "total_pairs": 8244,
+          "gt_positives": 8175,
+          "gt_negatives": 69,
+          "empirical_precision": 0.9916,
+          "predicted_positive_by_v4": 8186
+        }
+      },
+      "fps_with_stronger_s1_sibling": 297
+    },
+    "INTERNAL_CHECK_1000": {
+      "v4_metrics": {
+        "threshold": "V4_Baseline",
+        "macro_f05": 0.9207655899454551,
+        "macro_precision": 0.9592333333333334,
+        "macro_recall": 0.8397837301587301,
+        "predicted_pairs": 2903,
+        "tp": 2859,
+        "fp": 44,
+        "fn": 577,
+        "predicted_empty_s1_count": 71,
+        "empty_s1_accuracy": 0.9791666666666666,
+        "singleton_fp_rate": 0.02083333333333337,
+        "s2_metrics": {
+          "tp": 1386,
+          "fp": 18,
+          "fn": 267,
+          "micro_prec": 0.9871794871794872,
+          "micro_rec": 0.838475499092559,
+          "micro_f05": 0.9533635988444078
+        },
+        "s3_metrics": {
+          "tp": 1473,
+          "fp": 26,
+          "fn": 310,
+          "micro_prec": 0.9826551034022681,
+          "micro_rec": 0.826135726303982,
+          "micro_f05": 0.9467797917470112
+        },
+        "by_country": {
+          "india": {
+            "s1_count": 407,
+            "macro_f05": 0.8924126928173673,
+            "macro_prec": 0.9361179361179361,
+            "macro_rec": 0.8007790257790257
+          },
+          "us": {
+            "s1_count": 593,
+            "macro_f05": 0.9402253355291509,
+            "macro_prec": 0.9750983698707137,
+            "macro_rec": 0.8665542439572794
+          }
+        },
+        "by_cardinality": {
+          "empty_s1_f05": 0.9791666666666666,
+          "single_match_s1_f05": 0.7529239766081871,
+          "multi_match_s1_f05": 0.9321271321041471
+        }
+      },
+      "decoder_stats": {
+        "decoder_variant": "V4.1-C(m=0.05)",
+        "target_conflicts_before": 0,
+        "excess_assignments_removed": 0,
+        "gt_positives_removed": 0,
+        "gt_negatives_removed": 0
+      },
+      "fp_total": 44,
+      "fn_total": 577,
+      "fn_retrieved": 463,
+      "fn_unretrieved": 114,
+      "fp_by_country": {
+        "us": 21,
+        "india": 23
+      },
+      "fp_by_source": {
+        "S2": 18,
+        "S3": 26
+      },
+      "fn_by_country": {
+        "india": 291,
+        "us": 286
+      },
+      "fn_by_source": {
+        "S2": 267,
+        "S3": 310
+      },
+      "fp_categories": {
+        "wrong branch / same name": 29,
+        "building-number conflict": 6,
+        "target competition": 4,
+        "wrong address": 2,
+        "name collision": 1,
+        "abbreviation": 1,
+        "other": 1
+      },
+      "fn_categories": {
+        "building-number conflict": 149,
+        "abbreviation": 135,
+        "retrieval failure": 114,
+        "multilingual/transliteration": 64,
+        "other": 57,
+        "name collision": 36,
+        "wrong address": 15,
+        "wrong branch / same name": 7
+      },
+      "top_20_fp_patterns": [
+        {
+          "pattern": "US | S3 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 9
+        },
+        {
+          "pattern": "INDIA | S3 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 9
+        },
+        {
+          "pattern": "US | S2 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 5
+        },
+        {
+          "pattern": "INDIA | S2 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 5
+        },
+        {
+          "pattern": "INDIA | S2 | target competition | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 2
+        },
+        {
+          "pattern": "US | S3 | wrong address | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 2
+        },
+        {
+          "pattern": "INDIA | S3 | target competition | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_agree | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | bldg_conflict | postal_none | num_conflict | has_other_true_S1_owner",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S3 | name collision | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | bldg_conflict | postal_none | num_agree | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "US | S2 | abbreviation | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 1
+        },
+        {
+          "pattern": "US | S2 | target competition | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 1
+        },
+        {
+          "pattern": "US | S3 | building-number conflict | bldg_conflict | postal_none | num_agree | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_conflict | has_other_true_S1_owner",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S3 | other | bldg_match | postal_none | num_agree | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | bldg_conflict | postal_none | num_conflict | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "US | S2 | wrong branch / same name | bldg_none | postal_none | num_none | unowned_target_in_GT",
+          "count": 1
+        }
+      ],
+      "top_20_fn_patterns": [
+        {
+          "pattern": "INDIA | S3 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 44
+        },
+        {
+          "pattern": "INDIA | S2 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 30
+        },
+        {
+          "pattern": "US | S3 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 25
+        },
+        {
+          "pattern": "INDIA | S2 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 18
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 18
+        },
+        {
+          "pattern": "US | S3 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 18
+        },
+        {
+          "pattern": "US | S2 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 17
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 17
+        },
+        {
+          "pattern": "US | S3 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 15
+        },
+        {
+          "pattern": "US | S2 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 15
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 14
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 13
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 13
+        },
+        {
+          "pattern": "INDIA | S3 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 13
+        },
+        {
+          "pattern": "US | S3 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 12
+        },
+        {
+          "pattern": "US | S3 | abbreviation | below_policy_threshold | p < 0.900",
+          "count": 10
+        },
+        {
+          "pattern": "US | S2 | name collision | below_policy_threshold | p in [0.900,0.980)",
+          "count": 9
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | below_policy_threshold | p in [0.980,0.990)",
+          "count": 9
+        },
+        {
+          "pattern": "INDIA | S3 | multilingual/transliteration | below_policy_threshold | p in [0.900,0.980)",
+          "count": 9
+        },
+        {
+          "pattern": "US | S2 | multilingual/transliteration | below_policy_threshold | p < 0.900",
+          "count": 8
+        }
+      ],
+      "fp_feature_means": {
+        "model_probability": 0.9967,
+        "raw_model_score": 4.8063,
+        "owner_score": 0.5909,
+        "s1_rank": 3.25,
+        "target_rank": 1.0,
+        "target_competitor_count": 1.0455,
+        "core_name_token_set": 0.943,
+        "norm_addr_token_set": 0.2604,
+        "building_number_match_rate": 0.1364,
+        "building_number_conflict_rate": 0.1364,
+        "unit_number_conflict_rate": 0.0,
+        "postal_match_rate": 0.0,
+        "postal_conflict_rate": 0.0,
+        "numeric_token_jaccard": 0.178,
+        "v4_numeric_token_conflict_rate": 0.0682,
+        "retrieval_source_count": 2.75,
+        "rescued_rate": 0.0,
+        "has_true_owner_in_full_catalog_rate": 0.8636,
+        "s1_has_other_cand_with_stronger_evidence_rate": 0.8182
+      },
+      "fn_retrieved_feature_means": {
+        "model_probability": 0.8859,
+        "raw_model_score": 2.3138,
+        "owner_score": 0.755,
+        "s1_rank": 4.5767,
+        "core_name_token_set": 0.8373,
+        "norm_addr_token_set": 0.6342,
+        "building_number_match_rate": 0.2473,
+        "building_number_conflict_rate": 0.3218,
+        "postal_match_rate": 0.0,
+        "postal_conflict_rate": 0.0,
+        "numeric_token_jaccard": 0.3035,
+        "retrieval_source_count": 2.4752
+      },
+      "singleton_empty_s1_analysis": {
+        "total_s1": 1000,
+        "gt_empty_s1": 48,
+        "pred_empty_s1": 71,
+        "true_empty_correctly_predicted_empty": 47,
+        "singleton_fp_s1_count": 1,
+        "false_empty_s1_count": 24
+      },
+      "near_threshold_bands": {
+        "[0.900, 0.950)": {
+          "total_pairs": 470,
+          "gt_positives": 77,
+          "gt_negatives": 393,
+          "empirical_precision": 0.1638,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.950, 0.980)": {
+          "total_pairs": 492,
+          "gt_positives": 110,
+          "gt_negatives": 382,
+          "empirical_precision": 0.2236,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.980, 0.990)": {
+          "total_pairs": 214,
+          "gt_positives": 62,
+          "gt_negatives": 152,
+          "empirical_precision": 0.2897,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.990, 0.993)": {
+          "total_pairs": 85,
+          "gt_positives": 31,
+          "gt_negatives": 54,
+          "empirical_precision": 0.3647,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.993, 0.995)": {
+          "total_pairs": 58,
+          "gt_positives": 31,
+          "gt_negatives": 27,
+          "empirical_precision": 0.5345,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.995, 0.997)": {
+          "total_pairs": 95,
+          "gt_positives": 64,
+          "gt_negatives": 31,
+          "empirical_precision": 0.6737,
+          "predicted_positive_by_v4": 92
+        },
+        "[0.997, 0.999)": {
+          "total_pairs": 138,
+          "gt_positives": 119,
+          "gt_negatives": 19,
+          "empirical_precision": 0.8623,
+          "predicted_positive_by_v4": 130
+        },
+        "[0.999, 1.000]": {
+          "total_pairs": 2694,
+          "gt_positives": 2692,
+          "gt_negatives": 2,
+          "empirical_precision": 0.9993,
+          "predicted_positive_by_v4": 2681
+        }
+      },
+      "fps_with_stronger_s1_sibling": 36
+    },
+    "FINAL_HOLDOUT_1000": {
+      "v4_metrics": {
+        "threshold": "V4_Baseline",
+        "macro_f05": 0.9156036267567879,
+        "macro_precision": 0.9516166666666666,
+        "macro_recall": 0.8434357142857143,
+        "predicted_pairs": 2953,
+        "tp": 2872,
+        "fp": 81,
+        "fn": 558,
+        "predicted_empty_s1_count": 81,
+        "empty_s1_accuracy": 0.9666666666666667,
+        "singleton_fp_rate": 0.033333333333333326,
+        "s2_metrics": {
+          "tp": 1404,
+          "fp": 23,
+          "fn": 276,
+          "micro_prec": 0.9838822704975473,
+          "micro_rec": 0.8357142857142857,
+          "micro_f05": 0.9501894964807797
+        },
+        "s3_metrics": {
+          "tp": 1468,
+          "fp": 58,
+          "fn": 282,
+          "micro_prec": 0.9619921363040629,
+          "micro_rec": 0.8388571428571429,
+          "micro_f05": 0.9345556404379932
+        },
+        "by_country": {
+          "india": {
+            "s1_count": 419,
+            "macro_f05": 0.9059956906520972,
+            "macro_prec": 0.9463802704852824,
+            "macro_rec": 0.8292817365609728
+          },
+          "us": {
+            "s1_count": 581,
+            "macro_f05": 0.9225325858408938,
+            "macro_prec": 0.9553930005737236,
+            "macro_rec": 0.8536431440045897
+          }
+        },
+        "by_cardinality": {
+          "empty_s1_f05": 0.9666666666666667,
+          "single_match_s1_f05": 0.8138138138138138,
+          "multi_match_s1_f05": 0.920763746575711
+        }
+      },
+      "decoder_stats": {
+        "decoder_variant": "V4.1-C(m=0.05)",
+        "target_conflicts_before": 0,
+        "excess_assignments_removed": 0,
+        "gt_positives_removed": 0,
+        "gt_negatives_removed": 0
+      },
+      "fp_total": 81,
+      "fn_total": 558,
+      "fn_retrieved": 469,
+      "fn_unretrieved": 89,
+      "fp_by_country": {
+        "india": 50,
+        "us": 31
+      },
+      "fp_by_source": {
+        "S3": 58,
+        "S2": 23
+      },
+      "fn_by_country": {
+        "india": 261,
+        "us": 297
+      },
+      "fn_by_source": {
+        "S3": 282,
+        "S2": 276
+      },
+      "fp_categories": {
+        "wrong branch / same name": 52,
+        "building-number conflict": 13,
+        "target competition": 5,
+        "abbreviation": 4,
+        "name collision": 3,
+        "wrong address": 2,
+        "multilingual/transliteration": 1,
+        "other": 1
+      },
+      "fn_categories": {
+        "building-number conflict": 157,
+        "abbreviation": 114,
+        "retrieval failure": 89,
+        "multilingual/transliteration": 67,
+        "other": 52,
+        "name collision": 42,
+        "wrong branch / same name": 19,
+        "wrong address": 18
+      },
+      "top_20_fp_patterns": [
+        {
+          "pattern": "INDIA | S3 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 21
+        },
+        {
+          "pattern": "US | S3 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 13
+        },
+        {
+          "pattern": "US | S2 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 11
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_conflict | has_other_true_S1_owner",
+          "count": 6
+        },
+        {
+          "pattern": "INDIA | S3 | target competition | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 4
+        },
+        {
+          "pattern": "INDIA | S2 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 3
+        },
+        {
+          "pattern": "INDIA | S3 | wrong branch / same name | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 3
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | bldg_conflict | postal_none | num_conflict | unowned_target_in_GT",
+          "count": 2
+        },
+        {
+          "pattern": "US | S2 | abbreviation | bldg_match | postal_none | num_agree | unowned_target_in_GT",
+          "count": 2
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | bldg_conflict | postal_none | num_conflict | has_other_true_S1_owner",
+          "count": 2
+        },
+        {
+          "pattern": "INDIA | S3 | name collision | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 2
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S3 | multilingual/transliteration | bldg_match | postal_none | num_agree | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S2 | target competition | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 1
+        },
+        {
+          "pattern": "US | S3 | abbreviation | bldg_match | postal_none | num_agree | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_agree | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S3 | other | bldg_match | postal_none | num_agree | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | bldg_conflict | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 1
+        },
+        {
+          "pattern": "INDIA | S3 | name collision | bldg_match | postal_none | num_agree | unowned_target_in_GT",
+          "count": 1
+        },
+        {
+          "pattern": "US | S3 | wrong address | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 1
+        }
+      ],
+      "top_20_fn_patterns": [
+        {
+          "pattern": "INDIA | S2 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 33
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 27
+        },
+        {
+          "pattern": "INDIA | S3 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 27
+        },
+        {
+          "pattern": "US | S3 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 21
+        },
+        {
+          "pattern": "INDIA | S3 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 17
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 17
+        },
+        {
+          "pattern": "US | S3 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 17
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 16
+        },
+        {
+          "pattern": "US | S3 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 16
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 13
+        },
+        {
+          "pattern": "US | S2 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 12
+        },
+        {
+          "pattern": "INDIA | S2 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 11
+        },
+        {
+          "pattern": "US | S2 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 10
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 9
+        },
+        {
+          "pattern": "US | S3 | abbreviation | below_policy_threshold | p < 0.900",
+          "count": 9
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 9
+        },
+        {
+          "pattern": "US | S2 | multilingual/transliteration | below_policy_threshold | p in [0.900,0.980)",
+          "count": 8
+        },
+        {
+          "pattern": "US | S2 | abbreviation | below_policy_threshold | p < 0.900",
+          "count": 8
+        },
+        {
+          "pattern": "INDIA | S3 | name collision | below_policy_threshold | p in [0.900,0.980)",
+          "count": 8
+        },
+        {
+          "pattern": "INDIA | S2 | multilingual/transliteration | below_policy_threshold | p in [0.900,0.980)",
+          "count": 8
+        }
+      ],
+      "fp_feature_means": {
+        "model_probability": 0.9974,
+        "raw_model_score": 5.2246,
+        "owner_score": 0.6243,
+        "s1_rank": 3.679,
+        "target_rank": 1.0,
+        "target_competitor_count": 1.0123,
+        "core_name_token_set": 0.9428,
+        "norm_addr_token_set": 0.3475,
+        "building_number_match_rate": 0.2222,
+        "building_number_conflict_rate": 0.1605,
+        "unit_number_conflict_rate": 0.0,
+        "postal_match_rate": 0.0,
+        "postal_conflict_rate": 0.0,
+        "numeric_token_jaccard": 0.2062,
+        "v4_numeric_token_conflict_rate": 0.1235,
+        "retrieval_source_count": 2.6543,
+        "rescued_rate": 0.0123,
+        "has_true_owner_in_full_catalog_rate": 0.8765,
+        "s1_has_other_cand_with_stronger_evidence_rate": 0.7531
+      },
+      "fn_retrieved_feature_means": {
+        "model_probability": 0.8523,
+        "raw_model_score": 2.1857,
+        "owner_score": 0.77,
+        "s1_rank": 4.951,
+        "core_name_token_set": 0.8325,
+        "norm_addr_token_set": 0.6856,
+        "building_number_match_rate": 0.2751,
+        "building_number_conflict_rate": 0.3348,
+        "postal_match_rate": 0.0,
+        "postal_conflict_rate": 0.0,
+        "numeric_token_jaccard": 0.3353,
+        "retrieval_source_count": 2.4179
+      },
+      "singleton_empty_s1_analysis": {
+        "total_s1": 1000,
+        "gt_empty_s1": 60,
+        "pred_empty_s1": 81,
+        "true_empty_correctly_predicted_empty": 58,
+        "singleton_fp_s1_count": 2,
+        "false_empty_s1_count": 23
+      },
+      "near_threshold_bands": {
+        "[0.900, 0.950)": {
+          "total_pairs": 505,
+          "gt_positives": 82,
+          "gt_negatives": 423,
+          "empirical_precision": 0.1624,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.950, 0.980)": {
+          "total_pairs": 485,
+          "gt_positives": 89,
+          "gt_negatives": 396,
+          "empirical_precision": 0.1835,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.980, 0.990)": {
+          "total_pairs": 232,
+          "gt_positives": 48,
+          "gt_negatives": 184,
+          "empirical_precision": 0.2069,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.990, 0.993)": {
+          "total_pairs": 90,
+          "gt_positives": 33,
+          "gt_negatives": 57,
+          "empirical_precision": 0.3667,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.993, 0.995)": {
+          "total_pairs": 70,
+          "gt_positives": 38,
+          "gt_negatives": 32,
+          "empirical_precision": 0.5429,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.995, 0.997)": {
+          "total_pairs": 89,
+          "gt_positives": 52,
+          "gt_negatives": 37,
+          "empirical_precision": 0.5843,
+          "predicted_positive_by_v4": 84
+        },
+        "[0.997, 0.999)": {
+          "total_pairs": 158,
+          "gt_positives": 126,
+          "gt_negatives": 32,
+          "empirical_precision": 0.7975,
+          "predicted_positive_by_v4": 146
+        },
+        "[0.999, 1.000]": {
+          "total_pairs": 2741,
+          "gt_positives": 2724,
+          "gt_negatives": 17,
+          "empirical_precision": 0.9938,
+          "predicted_positive_by_v4": 2723
+        }
+      },
+      "fps_with_stronger_s1_sibling": 61
+    },
+    "COMBINED_5000": {
+      "v4_metrics": {
+        "threshold": "V4_Baseline",
+        "macro_f05": 0.9119159513472954,
+        "macro_precision": 0.9492133333333331,
+        "macro_recall": 0.8369648412698413,
+        "predicted_pairs": 14916,
+        "tp": 14440,
+        "fp": 476,
+        "fn": 2954,
+        "predicted_empty_s1_count": 373,
+        "empty_s1_accuracy": 0.9592592592592593,
+        "singleton_fp_rate": 0.040740740740740744,
+        "s2_metrics": {
+          "tp": 6996,
+          "fp": 158,
+          "fn": 1441,
+          "micro_prec": 0.977914453452614,
+          "micro_rec": 0.8292046936114733,
+          "micro_f05": 0.9440531131082504
+        },
+        "s3_metrics": {
+          "tp": 7444,
+          "fp": 318,
+          "fn": 1513,
+          "micro_prec": 0.9590311775315641,
+          "micro_rec": 0.8310818354359719,
+          "micro_f05": 0.9303837020372454
+        },
+        "by_country": {
+          "india": {
+            "s1_count": 2050,
+            "macro_f05": 0.8895943435730407,
+            "macro_prec": 0.9281544715447154,
+            "macro_rec": 0.8151900890437476
+          },
+          "us": {
+            "s1_count": 2950,
+            "macro_f05": 0.9274275770887267,
+            "macro_prec": 0.9638474576271187,
+            "macro_rec": 0.8520964487489912
+          }
+        },
+        "by_cardinality": {
+          "empty_s1_f05": 0.9592592592592593,
+          "single_match_s1_f05": 0.7683903642558031,
+          "multi_match_s1_f05": 0.9191925679702085
+        }
+      },
+      "decoder_stats": {
+        "decoder_variant": "V4.1-C(m=0.05)",
+        "target_conflicts_before": 4,
+        "excess_assignments_removed": 4,
+        "gt_positives_removed": 0,
+        "gt_negatives_removed": 4
+      },
+      "fp_total": 476,
+      "fn_total": 2954,
+      "fn_retrieved": 2396,
+      "fn_unretrieved": 558,
+      "fp_by_country": {
+        "india": 299,
+        "us": 177
+      },
+      "fp_by_source": {
+        "S3": 318,
+        "S2": 158
+      },
+      "fn_by_country": {
+        "india": 1372,
+        "us": 1582
+      },
+      "fn_by_source": {
+        "S3": 1513,
+        "S2": 1441
+      },
+      "fp_categories": {
+        "wrong branch / same name": 317,
+        "building-number conflict": 57,
+        "target competition": 29,
+        "name collision": 22,
+        "wrong address": 19,
+        "abbreviation": 13,
+        "multilingual/transliteration": 10,
+        "other": 9
+      },
+      "fn_categories": {
+        "building-number conflict": 811,
+        "abbreviation": 644,
+        "retrieval failure": 558,
+        "multilingual/transliteration": 319,
+        "other": 250,
+        "name collision": 220,
+        "wrong address": 85,
+        "wrong branch / same name": 66,
+        "numeric conflict": 1
+      },
+      "top_20_fp_patterns": [
+        {
+          "pattern": "INDIA | S3 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 115
+        },
+        {
+          "pattern": "US | S3 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 73
+        },
+        {
+          "pattern": "US | S2 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 70
+        },
+        {
+          "pattern": "INDIA | S2 | wrong branch / same name | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 34
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_conflict | has_other_true_S1_owner",
+          "count": 25
+        },
+        {
+          "pattern": "INDIA | S3 | target competition | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 21
+        },
+        {
+          "pattern": "INDIA | S3 | name collision | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 12
+        },
+        {
+          "pattern": "INDIA | S3 | wrong branch / same name | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 10
+        },
+        {
+          "pattern": "INDIA | S2 | name collision | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 9
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 8
+        },
+        {
+          "pattern": "INDIA | S3 | other | bldg_match | postal_none | num_agree | unowned_target_in_GT",
+          "count": 7
+        },
+        {
+          "pattern": "INDIA | S3 | wrong address | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 7
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | bldg_conflict | postal_none | num_conflict | has_other_true_S1_owner",
+          "count": 6
+        },
+        {
+          "pattern": "US | S3 | wrong address | bldg_none | postal_none | num_none | has_other_true_S1_owner",
+          "count": 6
+        },
+        {
+          "pattern": "INDIA | S2 | target competition | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 5
+        },
+        {
+          "pattern": "INDIA | S2 | multilingual/transliteration | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 5
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | bldg_conflict | postal_none | num_conflict | unowned_target_in_GT",
+          "count": 4
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_agree | unowned_target_in_GT",
+          "count": 4
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | bldg_conflict | postal_none | num_conflict | unowned_target_in_GT",
+          "count": 4
+        },
+        {
+          "pattern": "INDIA | S3 | wrong address | bldg_match | postal_none | num_agree | has_other_true_S1_owner",
+          "count": 4
+        }
+      ],
+      "top_20_fn_patterns": [
+        {
+          "pattern": "INDIA | S2 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 187
+        },
+        {
+          "pattern": "INDIA | S3 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 164
+        },
+        {
+          "pattern": "US | S3 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 123
+        },
+        {
+          "pattern": "US | S3 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 123
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 121
+        },
+        {
+          "pattern": "US | S3 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 91
+        },
+        {
+          "pattern": "US | S2 | retrieval failure | unretrieved_by_v4_blocker | unretrieved",
+          "count": 84
+        },
+        {
+          "pattern": "US | S2 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 69
+        },
+        {
+          "pattern": "INDIA | S3 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 65
+        },
+        {
+          "pattern": "INDIA | S2 | abbreviation | below_policy_threshold | p in [0.900,0.980)",
+          "count": 63
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 62
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 60
+        },
+        {
+          "pattern": "INDIA | S2 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 59
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 56
+        },
+        {
+          "pattern": "INDIA | S3 | building-number conflict | below_policy_threshold | p < 0.900",
+          "count": 53
+        },
+        {
+          "pattern": "US | S3 | abbreviation | below_policy_threshold | p < 0.900",
+          "count": 50
+        },
+        {
+          "pattern": "US | S3 | building-number conflict | below_policy_threshold | p in [0.900,0.980)",
+          "count": 47
+        },
+        {
+          "pattern": "US | S2 | abbreviation | below_policy_threshold | p < 0.900",
+          "count": 43
+        },
+        {
+          "pattern": "INDIA | S3 | name collision | below_policy_threshold | p in [0.900,0.980)",
+          "count": 43
+        },
+        {
+          "pattern": "US | S2 | building-number conflict | below_policy_threshold | p in [0.980,0.990)",
+          "count": 40
+        }
+      ],
+      "fp_feature_means": {
+        "model_probability": 0.9974,
+        "raw_model_score": 5.1071,
+        "owner_score": 0.5901,
+        "s1_rank": 3.7395,
+        "target_rank": 1.0,
+        "target_competitor_count": 1.0735,
+        "core_name_token_set": 0.921,
+        "norm_addr_token_set": 0.2854,
+        "building_number_match_rate": 0.2132,
+        "building_number_conflict_rate": 0.1197,
+        "unit_number_conflict_rate": 0.0,
+        "postal_match_rate": 0.0,
+        "postal_conflict_rate": 0.0,
+        "numeric_token_jaccard": 0.1995,
+        "v4_numeric_token_conflict_rate": 0.0882,
+        "retrieval_source_count": 2.7227,
+        "rescued_rate": 0.0042,
+        "has_true_owner_in_full_catalog_rate": 0.9055,
+        "s1_has_other_cand_with_stronger_evidence_rate": 0.8256
+      },
+      "fn_retrieved_feature_means": {
+        "model_probability": 0.8613,
+        "raw_model_score": 2.2391,
+        "owner_score": 0.7643,
+        "s1_rank": 4.8802,
+        "core_name_token_set": 0.8304,
+        "norm_addr_token_set": 0.671,
+        "building_number_match_rate": 0.2707,
+        "building_number_conflict_rate": 0.3385,
+        "postal_match_rate": 0.0004,
+        "postal_conflict_rate": 0.0,
+        "numeric_token_jaccard": 0.3128,
+        "retrieval_source_count": 2.4524
+      },
+      "singleton_empty_s1_analysis": {
+        "total_s1": 5000,
+        "gt_empty_s1": 270,
+        "pred_empty_s1": 373,
+        "true_empty_correctly_predicted_empty": 259,
+        "singleton_fp_s1_count": 11,
+        "false_empty_s1_count": 114
+      },
+      "near_threshold_bands": {
+        "[0.900, 0.950)": {
+          "total_pairs": 2311,
+          "gt_positives": 362,
+          "gt_negatives": 1949,
+          "empirical_precision": 0.1566,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.950, 0.980)": {
+          "total_pairs": 2332,
+          "gt_positives": 484,
+          "gt_negatives": 1848,
+          "empirical_precision": 0.2075,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.980, 0.990)": {
+          "total_pairs": 1206,
+          "gt_positives": 344,
+          "gt_negatives": 862,
+          "empirical_precision": 0.2852,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.990, 0.993)": {
+          "total_pairs": 482,
+          "gt_positives": 152,
+          "gt_negatives": 330,
+          "empirical_precision": 0.3154,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.993, 0.995)": {
+          "total_pairs": 372,
+          "gt_positives": 175,
+          "gt_negatives": 197,
+          "empirical_precision": 0.4704,
+          "predicted_positive_by_v4": 0
+        },
+        "[0.995, 0.997)": {
+          "total_pairs": 530,
+          "gt_positives": 289,
+          "gt_negatives": 241,
+          "empirical_precision": 0.5453,
+          "predicted_positive_by_v4": 476
+        },
+        "[0.997, 0.999)": {
+          "total_pairs": 918,
+          "gt_positives": 682,
+          "gt_negatives": 236,
+          "empirical_precision": 0.7429,
+          "predicted_positive_by_v4": 850
+        },
+        "[0.999, 1.000]": {
+          "total_pairs": 13679,
+          "gt_positives": 13591,
+          "gt_negatives": 88,
+          "empirical_precision": 0.9936,
+          "predicted_positive_by_v4": 13590
+        }
+      },
+      "fps_with_stronger_s1_sibling": 393
+    }
+  },
+  "full_catalog_conflict_analysis": {
+    "total_v4_fps_combined_5000": 476,
+    "fps_with_true_s1_owner_in_full_catalog": 431,
+    "fps_with_true_s1_owner_pct": 90.55,
+    "wrong_owner_cases_count_at_m005": 54,
+    "wrong_owner_sample": [
+      {
+        "fp_s1_id": "S1-179807895",
+        "true_s1_id": "S1-250350489",
+        "target_id": "S3-856081929",
+        "country": "india",
+        "fp_owner_score": 0.8099,
+        "true_owner_score": 0.8569,
+        "owner_score_gap_fp_minus_true": -0.0469,
+        "fp_prob": 0.999973
+      },
+      {
+        "fp_s1_id": "S1-287482829",
+        "true_s1_id": "S1-798213858",
+        "target_id": "S2-706997268",
+        "country": "india",
+        "fp_owner_score": 1.1162,
+        "true_owner_score": 1.1551,
+        "owner_score_gap_fp_minus_true": -0.0389,
+        "fp_prob": 0.999165
+      },
+      {
+        "fp_s1_id": "S1-740694244",
+        "true_s1_id": "S1-139087444",
+        "target_id": "S2-308689469",
+        "country": "india",
+        "fp_owner_score": 0.6059,
+        "true_owner_score": 0.6192,
+        "owner_score_gap_fp_minus_true": -0.0132,
+        "fp_prob": 0.999309
+      },
+      {
+        "fp_s1_id": "S1-796839517",
+        "true_s1_id": "S1-340743535",
+        "target_id": "S3-796018437",
+        "country": "india",
+        "fp_owner_score": 0.8609,
+        "true_owner_score": 0.7078,
+        "owner_score_gap_fp_minus_true": 0.1531,
+        "fp_prob": 0.998829
+      },
+      {
+        "fp_s1_id": "S1-853587502",
+        "true_s1_id": "S1-258241798",
+        "target_id": "S3-4059649",
+        "country": "india",
+        "fp_owner_score": 0.7268,
+        "true_owner_score": 0.4963,
+        "owner_score_gap_fp_minus_true": 0.2305,
+        "fp_prob": 0.999874
+      },
+      {
+        "fp_s1_id": "S1-169438452",
+        "true_s1_id": "S1-374034762",
+        "target_id": "S3-199144476",
+        "country": "india",
+        "fp_owner_score": 0.803,
+        "true_owner_score": 0.821,
+        "owner_score_gap_fp_minus_true": -0.018,
+        "fp_prob": 0.999711
+      },
+      {
+        "fp_s1_id": "S1-566033137",
+        "true_s1_id": "S1-307711517",
+        "target_id": "S3-935906740",
+        "country": "us",
+        "fp_owner_score": 0.5,
+        "true_owner_score": 0.3395,
+        "owner_score_gap_fp_minus_true": 0.1605,
+        "fp_prob": 0.996305
+      },
+      {
+        "fp_s1_id": "S1-126845333",
+        "true_s1_id": "S1-621326982",
+        "target_id": "S3-763905552",
+        "country": "us",
+        "fp_owner_score": 0.5003,
+        "true_owner_score": 0.2821,
+        "owner_score_gap_fp_minus_true": 0.2182,
+        "fp_prob": 0.998075
+      },
+      {
+        "fp_s1_id": "S1-131621161",
+        "true_s1_id": "S1-875055852",
+        "target_id": "S2-393578554",
+        "country": "india",
+        "fp_owner_score": 0.4915,
+        "true_owner_score": 0.5385,
+        "owner_score_gap_fp_minus_true": -0.047,
+        "fp_prob": 0.999078
+      },
+      {
+        "fp_s1_id": "S1-131621161",
+        "true_s1_id": "S1-295406571",
+        "target_id": "S3-416014252",
+        "country": "india",
+        "fp_owner_score": 0.4946,
+        "true_owner_score": 0.3188,
+        "owner_score_gap_fp_minus_true": 0.1757,
+        "fp_prob": 0.999315
+      },
+      {
+        "fp_s1_id": "S1-131621161",
+        "true_s1_id": "S1-217570021",
+        "target_id": "S3-92528308",
+        "country": "india",
+        "fp_owner_score": 0.4927,
+        "true_owner_score": 0.3069,
+        "owner_score_gap_fp_minus_true": 0.1858,
+        "fp_prob": 0.998461
+      },
+      {
+        "fp_s1_id": "S1-236048741",
+        "true_s1_id": "S1-507635098",
+        "target_id": "S3-450640280",
+        "country": "india",
+        "fp_owner_score": 0.7496,
+        "true_owner_score": 0.7425,
+        "owner_score_gap_fp_minus_true": 0.0071,
+        "fp_prob": 0.999504
+      },
+      {
+        "fp_s1_id": "S1-236048741",
+        "true_s1_id": "S1-507635098",
+        "target_id": "S2-576756479",
+        "country": "india",
+        "fp_owner_score": 0.708,
+        "true_owner_score": 0.4208,
+        "owner_score_gap_fp_minus_true": 0.2872,
+        "fp_prob": 0.999163
+      },
+      {
+        "fp_s1_id": "S1-236048741",
+        "true_s1_id": "S1-507635098",
+        "target_id": "S3-47427169",
+        "country": "india",
+        "fp_owner_score": 0.6527,
+        "true_owner_score": 0.573,
+        "owner_score_gap_fp_minus_true": 0.0797,
+        "fp_prob": 0.999806
+      },
+      {
+        "fp_s1_id": "S1-24324535",
+        "true_s1_id": "S1-758022916",
+        "target_id": "S2-147792872",
+        "country": "india",
+        "fp_owner_score": 0.799,
+        "true_owner_score": 0.6216,
+        "owner_score_gap_fp_minus_true": 0.1774,
+        "fp_prob": 0.999563
+      },
+      {
+        "fp_s1_id": "S1-24681118",
+        "true_s1_id": "S1-934019089",
+        "target_id": "S3-119943164",
+        "country": "us",
+        "fp_owner_score": 0.3633,
+        "true_owner_score": 0.3633,
+        "owner_score_gap_fp_minus_true": 0.0,
+        "fp_prob": 0.999227
+      },
+      {
+        "fp_s1_id": "S1-26207120",
+        "true_s1_id": "S1-396191902",
+        "target_id": "S3-244598566",
+        "country": "india",
+        "fp_owner_score": 1.08,
+        "true_owner_score": 0.8995,
+        "owner_score_gap_fp_minus_true": 0.1805,
+        "fp_prob": 0.99962
+      },
+      {
+        "fp_s1_id": "S1-274487315",
+        "true_s1_id": "S1-91259402",
+        "target_id": "S2-217530689",
+        "country": "us",
+        "fp_owner_score": 0.498,
+        "true_owner_score": 0.3608,
+        "owner_score_gap_fp_minus_true": 0.1372,
+        "fp_prob": 0.998724
+      },
+      {
+        "fp_s1_id": "S1-279626466",
+        "true_s1_id": "S1-312745938",
+        "target_id": "S3-356264192",
+        "country": "india",
+        "fp_owner_score": 0.8906,
+        "true_owner_score": 0.709,
+        "owner_score_gap_fp_minus_true": 0.1816,
+        "fp_prob": 0.999404
+      },
+      {
+        "fp_s1_id": "S1-285714217",
+        "true_s1_id": "S1-914707808",
+        "target_id": "S3-69354158",
+        "country": "india",
+        "fp_owner_score": 0.49,
+        "true_owner_score": 0.3007,
+        "owner_score_gap_fp_minus_true": 0.1893,
+        "fp_prob": 0.998458
+      }
+    ],
+    "conflict_decoder_sweep": {
+      "V4.1-C(m=0.01)": {
+        "true_owner_wins": 379,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.94
+      },
+      "V4.1-C(m=0.02)": {
+        "true_owner_wins": 378,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.7
+      },
+      "V4.1-C(m=0.03)": {
+        "true_owner_wins": 378,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.7
+      },
+      "V4.1-C(m=0.04)": {
+        "true_owner_wins": 379,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.94
+      },
+      "V4.1-C(m=0.05)": {
+        "true_owner_wins": 377,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.47
+      },
+      "V4.1-C(m=0.06)": {
+        "true_owner_wins": 377,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.47
+      },
+      "V4.1-C(m=0.07)": {
+        "true_owner_wins": 374,
+        "total_conflicts": 431,
+        "win_rate_pct": 86.77
+      },
+      "V4.1-C(m=0.08)": {
+        "true_owner_wins": 374,
+        "total_conflicts": 431,
+        "win_rate_pct": 86.77
+      },
+      "V4.1-C(m=0.09)": {
+        "true_owner_wins": 373,
+        "total_conflicts": 431,
+        "win_rate_pct": 86.54
+      },
+      "V4.1-C(m=0.10)": {
+        "true_owner_wins": 373,
+        "total_conflicts": 431,
+        "win_rate_pct": 86.54
+      },
+      "owner_score + 0.05*prob": {
+        "true_owner_wins": 369,
+        "total_conflicts": 431,
+        "win_rate_pct": 85.61
+      },
+      "owner_score + 0.10*prob": {
+        "true_owner_wins": 369,
+        "total_conflicts": 431,
+        "win_rate_pct": 85.61
+      },
+      "owner_score + 0.20*prob": {
+        "true_owner_wins": 368,
+        "total_conflicts": 431,
+        "win_rate_pct": 85.38
+      },
+      "owner_score + 0.35*prob": {
+        "true_owner_wins": 368,
+        "total_conflicts": 431,
+        "win_rate_pct": 85.38
+      },
+      "owner_score + 0.50*prob": {
+        "true_owner_wins": 370,
+        "total_conflicts": 431,
+        "win_rate_pct": 85.85
+      },
+      "owner_score + 0.05*logit_norm(prob)": {
+        "true_owner_wins": 377,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.47
+      },
+      "owner_score + 0.10*logit_norm(prob)": {
+        "true_owner_wins": 377,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.47
+      },
+      "owner_score + 0.15*logit_norm(prob)": {
+        "true_owner_wins": 379,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.94
+      },
+      "owner_score + 0.18*logit_norm(prob)": {
+        "true_owner_wins": 379,
+        "total_conflicts": 431,
+        "win_rate_pct": 87.94
+      },
+      "owner_score + 0.25*logit_norm(prob)": {
+        "true_owner_wins": 380,
+        "total_conflicts": 431,
+        "win_rate_pct": 88.17
+      },
+      "owner_score + 0.35*logit_norm(prob)": {
+        "true_owner_wins": 381,
+        "total_conflicts": 431,
+        "win_rate_pct": 88.4
+      }
+    }
+  },
+  "decoder_only_candidates": [
+    {
+      "name": "0_V4_Frozen_Baseline",
+      "DEV_F0.5": 0.90765,
+      "DEV_delta": 0.0,
+      "DEV_TP_FP_FN": [
+        8709,
+        352,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.920766,
+      "INTERNAL_delta": 0.0,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        44,
+        577
+      ],
+      "FINAL_F0.5": 0.915604,
+      "FINAL_delta": 0.0,
+      "FINAL_TP_FP_FN": [
+        2872,
+        81,
+        558
+      ],
+      "COMBINED_F0.5": 0.911916,
+      "COMBINED_delta": 0.0,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        476,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "1_V4.1-C(m=0.03)",
+      "DEV_F0.5": 0.90765,
+      "DEV_delta": 0.0,
+      "DEV_TP_FP_FN": [
+        8709,
+        352,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.920766,
+      "INTERNAL_delta": 0.0,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        44,
+        577
+      ],
+      "FINAL_F0.5": 0.915604,
+      "FINAL_delta": 0.0,
+      "FINAL_TP_FP_FN": [
+        2872,
+        81,
+        558
+      ],
+      "COMBINED_F0.5": 0.911916,
+      "COMBINED_delta": 0.0,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        476,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "2_V4.1-C(m=0.07)",
+      "DEV_F0.5": 0.90765,
+      "DEV_delta": 0.0,
+      "DEV_TP_FP_FN": [
+        8709,
+        352,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.920766,
+      "INTERNAL_delta": 0.0,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        44,
+        577
+      ],
+      "FINAL_F0.5": 0.915604,
+      "FINAL_delta": 0.0,
+      "FINAL_TP_FP_FN": [
+        2872,
+        81,
+        558
+      ],
+      "COMBINED_F0.5": 0.911916,
+      "COMBINED_delta": 0.0,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        476,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "3_V4.1-C(m=0.10)",
+      "DEV_F0.5": 0.90765,
+      "DEV_delta": 0.0,
+      "DEV_TP_FP_FN": [
+        8709,
+        352,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.920766,
+      "INTERNAL_delta": 0.0,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        44,
+        577
+      ],
+      "FINAL_F0.5": 0.915604,
+      "FINAL_delta": 0.0,
+      "FINAL_TP_FP_FN": [
+        2872,
+        81,
+        558
+      ],
+      "COMBINED_F0.5": 0.911916,
+      "COMBINED_delta": 0.0,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        476,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "4_Country_Thr(t_us=0.9945,t_in=0.9950)",
+      "DEV_F0.5": 0.907266,
+      "DEV_delta": -0.000384,
+      "DEV_TP_FP_FN": [
+        8727,
+        362,
+        1801
+      ],
+      "INTERNAL_F0.5": 0.921092,
+      "INTERNAL_delta": 0.000326,
+      "INTERNAL_TP_FP_FN": [
+        2864,
+        44,
+        572
+      ],
+      "FINAL_F0.5": 0.916941,
+      "FINAL_delta": 0.001338,
+      "FINAL_TP_FP_FN": [
+        2878,
+        85,
+        552
+      ],
+      "COMBINED_F0.5": 0.912018,
+      "COMBINED_delta": 0.000102,
+      "COMBINED_TP_FP_FN": [
+        14469,
+        490,
+        2925
+      ],
+      "passes_dev_and_internal_tuning": false,
+      "passes_final_holdout_gate": false
+    },
+    {
+      "name": "5_Country_Thr(t_us=0.9950,t_in=0.9945)",
+      "DEV_F0.5": 0.90649,
+      "DEV_delta": -0.001161,
+      "DEV_TP_FP_FN": [
+        8720,
+        368,
+        1808
+      ],
+      "INTERNAL_F0.5": 0.919991,
+      "INTERNAL_delta": -0.000775,
+      "INTERNAL_TP_FP_FN": [
+        2865,
+        51,
+        571
+      ],
+      "FINAL_F0.5": 0.916084,
+      "FINAL_delta": 0.000481,
+      "FINAL_TP_FP_FN": [
+        2876,
+        81,
+        554
+      ],
+      "COMBINED_F0.5": 0.911161,
+      "COMBINED_delta": -0.000755,
+      "COMBINED_TP_FP_FN": [
+        14461,
+        499,
+        2933
+      ],
+      "passes_dev_and_internal_tuning": false,
+      "passes_final_holdout_gate": false
+    },
+    {
+      "name": "6_Country_Thr(t_us=0.9955,t_in=0.9950)",
+      "DEV_F0.5": 0.907302,
+      "DEV_delta": -0.000349,
+      "DEV_TP_FP_FN": [
+        8697,
+        339,
+        1831
+      ],
+      "INTERNAL_F0.5": 0.921434,
+      "INTERNAL_delta": 0.000668,
+      "INTERNAL_TP_FP_FN": [
+        2854,
+        40,
+        582
+      ],
+      "FINAL_F0.5": 0.916799,
+      "FINAL_delta": 0.001196,
+      "FINAL_TP_FP_FN": [
+        2871,
+        76,
+        559
+      ],
+      "COMBINED_F0.5": 0.912079,
+      "COMBINED_delta": 0.000164,
+      "COMBINED_TP_FP_FN": [
+        14422,
+        454,
+        2972
+      ],
+      "passes_dev_and_internal_tuning": false,
+      "passes_final_holdout_gate": false
+    },
+    {
+      "name": "7_Country_Thr(t_us=0.9950,t_in=0.9955)",
+      "DEV_F0.5": 0.907212,
+      "DEV_delta": -0.000438,
+      "DEV_TP_FP_FN": [
+        8693,
+        336,
+        1835
+      ],
+      "INTERNAL_F0.5": 0.92212,
+      "INTERNAL_delta": 0.001354,
+      "INTERNAL_TP_FP_FN": [
+        2853,
+        38,
+        583
+      ],
+      "FINAL_F0.5": 0.91594,
+      "FINAL_delta": 0.000337,
+      "FINAL_TP_FP_FN": [
+        2869,
+        79,
+        561
+      ],
+      "COMBINED_F0.5": 0.911991,
+      "COMBINED_delta": 7.5e-05,
+      "COMBINED_TP_FP_FN": [
+        14415,
+        452,
+        2979
+      ],
+      "passes_dev_and_internal_tuning": false,
+      "passes_final_holdout_gate": false
+    },
+    {
+      "name": "8_Prune_Severe_BldgPostal_Conflict(p<0.9975)",
+      "DEV_F0.5": 0.90772,
+      "DEV_delta": 7e-05,
+      "DEV_TP_FP_FN": [
+        8709,
+        351,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.92121,
+      "INTERNAL_delta": 0.000444,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        43,
+        577
+      ],
+      "FINAL_F0.5": 0.915889,
+      "FINAL_delta": 0.000286,
+      "FINAL_TP_FP_FN": [
+        2872,
+        80,
+        558
+      ],
+      "COMBINED_F0.5": 0.912104,
+      "COMBINED_delta": 0.000188,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        473,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "9_Prune_Sibling_Anchor_Conflict(p<0.9980)",
+      "DEV_F0.5": 0.90765,
+      "DEV_delta": 0.0,
+      "DEV_TP_FP_FN": [
+        8709,
+        352,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.920766,
+      "INTERNAL_delta": 0.0,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        44,
+        577
+      ],
+      "FINAL_F0.5": 0.915604,
+      "FINAL_delta": 0.0,
+      "FINAL_TP_FP_FN": [
+        2872,
+        81,
+        558
+      ],
+      "COMBINED_F0.5": 0.911916,
+      "COMBINED_delta": 0.0,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        476,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "10_Rescue_StrictExact_BldgPostal(p>=0.9930)",
+      "DEV_F0.5": 0.90765,
+      "DEV_delta": 0.0,
+      "DEV_TP_FP_FN": [
+        8709,
+        352,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.920766,
+      "INTERNAL_delta": 0.0,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        44,
+        577
+      ],
+      "FINAL_F0.5": 0.915604,
+      "FINAL_delta": 0.0,
+      "FINAL_TP_FP_FN": [
+        2872,
+        81,
+        558
+      ],
+      "COMBINED_F0.5": 0.911916,
+      "COMBINED_delta": 0.0,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        476,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "11_Rescue_StrictExact_BldgPostal(p>=0.9910)",
+      "DEV_F0.5": 0.90765,
+      "DEV_delta": 0.0,
+      "DEV_TP_FP_FN": [
+        8709,
+        352,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.920766,
+      "INTERNAL_delta": 0.0,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        44,
+        577
+      ],
+      "FINAL_F0.5": 0.915604,
+      "FINAL_delta": 0.0,
+      "FINAL_TP_FP_FN": [
+        2872,
+        81,
+        558
+      ],
+      "COMBINED_F0.5": 0.911916,
+      "COMBINED_delta": 0.0,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        476,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "12_Combined_Prune8_plus_Rescue10",
+      "DEV_F0.5": 0.90772,
+      "DEV_delta": 7e-05,
+      "DEV_TP_FP_FN": [
+        8709,
+        351,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.92121,
+      "INTERNAL_delta": 0.000444,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        43,
+        577
+      ],
+      "FINAL_F0.5": 0.915889,
+      "FINAL_delta": 0.000286,
+      "FINAL_TP_FP_FN": [
+        2872,
+        80,
+        558
+      ],
+      "COMBINED_F0.5": 0.912104,
+      "COMBINED_delta": 0.000188,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        473,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "13_Combined_Prune9_plus_Rescue10",
+      "DEV_F0.5": 0.90765,
+      "DEV_delta": 0.0,
+      "DEV_TP_FP_FN": [
+        8709,
+        352,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.920766,
+      "INTERNAL_delta": 0.0,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        44,
+        577
+      ],
+      "FINAL_F0.5": 0.915604,
+      "FINAL_delta": 0.0,
+      "FINAL_TP_FP_FN": [
+        2872,
+        81,
+        558
+      ],
+      "COMBINED_F0.5": 0.911916,
+      "COMBINED_delta": 0.0,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        476,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    },
+    {
+      "name": "14_Combined_Prune8_plus_Prune9_plus_Rescue11",
+      "DEV_F0.5": 0.90772,
+      "DEV_delta": 7e-05,
+      "DEV_TP_FP_FN": [
+        8709,
+        351,
+        1819
+      ],
+      "INTERNAL_F0.5": 0.92121,
+      "INTERNAL_delta": 0.000444,
+      "INTERNAL_TP_FP_FN": [
+        2859,
+        43,
+        577
+      ],
+      "FINAL_F0.5": 0.915889,
+      "FINAL_delta": 0.000286,
+      "FINAL_TP_FP_FN": [
+        2872,
+        80,
+        558
+      ],
+      "COMBINED_F0.5": 0.912104,
+      "COMBINED_delta": 0.000188,
+      "COMBINED_TP_FP_FN": [
+        14440,
+        473,
+        2954
+      ],
+      "passes_dev_and_internal_tuning": true,
+      "passes_final_holdout_gate": true
+    }
+  ],
+  "elapsed_sec": 116.9
+}

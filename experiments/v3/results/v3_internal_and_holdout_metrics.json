@@ -1,0 +1,1431 @@
+{
+  "frozen_pipeline_config": {
+    "selected_model_name": "C_LightGBM_LambdaRank",
+    "dev_best_f05": 0.9069766238498236,
+    "base_threshold": 0.99,
+    "policy_config": {
+      "t_us": 0.995,
+      "t_in": 0.995,
+      "t_default": 0.995,
+      "bonus_agree": 0.0,
+      "pen_conflict": 0.0,
+      "pen_branch": 0.0,
+      "max_k": 6,
+      "rescue_floor": 0.965,
+      "rescue_margin": 1.0
+    },
+    "active_features": [
+      "name_ratio",
+      "name_token_sort",
+      "name_token_set",
+      "address_ratio",
+      "address_token_sort",
+      "address_token_set",
+      "country_same",
+      "name_len_1",
+      "name_len_2",
+      "address_len_1",
+      "address_len_2",
+      "norm_name_ratio",
+      "norm_name_token_sort",
+      "norm_name_token_set",
+      "norm_name_partial_ratio",
+      "core_name_ratio",
+      "core_name_token_sort",
+      "core_name_token_set",
+      "core_name_partial_ratio",
+      "compact_name_ratio",
+      "name_char_3gram_jaccard",
+      "name_char_4gram_jaccard",
+      "name_char_5gram_jaccard",
+      "name_token_jaccard",
+      "core_name_token_jaccard",
+      "core_name_min_containment",
+      "core_name_max_containment",
+      "name_common_token_count",
+      "name_rare_token_idf_overlap",
+      "name_rare_token_idf_ratio",
+      "name_len_ratio",
+      "core_name_len_ratio",
+      "name_token_count_min",
+      "name_token_count_diff",
+      "exact_orig_name",
+      "exact_norm_name",
+      "exact_core_name",
+      "exact_compact_name",
+      "business_suffix_agreement",
+      "first_core_token_exact",
+      "first_core_token_ratio",
+      "norm_addr_ratio",
+      "norm_addr_token_sort",
+      "norm_addr_token_set",
+      "norm_addr_partial_ratio",
+      "addr_char_3gram_jaccard",
+      "addr_char_4gram_jaccard",
+      "addr_char_5gram_jaccard",
+      "addr_token_jaccard",
+      "addr_min_containment",
+      "addr_max_containment",
+      "addr_common_token_count",
+      "addr_rare_token_idf_overlap",
+      "addr_rare_token_idf_ratio",
+      "exact_orig_addr",
+      "exact_norm_addr",
+      "addr_len_ratio",
+      "addr_both_present",
+      "addr_either_missing",
+      "state_region_match",
+      "state_region_conflict",
+      "building_number_match",
+      "building_number_conflict",
+      "building_extraction_conf_min",
+      "postal_match",
+      "postal_conflict",
+      "postal_extraction_conf_min",
+      "numeric_token_jaccard",
+      "numeric_token_overlap",
+      "numeric_count_difference",
+      "unit_number_match",
+      "unit_number_conflict",
+      "name_x_addr_sim",
+      "core_name_x_norm_addr_set",
+      "name_addr_agreement",
+      "name_addr_conflict",
+      "high_name_low_addr",
+      "high_name_high_addr",
+      "exact_name_plus_addr_ev",
+      "exact_addr_plus_name_ev",
+      "num_agree_x_name_sim",
+      "num_conflict_x_name_sim",
+      "postal_agree_x_name_sim",
+      "postal_conflict_x_name_sim",
+      "is_s2_candidate",
+      "phonetic_name_ratio",
+      "phonetic_name_token_jaccard",
+      "phonetic_exact_core_name"
+    ],
+    "total_bakeoff_runtime_s": 56.04,
+    "use_entity_policy": true
+  },
+  "retrieval_meta": {
+    "total_elapsed_s": 1021.21,
+    "index_elapsed_s": 686.41,
+    "union_elapsed_s": 182.73,
+    "union_queries_per_sec": 10.94,
+    "fetch_elapsed_s": 137.62,
+    "avg_anchor_pool_per_s1": 27682.68,
+    "top_k": 750,
+    "channel_hit_counts": {
+      "ch1_exact": 93794,
+      "ch2_rare_tok": 1450799,
+      "ch3_char_gram": 773449,
+      "ch4_numeric": 367271
+    },
+    "tfidf_benchmark": {}
+  },
+  "INTERNAL_CHECK_1000": {
+    "pool_name": "INTERNAL_CHECK_1000",
+    "retrieval": {
+      "pool_name": "INTERNAL_CHECK_1000",
+      "s1_count": 1000,
+      "micro_link_recall": 0.9717694994179278,
+      "macro_entity_recall_nonempty": 0.9716486594637856,
+      "macro_entity_recall_all": 0.9730095238095239,
+      "total_gt_links": 3436,
+      "found_gt_links": 3339,
+      "missed_gt_links": 97,
+      "s2_gt_links": 1653,
+      "s2_found_links": 1618,
+      "s2_link_recall": 0.9788263762855415,
+      "s3_gt_links": 1783,
+      "s3_found_links": 1721,
+      "s3_link_recall": 0.9652271452607964,
+      "zero_candidate_s1_count": 0,
+      "zero_candidate_rate": 0.0,
+      "exact_channel_s1_coverage_count": 954,
+      "exact_channel_s1_coverage_pct": 0.954,
+      "empty_s1_coverage": {
+        "empty_s1_count": 48,
+        "zero_cand_empty_s1": 0,
+        "mean_cands_on_empty_s1": 750.0
+      },
+      "candidates_per_s1": {
+        "mean": 751.359,
+        "p50": 750.0,
+        "p90": 750.0,
+        "p95": 750.0,
+        "p99": 750.01,
+        "max": 1600,
+        "total_candidate_pairs": 751359
+      },
+      "by_country": {
+        "us": {
+          "s1_count": 593,
+          "gt_links": 2020,
+          "found_links": 1987,
+          "micro_recall": 0.9836633663366336,
+          "macro_recall_nonempty": 0.9810154803971057
+        },
+        "india": {
+          "s1_count": 407,
+          "gt_links": 1416,
+          "found_links": 1352,
+          "micro_recall": 0.9548022598870056,
+          "macro_recall_nonempty": 0.957913890944979
+        }
+      },
+      "gt_hit_channel_breakdown": {
+        "1": 0,
+        "2": 73,
+        "4": 0,
+        "8": 0,
+        "multi_channel": 3266
+      },
+      "gt_hit_marginal_channel_coverage": {
+        "ch1_exact": 2095,
+        "ch2_rare_tok": 3338,
+        "ch3_char_gram": 3024,
+        "ch4_numeric": 2344
+      }
+    },
+    "frozen_v3_primary": {
+      "threshold": "frozen_policy(C_LightGBM_LambdaRank)",
+      "macro_f05": 0.9215337675082573,
+      "macro_precision": 0.9595333333333333,
+      "macro_recall": 0.8422670634920635,
+      "predicted_pairs": 2915,
+      "tp": 2868,
+      "fp": 47,
+      "fn": 568,
+      "predicted_empty_s1_count": 70,
+      "empty_s1_accuracy": 0.9791666666666666,
+      "singleton_fp_rate": 0.02083333333333337,
+      "s2_metrics": {
+        "tp": 1392,
+        "fp": 19,
+        "fn": 261,
+        "micro_prec": 0.9865343727852587,
+        "micro_rec": 0.8421052631578947,
+        "micro_f05": 0.9538166369740989
+      },
+      "s3_metrics": {
+        "tp": 1476,
+        "fp": 28,
+        "fn": 307,
+        "micro_prec": 0.9813829787234043,
+        "micro_rec": 0.8278182837913629,
+        "micro_f05": 0.946275163482498
+      },
+      "by_country": {
+        "india": {
+          "s1_count": 407,
+          "macro_f05": 0.8932909809674607,
+          "macro_prec": 0.9368550368550369,
+          "macro_rec": 0.8040140790140791
+        },
+        "us": {
+          "s1_count": 593,
+          "macro_f05": 0.9409179397209119,
+          "macro_prec": 0.9750983698707137,
+          "macro_rec": 0.868521641371557
+        }
+      },
+      "by_cardinality": {
+        "empty_s1_f05": 0.9791666666666666,
+        "single_match_s1_f05": 0.7529239766081871,
+        "multi_match_s1_f05": 0.9330040471301771
+      }
+    },
+    "frozen_v3_threshold_only": {
+      "threshold": 0.99,
+      "macro_f05": 0.9092013914732423,
+      "macro_precision": 0.9367345238095238,
+      "macro_recall": 0.8572761904761905,
+      "predicted_pairs": 3096,
+      "tp": 2946,
+      "fp": 150,
+      "fn": 490,
+      "predicted_empty_s1_count": 61,
+      "empty_s1_accuracy": 0.8958333333333334,
+      "singleton_fp_rate": 0.10416666666666663,
+      "s2_metrics": {
+        "tp": 1427,
+        "fp": 56,
+        "fn": 226,
+        "micro_prec": 0.9622387053270398,
+        "micro_rec": 0.8632788868723533,
+        "micro_f05": 0.9406723796967699
+      },
+      "s3_metrics": {
+        "tp": 1519,
+        "fp": 94,
+        "fn": 264,
+        "micro_prec": 0.9417234965902046,
+        "micro_rec": 0.851934941110488,
+        "micro_f05": 0.9222829386763814
+      },
+      "by_country": {
+        "india": {
+          "s1_count": 407,
+          "macro_f05": 0.8683207535957363,
+          "macro_prec": 0.8984321984321985,
+          "macro_rec": 0.8189569439569439
+        },
+        "us": {
+          "s1_count": 593,
+          "macro_f05": 0.9372594346707884,
+          "macro_prec": 0.963022966353489,
+          "macro_rec": 0.8835762466875452
+        }
+      },
+      "by_cardinality": {
+        "empty_s1_f05": 0.8958333333333334,
+        "single_match_s1_f05": 0.7462887989203778,
+        "multi_match_s1_f05": 0.924067857026591
+      }
+    },
+    "frozen_v3_entity_policy": {
+      "threshold": "frozen_policy(C_LightGBM_LambdaRank)",
+      "macro_f05": 0.9215337675082573,
+      "macro_precision": 0.9595333333333333,
+      "macro_recall": 0.8422670634920635,
+      "predicted_pairs": 2915,
+      "tp": 2868,
+      "fp": 47,
+      "fn": 568,
+      "predicted_empty_s1_count": 70,
+      "empty_s1_accuracy": 0.9791666666666666,
+      "singleton_fp_rate": 0.02083333333333337,
+      "s2_metrics": {
+        "tp": 1392,
+        "fp": 19,
+        "fn": 261,
+        "micro_prec": 0.9865343727852587,
+        "micro_rec": 0.8421052631578947,
+        "micro_f05": 0.9538166369740989
+      },
+      "s3_metrics": {
+        "tp": 1476,
+        "fp": 28,
+        "fn": 307,
+        "micro_prec": 0.9813829787234043,
+        "micro_rec": 0.8278182837913629,
+        "micro_f05": 0.946275163482498
+      },
+      "by_country": {
+        "india": {
+          "s1_count": 407,
+          "macro_f05": 0.8932909809674607,
+          "macro_prec": 0.9368550368550369,
+          "macro_rec": 0.8040140790140791
+        },
+        "us": {
+          "s1_count": 593,
+          "macro_f05": 0.9409179397209119,
+          "macro_prec": 0.9750983698707137,
+          "macro_rec": 0.868521641371557
+        }
+      },
+      "by_cardinality": {
+        "empty_s1_f05": 0.9791666666666666,
+        "single_match_s1_f05": 0.7529239766081871,
+        "multi_match_s1_f05": 0.9330040471301771
+      }
+    },
+    "all_frozen_models": {
+      "A_XGBoost_Binary": {
+        "frozen_threshold_only": {
+          "threshold": 0.99,
+          "macro_f05": 0.9065421503108679,
+          "macro_precision": 0.9604404761904762,
+          "macro_recall": 0.795043253968254,
+          "predicted_pairs": 2714,
+          "tp": 2701,
+          "fp": 13,
+          "fn": 735,
+          "predicted_empty_s1_count": 84,
+          "empty_s1_accuracy": 1.0,
+          "singleton_fp_rate": 0.0,
+          "s2_metrics": {
+            "tp": 1306,
+            "fp": 4,
+            "fn": 347,
+            "micro_prec": 0.9969465648854962,
+            "micro_rec": 0.7900786448880823,
+            "micro_f05": 0.9473378790076891
+          },
+          "s3_metrics": {
+            "tp": 1395,
+            "fp": 9,
+            "fn": 388,
+            "micro_prec": 0.9935897435897436,
+            "micro_rec": 0.7823892316320807,
+            "micro_f05": 0.9426949587782134
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.8797181612914082,
+              "macro_prec": 0.935971685971686,
+              "macro_rec": 0.765050115050115
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.9249525441235495,
+              "macro_prec": 0.9772344013490725,
+              "macro_rec": 0.815628764153216
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 1.0,
+            "single_match_s1_f05": 0.7251461988304094,
+            "multi_match_s1_f05": 0.9171587205476676
+          }
+        },
+        "frozen_entity_policy": {
+          "threshold": "frozen_policy(A_XGBoost_Binary)",
+          "macro_f05": 0.9153236618614068,
+          "macro_precision": 0.9593499999999999,
+          "macro_recall": 0.8235126984126985,
+          "predicted_pairs": 2840,
+          "tp": 2793,
+          "fp": 47,
+          "fn": 643,
+          "predicted_empty_s1_count": 73,
+          "empty_s1_accuracy": 0.9791666666666666,
+          "singleton_fp_rate": 0.02083333333333337,
+          "s2_metrics": {
+            "tp": 1354,
+            "fp": 15,
+            "fn": 299,
+            "micro_prec": 0.9890430971512053,
+            "micro_rec": 0.8191167574107683,
+            "micro_f05": 0.9496423060737833
+          },
+          "s3_metrics": {
+            "tp": 1439,
+            "fp": 32,
+            "fn": 344,
+            "micro_prec": 0.9782460910944936,
+            "micro_rec": 0.8070667414469994,
+            "micro_f05": 0.9384374592409027
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.8895925351177001,
+              "macro_prec": 0.9461506961506962,
+              "macro_rec": 0.7739811239811238
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.9329839798794314,
+              "macro_prec": 0.9684092186621698,
+              "macro_rec": 0.8575082309483659
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9791666666666666,
+            "single_match_s1_f05": 0.8055555555555556,
+            "multi_match_s1_f05": 0.9213486753871969
+          }
+        }
+      },
+      "B_LightGBM_Binary": {
+        "frozen_threshold_only": {
+          "threshold": 0.99,
+          "macro_f05": 0.91223399617469,
+          "macro_precision": 0.9598928571428571,
+          "macro_recall": 0.8129646825396826,
+          "predicted_pairs": 2792,
+          "tp": 2763,
+          "fp": 29,
+          "fn": 673,
+          "predicted_empty_s1_count": 79,
+          "empty_s1_accuracy": 1.0,
+          "singleton_fp_rate": 0.0,
+          "s2_metrics": {
+            "tp": 1337,
+            "fp": 11,
+            "fn": 316,
+            "micro_prec": 0.9918397626112759,
+            "micro_rec": 0.808832425892317,
+            "micro_f05": 0.9488999290276791
+          },
+          "s3_metrics": {
+            "tp": 1426,
+            "fp": 18,
+            "fn": 357,
+            "micro_prec": 0.9875346260387812,
+            "micro_rec": 0.7997756590016826,
+            "micro_f05": 0.9432464611721126
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.8805254475064263,
+              "macro_prec": 0.9305311805311806,
+              "macro_rec": 0.7801840801840801
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.9339968617868035,
+              "macro_prec": 0.980044969083755,
+              "macro_rec": 0.8354633421665462
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 1.0,
+            "single_match_s1_f05": 0.7587719298245614,
+            "multi_match_s1_f05": 0.9207389606255973
+          }
+        },
+        "frozen_entity_policy": {
+          "threshold": "frozen_policy(B_LightGBM_Binary)",
+          "macro_f05": 0.9138421711583722,
+          "macro_precision": 0.9639047619047619,
+          "macro_recall": 0.8091646825396825,
+          "predicted_pairs": 2764,
+          "tp": 2746,
+          "fp": 18,
+          "fn": 690,
+          "predicted_empty_s1_count": 79,
+          "empty_s1_accuracy": 1.0,
+          "singleton_fp_rate": 0.0,
+          "s2_metrics": {
+            "tp": 1328,
+            "fp": 6,
+            "fn": 325,
+            "micro_prec": 0.9955022488755623,
+            "micro_rec": 0.8033877797943134,
+            "micro_f05": 0.9500643868936902
+          },
+          "s3_metrics": {
+            "tp": 1418,
+            "fp": 12,
+            "fn": 365,
+            "micro_prec": 0.9916083916083916,
+            "micro_rec": 0.7952888390353338,
+            "micro_f05": 0.9449553511928562
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.8844767373926229,
+              "macro_prec": 0.9403884403884405,
+              "macro_rec": 0.7708474708474709
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.9339968617868035,
+              "macro_prec": 0.980044969083755,
+              "macro_rec": 0.8354633421665462
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 1.0,
+            "single_match_s1_f05": 0.7777777777777778,
+            "multi_match_s1_f05": 0.9209258676338594
+          }
+        }
+      },
+      "C_LightGBM_LambdaRank": {
+        "frozen_threshold_only": {
+          "threshold": 0.99,
+          "macro_f05": 0.9092013914732423,
+          "macro_precision": 0.9367345238095238,
+          "macro_recall": 0.8572761904761905,
+          "predicted_pairs": 3096,
+          "tp": 2946,
+          "fp": 150,
+          "fn": 490,
+          "predicted_empty_s1_count": 61,
+          "empty_s1_accuracy": 0.8958333333333334,
+          "singleton_fp_rate": 0.10416666666666663,
+          "s2_metrics": {
+            "tp": 1427,
+            "fp": 56,
+            "fn": 226,
+            "micro_prec": 0.9622387053270398,
+            "micro_rec": 0.8632788868723533,
+            "micro_f05": 0.9406723796967699
+          },
+          "s3_metrics": {
+            "tp": 1519,
+            "fp": 94,
+            "fn": 264,
+            "micro_prec": 0.9417234965902046,
+            "micro_rec": 0.851934941110488,
+            "micro_f05": 0.9222829386763814
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.8683207535957363,
+              "macro_prec": 0.8984321984321985,
+              "macro_rec": 0.8189569439569439
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.9372594346707884,
+              "macro_prec": 0.963022966353489,
+              "macro_rec": 0.8835762466875452
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.8958333333333334,
+            "single_match_s1_f05": 0.7462887989203778,
+            "multi_match_s1_f05": 0.924067857026591
+          }
+        },
+        "frozen_entity_policy": {
+          "threshold": "frozen_policy(C_LightGBM_LambdaRank)",
+          "macro_f05": 0.9215337675082573,
+          "macro_precision": 0.9595333333333333,
+          "macro_recall": 0.8422670634920635,
+          "predicted_pairs": 2915,
+          "tp": 2868,
+          "fp": 47,
+          "fn": 568,
+          "predicted_empty_s1_count": 70,
+          "empty_s1_accuracy": 0.9791666666666666,
+          "singleton_fp_rate": 0.02083333333333337,
+          "s2_metrics": {
+            "tp": 1392,
+            "fp": 19,
+            "fn": 261,
+            "micro_prec": 0.9865343727852587,
+            "micro_rec": 0.8421052631578947,
+            "micro_f05": 0.9538166369740989
+          },
+          "s3_metrics": {
+            "tp": 1476,
+            "fp": 28,
+            "fn": 307,
+            "micro_prec": 0.9813829787234043,
+            "micro_rec": 0.8278182837913629,
+            "micro_f05": 0.946275163482498
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.8932909809674607,
+              "macro_prec": 0.9368550368550369,
+              "macro_rec": 0.8040140790140791
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.9409179397209119,
+              "macro_prec": 0.9750983698707137,
+              "macro_rec": 0.868521641371557
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9791666666666666,
+            "single_match_s1_f05": 0.7529239766081871,
+            "multi_match_s1_f05": 0.9330040471301771
+          }
+        }
+      },
+      "D_LightGBM_rank_xendcg": {
+        "frozen_threshold_only": {
+          "threshold": 0.99,
+          "macro_f05": 0.858840189775793,
+          "macro_precision": 0.9102630952380952,
+          "macro_recall": 0.7681670634920635,
+          "predicted_pairs": 2800,
+          "tp": 2637,
+          "fp": 163,
+          "fn": 799,
+          "predicted_empty_s1_count": 84,
+          "empty_s1_accuracy": 0.8958333333333334,
+          "singleton_fp_rate": 0.10416666666666663,
+          "s2_metrics": {
+            "tp": 1272,
+            "fp": 48,
+            "fn": 381,
+            "micro_prec": 0.9636363636363636,
+            "micro_rec": 0.7695099818511797,
+            "micro_f05": 0.9173517957594115
+          },
+          "s3_metrics": {
+            "tp": 1365,
+            "fp": 115,
+            "fn": 418,
+            "micro_prec": 0.9222972972972973,
+            "micro_rec": 0.7655636567582725,
+            "micro_f05": 0.886018434376217
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.8134648047751551,
+              "macro_prec": 0.8539019539019539,
+              "macro_rec": 0.7528499278499279
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.8899831605941058,
+              "macro_prec": 0.948946037099494,
+              "macro_rec": 0.778679836184052
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.8958333333333334,
+            "single_match_s1_f05": 0.6431623931623932,
+            "multi_match_s1_f05": 0.8755249405199212
+          }
+        },
+        "frozen_entity_policy": {
+          "threshold": "frozen_policy(D_LightGBM_rank_xendcg)",
+          "macro_f05": 0.8645305941154867,
+          "macro_precision": 0.9167333333333334,
+          "macro_recall": 0.7705936507936508,
+          "predicted_pairs": 2777,
+          "tp": 2626,
+          "fp": 151,
+          "fn": 810,
+          "predicted_empty_s1_count": 74,
+          "empty_s1_accuracy": 0.8541666666666666,
+          "singleton_fp_rate": 0.14583333333333337,
+          "s2_metrics": {
+            "tp": 1268,
+            "fp": 45,
+            "fn": 385,
+            "micro_prec": 0.9657273419649657,
+            "micro_rec": 0.7670901391409558,
+            "micro_f05": 0.9181752353367126
+          },
+          "s3_metrics": {
+            "tp": 1358,
+            "fp": 106,
+            "fn": 425,
+            "micro_prec": 0.9275956284153005,
+            "micro_rec": 0.7616376892877174,
+            "micro_f05": 0.8888597984029324
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 407,
+              "macro_f05": 0.819947091320239,
+              "macro_prec": 0.8615069615069615,
+              "macro_rec": 0.754073554073554
+            },
+            "us": {
+              "s1_count": 593,
+              "macro_f05": 0.8951300639935066,
+              "macro_prec": 0.9546374367622258,
+              "macro_rec": 0.781932064562756
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.8541666666666666,
+            "single_match_s1_f05": 0.7352676563202879,
+            "multi_match_s1_f05": 0.8763130733277908
+          }
+        }
+      }
+    },
+    "frozen_v2c_reference_at_0900": {
+      "threshold": 0.9,
+      "macro_f05": 0.5660197516761377,
+      "macro_precision": 0.64501931189378,
+      "macro_recall": 0.46546507936507936,
+      "predicted_pairs": 2607,
+      "tp": 1582,
+      "fp": 1025,
+      "fn": 1854,
+      "predicted_empty_s1_count": 121,
+      "empty_s1_accuracy": 0.6041666666666666,
+      "singleton_fp_rate": 0.39583333333333337,
+      "s2_metrics": {
+        "tp": 374,
+        "fp": 143,
+        "fn": 1279,
+        "micro_prec": 0.723404255319149,
+        "micro_rec": 0.22625529340592862,
+        "micro_f05": 0.5025530771298039
+      },
+      "s3_metrics": {
+        "tp": 1208,
+        "fp": 882,
+        "fn": 575,
+        "micro_prec": 0.5779904306220096,
+        "micro_rec": 0.6775098149186763,
+        "micro_f05": 0.5954845706398503
+      },
+      "by_country": {
+        "india": {
+          "s1_count": 407,
+          "macro_f05": 0.4751103164355038,
+          "macro_prec": 0.5561713607168153,
+          "macro_rec": 0.36988904488904484
+        },
+        "us": {
+          "s1_count": 593,
+          "macro_f05": 0.6284145917148191,
+          "macro_prec": 0.7059992716391841,
+          "macro_rec": 0.5310627961133862
+        }
+      },
+      "by_cardinality": {
+        "empty_s1_f05": 0.6041666666666666,
+        "single_match_s1_f05": 0.2855253579711784,
+        "multi_match_s1_f05": 0.5882646398063106
+      }
+    }
+  },
+  "FINAL_HOLDOUT_1000": {
+    "pool_name": "FINAL_HOLDOUT_1000",
+    "retrieval": {
+      "pool_name": "FINAL_HOLDOUT_1000",
+      "s1_count": 1000,
+      "micro_link_recall": 0.9769679300291545,
+      "macro_entity_recall_nonempty": 0.9774113475177305,
+      "macro_entity_recall_all": 0.9787666666666667,
+      "total_gt_links": 3430,
+      "found_gt_links": 3351,
+      "missed_gt_links": 79,
+      "s2_gt_links": 1680,
+      "s2_found_links": 1638,
+      "s2_link_recall": 0.975,
+      "s3_gt_links": 1750,
+      "s3_found_links": 1713,
+      "s3_link_recall": 0.9788571428571429,
+      "zero_candidate_s1_count": 0,
+      "zero_candidate_rate": 0.0,
+      "exact_channel_s1_coverage_count": 955,
+      "exact_channel_s1_coverage_pct": 0.955,
+      "empty_s1_coverage": {
+        "empty_s1_count": 60,
+        "zero_cand_empty_s1": 0,
+        "mean_cands_on_empty_s1": 750.0
+      },
+      "candidates_per_s1": {
+        "mean": 750.601,
+        "p50": 750.0,
+        "p90": 750.0,
+        "p95": 750.0,
+        "p99": 753.0799999999999,
+        "max": 903,
+        "total_candidate_pairs": 750601
+      },
+      "by_country": {
+        "us": {
+          "s1_count": 581,
+          "gt_links": 1995,
+          "found_links": 1972,
+          "micro_recall": 0.9884711779448622,
+          "macro_recall_nonempty": 0.9884840541721275
+        },
+        "india": {
+          "s1_count": 419,
+          "gt_links": 1435,
+          "found_links": 1379,
+          "micro_recall": 0.9609756097560975,
+          "macro_recall_nonempty": 0.9621338155515371
+        }
+      },
+      "gt_hit_channel_breakdown": {
+        "1": 0,
+        "2": 61,
+        "4": 0,
+        "8": 1,
+        "multi_channel": 3289
+      },
+      "gt_hit_marginal_channel_coverage": {
+        "ch1_exact": 2016,
+        "ch2_rare_tok": 3347,
+        "ch3_char_gram": 3039,
+        "ch4_numeric": 2417
+      }
+    },
+    "frozen_v3_primary": {
+      "threshold": "frozen_policy(C_LightGBM_LambdaRank)",
+      "macro_f05": 0.9140281957223052,
+      "macro_precision": 0.9496166666666667,
+      "macro_recall": 0.8429357142857143,
+      "predicted_pairs": 2960,
+      "tp": 2874,
+      "fp": 86,
+      "fn": 556,
+      "predicted_empty_s1_count": 80,
+      "empty_s1_accuracy": 0.95,
+      "singleton_fp_rate": 0.050000000000000044,
+      "s2_metrics": {
+        "tp": 1405,
+        "fp": 26,
+        "fn": 275,
+        "micro_prec": 0.9818308874912649,
+        "micro_rec": 0.8363095238095238,
+        "micro_f05": 0.9488114532685037
+      },
+      "s3_metrics": {
+        "tp": 1469,
+        "fp": 60,
+        "fn": 281,
+        "micro_prec": 0.960758665794637,
+        "micro_rec": 0.8394285714285714,
+        "micro_f05": 0.9337655733536739
+      },
+      "by_country": {
+        "india": {
+          "s1_count": 419,
+          "macro_f05": 0.9025340414051216,
+          "macro_prec": 0.9422036595067622,
+          "macro_rec": 0.8274917604273213
+        },
+        "us": {
+          "s1_count": 581,
+          "macro_f05": 0.9223174395414101,
+          "macro_prec": 0.9549627079747562,
+          "macro_rec": 0.8540734366035571
+        }
+      },
+      "by_cardinality": {
+        "empty_s1_f05": 0.95,
+        "single_match_s1_f05": 0.8138138138138138,
+        "multi_match_s1_f05": 0.9200992765589874
+      }
+    },
+    "frozen_v3_threshold_only": {
+      "threshold": 0.99,
+      "macro_f05": 0.9034725354799873,
+      "macro_precision": 0.9285496031746031,
+      "macro_recall": 0.8630007936507936,
+      "predicted_pairs": 3166,
+      "tp": 2977,
+      "fp": 189,
+      "fn": 453,
+      "predicted_empty_s1_count": 69,
+      "empty_s1_accuracy": 0.8666666666666667,
+      "singleton_fp_rate": 0.1333333333333333,
+      "s2_metrics": {
+        "tp": 1458,
+        "fp": 72,
+        "fn": 222,
+        "micro_prec": 0.9529411764705882,
+        "micro_rec": 0.8678571428571429,
+        "micro_f05": 0.9346153846153845
+      },
+      "s3_metrics": {
+        "tp": 1519,
+        "fp": 117,
+        "fn": 231,
+        "micro_prec": 0.9284841075794621,
+        "micro_rec": 0.868,
+        "micro_f05": 0.915722208825657
+      },
+      "by_country": {
+        "india": {
+          "s1_count": 419,
+          "macro_f05": 0.8795296574832676,
+          "macro_prec": 0.9061597908853279,
+          "macro_rec": 0.8430418229344243
+        },
+        "us": {
+          "s1_count": 581,
+          "macro_f05": 0.9207394302831295,
+          "macro_prec": 0.9446964729666969,
+          "macro_rec": 0.8773946124634593
+        }
+      },
+      "by_cardinality": {
+        "empty_s1_f05": 0.8666666666666667,
+        "single_match_s1_f05": 0.7978747978747979,
+        "multi_match_s1_f05": 0.9150459589344714
+      }
+    },
+    "frozen_v3_entity_policy": {
+      "threshold": "frozen_policy(C_LightGBM_LambdaRank)",
+      "macro_f05": 0.9140281957223052,
+      "macro_precision": 0.9496166666666667,
+      "macro_recall": 0.8429357142857143,
+      "predicted_pairs": 2960,
+      "tp": 2874,
+      "fp": 86,
+      "fn": 556,
+      "predicted_empty_s1_count": 80,
+      "empty_s1_accuracy": 0.95,
+      "singleton_fp_rate": 0.050000000000000044,
+      "s2_metrics": {
+        "tp": 1405,
+        "fp": 26,
+        "fn": 275,
+        "micro_prec": 0.9818308874912649,
+        "micro_rec": 0.8363095238095238,
+        "micro_f05": 0.9488114532685037
+      },
+      "s3_metrics": {
+        "tp": 1469,
+        "fp": 60,
+        "fn": 281,
+        "micro_prec": 0.960758665794637,
+        "micro_rec": 0.8394285714285714,
+        "micro_f05": 0.9337655733536739
+      },
+      "by_country": {
+        "india": {
+          "s1_count": 419,
+          "macro_f05": 0.9025340414051216,
+          "macro_prec": 0.9422036595067622,
+          "macro_rec": 0.8274917604273213
+        },
+        "us": {
+          "s1_count": 581,
+          "macro_f05": 0.9223174395414101,
+          "macro_prec": 0.9549627079747562,
+          "macro_rec": 0.8540734366035571
+        }
+      },
+      "by_cardinality": {
+        "empty_s1_f05": 0.95,
+        "single_match_s1_f05": 0.8138138138138138,
+        "multi_match_s1_f05": 0.9200992765589874
+      }
+    },
+    "all_frozen_models": {
+      "A_XGBoost_Binary": {
+        "frozen_threshold_only": {
+          "threshold": 0.99,
+          "macro_f05": 0.9105411559022011,
+          "macro_precision": 0.9591404761904762,
+          "macro_recall": 0.8097035714285714,
+          "predicted_pairs": 2792,
+          "tp": 2758,
+          "fp": 34,
+          "fn": 672,
+          "predicted_empty_s1_count": 91,
+          "empty_s1_accuracy": 1.0,
+          "singleton_fp_rate": 0.0,
+          "s2_metrics": {
+            "tp": 1361,
+            "fp": 6,
+            "fn": 319,
+            "micro_prec": 0.9956108266276518,
+            "micro_rec": 0.8101190476190476,
+            "micro_f05": 0.9520145495243425
+          },
+          "s3_metrics": {
+            "tp": 1397,
+            "fp": 28,
+            "fn": 353,
+            "micro_prec": 0.9803508771929824,
+            "micro_rec": 0.7982857142857143,
+            "micro_f05": 0.9375838926174496
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.8910100861873924,
+              "macro_prec": 0.9434765314240254,
+              "macro_rec": 0.7869454862294958
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.9246263851801785,
+              "macro_prec": 0.9704368494385707,
+              "macro_rec": 0.8261160287408136
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 1.0,
+            "single_match_s1_f05": 0.8108108108108109,
+            "multi_match_s1_f05": 0.9128650760995394
+          }
+        },
+        "frozen_entity_policy": {
+          "threshold": "frozen_policy(A_XGBoost_Binary)",
+          "macro_f05": 0.9106100144204244,
+          "macro_precision": 0.9515166666666667,
+          "macro_recall": 0.8274869047619047,
+          "predicted_pairs": 2891,
+          "tp": 2823,
+          "fp": 68,
+          "fn": 607,
+          "predicted_empty_s1_count": 85,
+          "empty_s1_accuracy": 0.95,
+          "singleton_fp_rate": 0.050000000000000044,
+          "s2_metrics": {
+            "tp": 1384,
+            "fp": 24,
+            "fn": 296,
+            "micro_prec": 0.9829545454545454,
+            "micro_rec": 0.8238095238095238,
+            "micro_f05": 0.9463894967177241
+          },
+          "s3_metrics": {
+            "tp": 1439,
+            "fp": 44,
+            "fn": 311,
+            "micro_prec": 0.9703304113283884,
+            "micro_rec": 0.8222857142857143,
+            "micro_f05": 0.9366050507680294
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.8931489040308451,
+              "macro_prec": 0.9458631662688942,
+              "macro_rec": 0.7884276622343448
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.9232024503123932,
+              "macro_prec": 0.955593803786575,
+              "macro_rec": 0.8556552741578558
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.95,
+            "single_match_s1_f05": 0.8258258258258259,
+            "multi_match_s1_f05": 0.9151257543987452
+          }
+        }
+      },
+      "B_LightGBM_Binary": {
+        "frozen_threshold_only": {
+          "threshold": 0.99,
+          "macro_f05": 0.9119991043944756,
+          "macro_precision": 0.9572424603174603,
+          "macro_recall": 0.8212805555555556,
+          "predicted_pairs": 2853,
+          "tp": 2801,
+          "fp": 52,
+          "fn": 629,
+          "predicted_empty_s1_count": 90,
+          "empty_s1_accuracy": 1.0,
+          "singleton_fp_rate": 0.0,
+          "s2_metrics": {
+            "tp": 1374,
+            "fp": 14,
+            "fn": 306,
+            "micro_prec": 0.9899135446685879,
+            "micro_rec": 0.8178571428571428,
+            "micro_f05": 0.9499446902654868
+          },
+          "s3_metrics": {
+            "tp": 1427,
+            "fp": 38,
+            "fn": 323,
+            "micro_prec": 0.974061433447099,
+            "micro_rec": 0.8154285714285714,
+            "micro_f05": 0.9375821287779238
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.8939413590056893,
+              "macro_prec": 0.9449397658824866,
+              "macro_rec": 0.7974400500056825
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.9250218157850117,
+              "macro_prec": 0.966114799333388,
+              "macro_rec": 0.8384736223806792
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 1.0,
+            "single_match_s1_f05": 0.7912912912912913,
+            "multi_match_s1_f05": 0.9162165690980599
+          }
+        },
+        "frozen_entity_policy": {
+          "threshold": "frozen_policy(B_LightGBM_Binary)",
+          "macro_f05": 0.9086914361320962,
+          "macro_precision": 0.9563988095238095,
+          "macro_recall": 0.8119805555555556,
+          "predicted_pairs": 2813,
+          "tp": 2773,
+          "fp": 40,
+          "fn": 657,
+          "predicted_empty_s1_count": 91,
+          "empty_s1_accuracy": 0.9833333333333333,
+          "singleton_fp_rate": 0.01666666666666672,
+          "s2_metrics": {
+            "tp": 1356,
+            "fp": 12,
+            "fn": 324,
+            "micro_prec": 0.9912280701754386,
+            "micro_rec": 0.8071428571428572,
+            "micro_f05": 0.947986577181208
+          },
+          "s3_metrics": {
+            "tp": 1417,
+            "fp": 28,
+            "fn": 333,
+            "micro_prec": 0.9806228373702423,
+            "micro_rec": 0.8097142857142857,
+            "micro_f05": 0.9409030544488712
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.8882268264768397,
+              "macro_prec": 0.9450477326968975,
+              "macro_rec": 0.777630980793272
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.9234499067784863,
+              "macro_prec": 0.9645848700926153,
+              "macro_rec": 0.8367524519848101
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.9833333333333333,
+            "single_match_s1_f05": 0.7777777777777778,
+            "multi_match_s1_f05": 0.9147065595572064
+          }
+        }
+      },
+      "C_LightGBM_LambdaRank": {
+        "frozen_threshold_only": {
+          "threshold": 0.99,
+          "macro_f05": 0.9034725354799873,
+          "macro_precision": 0.9285496031746031,
+          "macro_recall": 0.8630007936507936,
+          "predicted_pairs": 3166,
+          "tp": 2977,
+          "fp": 189,
+          "fn": 453,
+          "predicted_empty_s1_count": 69,
+          "empty_s1_accuracy": 0.8666666666666667,
+          "singleton_fp_rate": 0.1333333333333333,
+          "s2_metrics": {
+            "tp": 1458,
+            "fp": 72,
+            "fn": 222,
+            "micro_prec": 0.9529411764705882,
+            "micro_rec": 0.8678571428571429,
+            "micro_f05": 0.9346153846153845
+          },
+          "s3_metrics": {
+            "tp": 1519,
+            "fp": 117,
+            "fn": 231,
+            "micro_prec": 0.9284841075794621,
+            "micro_rec": 0.868,
+            "micro_f05": 0.915722208825657
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.8795296574832676,
+              "macro_prec": 0.9061597908853279,
+              "macro_rec": 0.8430418229344243
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.9207394302831295,
+              "macro_prec": 0.9446964729666969,
+              "macro_rec": 0.8773946124634593
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.8666666666666667,
+            "single_match_s1_f05": 0.7978747978747979,
+            "multi_match_s1_f05": 0.9150459589344714
+          }
+        },
+        "frozen_entity_policy": {
+          "threshold": "frozen_policy(C_LightGBM_LambdaRank)",
+          "macro_f05": 0.9140281957223052,
+          "macro_precision": 0.9496166666666667,
+          "macro_recall": 0.8429357142857143,
+          "predicted_pairs": 2960,
+          "tp": 2874,
+          "fp": 86,
+          "fn": 556,
+          "predicted_empty_s1_count": 80,
+          "empty_s1_accuracy": 0.95,
+          "singleton_fp_rate": 0.050000000000000044,
+          "s2_metrics": {
+            "tp": 1405,
+            "fp": 26,
+            "fn": 275,
+            "micro_prec": 0.9818308874912649,
+            "micro_rec": 0.8363095238095238,
+            "micro_f05": 0.9488114532685037
+          },
+          "s3_metrics": {
+            "tp": 1469,
+            "fp": 60,
+            "fn": 281,
+            "micro_prec": 0.960758665794637,
+            "micro_rec": 0.8394285714285714,
+            "micro_f05": 0.9337655733536739
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.9025340414051216,
+              "macro_prec": 0.9422036595067622,
+              "macro_rec": 0.8274917604273213
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.9223174395414101,
+              "macro_prec": 0.9549627079747562,
+              "macro_rec": 0.8540734366035571
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.95,
+            "single_match_s1_f05": 0.8138138138138138,
+            "multi_match_s1_f05": 0.9200992765589874
+          }
+        }
+      },
+      "D_LightGBM_rank_xendcg": {
+        "frozen_threshold_only": {
+          "threshold": 0.99,
+          "macro_f05": 0.8583729417140299,
+          "macro_precision": 0.9079559523809524,
+          "macro_recall": 0.7720369047619047,
+          "predicted_pairs": 2865,
+          "tp": 2638,
+          "fp": 227,
+          "fn": 792,
+          "predicted_empty_s1_count": 85,
+          "empty_s1_accuracy": 0.8833333333333333,
+          "singleton_fp_rate": 0.1166666666666667,
+          "s2_metrics": {
+            "tp": 1282,
+            "fp": 61,
+            "fn": 398,
+            "micro_prec": 0.9545793000744601,
+            "micro_rec": 0.763095238095238,
+            "micro_f05": 0.90896199659671
+          },
+          "s3_metrics": {
+            "tp": 1356,
+            "fp": 166,
+            "fn": 394,
+            "micro_prec": 0.8909329829172142,
+            "micro_rec": 0.7748571428571429,
+            "micro_f05": 0.8650165858637408
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.8224927168977757,
+              "macro_prec": 0.8574591809675342,
+              "macro_rec": 0.7761999469636701
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.8842486976486436,
+              "macro_prec": 0.9443727290112832,
+              "macro_rec": 0.7690346419692375
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.8833333333333333,
+            "single_match_s1_f05": 0.7342541480472515,
+            "multi_match_s1_f05": 0.8672495782431101
+          }
+        },
+        "frozen_entity_policy": {
+          "threshold": "frozen_policy(D_LightGBM_rank_xendcg)",
+          "macro_f05": 0.8618879633481312,
+          "macro_precision": 0.9123666666666668,
+          "macro_recall": 0.7715551587301587,
+          "predicted_pairs": 2831,
+          "tp": 2626,
+          "fp": 205,
+          "fn": 804,
+          "predicted_empty_s1_count": 75,
+          "empty_s1_accuracy": 0.8166666666666667,
+          "singleton_fp_rate": 0.18333333333333335,
+          "s2_metrics": {
+            "tp": 1274,
+            "fp": 54,
+            "fn": 406,
+            "micro_prec": 0.9593373493975904,
+            "micro_rec": 0.7583333333333333,
+            "micro_f05": 0.9110411899313501
+          },
+          "s3_metrics": {
+            "tp": 1352,
+            "fp": 151,
+            "fn": 398,
+            "micro_prec": 0.8995342648037259,
+            "micro_rec": 0.7725714285714286,
+            "micro_f05": 0.8709095593919092
+          },
+          "by_country": {
+            "india": {
+              "s1_count": 419,
+              "macro_f05": 0.821580652195455,
+              "macro_prec": 0.8574781225139221,
+              "macro_rec": 0.7699691252793878
+            },
+            "us": {
+              "s1_count": 581,
+              "macro_f05": 0.8909564028885297,
+              "macro_prec": 0.9519506597819849,
+              "macro_rec": 0.7726989591017129
+            }
+          },
+          "by_cardinality": {
+            "empty_s1_f05": 0.8166666666666667,
+            "single_match_s1_f05": 0.8157080157080157,
+            "multi_match_s1_f05": 0.8689671711151711
+          }
+        }
+      }
+    },
+    "frozen_v2c_reference_at_0900": {
+      "threshold": 0.9,
+      "macro_f05": 0.5481027509726062,
+      "macro_precision": 0.6268389705882352,
+      "macro_recall": 0.44916904761904763,
+      "predicted_pairs": 2538,
+      "tp": 1555,
+      "fp": 983,
+      "fn": 1875,
+      "predicted_empty_s1_count": 139,
+      "empty_s1_accuracy": 0.5333333333333333,
+      "singleton_fp_rate": 0.4666666666666667,
+      "s2_metrics": {
+        "tp": 373,
+        "fp": 166,
+        "fn": 1307,
+        "micro_prec": 0.6920222634508348,
+        "micro_rec": 0.2220238095238095,
+        "micro_f05": 0.48618352450469243
+      },
+      "s3_metrics": {
+        "tp": 1182,
+        "fp": 817,
+        "fn": 568,
+        "micro_prec": 0.591295647823912,
+        "micro_rec": 0.6754285714285714,
+        "micro_f05": 0.6064026267186539
+      },
+      "by_country": {
+        "india": {
+          "s1_count": 419,
+          "macro_f05": 0.5027215901005734,
+          "macro_prec": 0.5842879872712808,
+          "macro_rec": 0.40201916884494454
+        },
+        "us": {
+          "s1_count": 581,
+          "macro_f05": 0.5808303007236937,
+          "macro_prec": 0.6575254800715468,
+          "macro_rec": 0.4831721443597519
+        }
+      },
+      "by_cardinality": {
+        "empty_s1_f05": 0.5333333333333333,
+        "single_match_s1_f05": 0.26255780296281744,
+        "multi_match_s1_f05": 0.5735259509854016
+      }
+    }
+  },
+  "elapsed_s": 1438.05
+}

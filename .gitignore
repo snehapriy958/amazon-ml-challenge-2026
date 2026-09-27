@@ -24,3 +24,38 @@ __pycache__/
 # OS/editor
 .DS_Store
 Thumbs.db
+
+# ============================================================
+# Large generated artifacts under experiments/
+# ============================================================
+
+# Experiment data
+experiments/*/data/
+experiments/*/cache/
+
+# Trained models
+experiments/*/models/
+
+# Large generated outputs
+experiments/*/output/
+experiments/*/output_exclusivity/
+
+# Scratch / temporary files
+experiments/*/scratch/
+experiments/*/scratch_verify/
+
+# Retrieval/generated bundles
+experiments/*/retrieval/
+
+# Submission staging artifacts
+experiments/*/submission_staging/
+
+# Large generated files
+experiments/**/*.tsv
+experiments/**/*.parquet
+experiments/**/*.joblib
+experiments/**/*.zip
+experiments/**/*.npz
+
+# Python cache
+experiments/**/__pycache__/

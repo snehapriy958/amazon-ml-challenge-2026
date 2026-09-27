@@ -1,0 +1,39 @@
+{
+  "total_pairs": 1246103,
+  "positives": 471551,
+  "negatives": 774552,
+  "positive_pct": 0.37842056395017104,
+  "negative_pct": 0.6215794360498289,
+  "s2_positives": 228132,
+  "s3_positives": 243419,
+  "s2_negatives": 387276,
+  "s3_negatives": 387276,
+  "s2_negative_share": 0.5,
+  "s3_negative_share": 0.5,
+  "hard_negatives_v2c_ge_050": 26002,
+  "semi_hard_negatives_010_to_050": 147688,
+  "easy_negatives_lt_010": 600862,
+  "structural_negative_counts": {
+    "high_name_sim_different_address": 380612,
+    "same_similar_name_different_building_num": 356679,
+    "same_postal_code_different_business": 526,
+    "same_street_different_business": 69479,
+    "high_name_low_address_flag": 366844,
+    "conflicting_numeric_evidence": 599151
+  },
+  "unique_s1_count": 166865,
+  "unique_candidate_count": 1011517,
+  "duplicate_pair_count": 0,
+  "gt_negative_overlap_count": 0,
+  "validation_leakage_counts": {
+    "dev_3000_overlap": 0,
+    "internal_check_1000_overlap": 0,
+    "final_holdout_1000_overlap": 0,
+    "diagnostic_5000_overlap": 0,
+    "val_1000_overlap": 0,
+    "official_val_split_overlap": 0
+  },
+  "feature_count": 88,
+  "dropped_unretrievable_gt_positives": 20,
+  "runtime_s": 1667.9
+}

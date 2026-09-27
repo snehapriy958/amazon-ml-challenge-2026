@@ -1,0 +1,68 @@
+{
+  "firewall_seed": 302026,
+  "disjointness_assertions": {
+    "dev_vs_internal_overlap": 0,
+    "dev_vs_final_holdout_overlap": 0,
+    "internal_vs_final_holdout_overlap": 0,
+    "overlap_with_v1_train_chunks": 0,
+    "overlap_with_v2_train_parquets": 0,
+    "overlap_with_val_1000": 0,
+    "overlap_with_diagnostic_5000": 0
+  },
+  "pools": {
+    "dev_3000": {
+      "pool_name": "DEV_3000",
+      "s1_count": 3000,
+      "total_gt_links": 10528,
+      "s2_gt_links": 5104,
+      "s3_gt_links": 5424,
+      "mean_gt_links_per_s1": 3.509333333333333,
+      "empty_s1_count": 162,
+      "empty_s1_pct": 0.054,
+      "single_match_s1_count": 163,
+      "single_match_s1_pct": 0.05433333333333333,
+      "multi_match_s1_count": 2675,
+      "multi_match_s1_pct": 0.8916666666666667,
+      "countries": {
+        "us": 1776,
+        "india": 1224
+      }
+    },
+    "internal_check_1000": {
+      "pool_name": "INTERNAL_CHECK_1000",
+      "s1_count": 1000,
+      "total_gt_links": 3436,
+      "s2_gt_links": 1653,
+      "s3_gt_links": 1783,
+      "mean_gt_links_per_s1": 3.436,
+      "empty_s1_count": 48,
+      "empty_s1_pct": 0.048,
+      "single_match_s1_count": 76,
+      "single_match_s1_pct": 0.076,
+      "multi_match_s1_count": 876,
+      "multi_match_s1_pct": 0.876,
+      "countries": {
+        "us": 593,
+        "india": 407
+      }
+    },
+    "final_holdout_1000": {
+      "pool_name": "FINAL_HOLDOUT_1000",
+      "s1_count": 1000,
+      "total_gt_links": 3430,
+      "s2_gt_links": 1680,
+      "s3_gt_links": 1750,
+      "mean_gt_links_per_s1": 3.43,
+      "empty_s1_count": 60,
+      "empty_s1_pct": 0.06,
+      "single_match_s1_count": 74,
+      "single_match_s1_pct": 0.074,
+      "multi_match_s1_count": 866,
+      "multi_match_s1_pct": 0.866,
+      "countries": {
+        "us": 581,
+        "india": 419
+      }
+    }
+  }
+}
