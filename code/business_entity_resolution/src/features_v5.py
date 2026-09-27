@@ -40,8 +40,8 @@ import numpy as np
 import pandas as pd
 from rapidfuzz import fuzz
 
-from experiments.v3.src.features_v3 import _char_ngrams_set, _set_jaccard
-from experiments.v5.src.transliteration_v5 import (
+from code.business_entity_resolution.src.features_v3 import _char_ngrams_set, _set_jaccard
+from code.business_entity_resolution.src.transliteration_v5 import (
     _CHALLENGE_TRANSLIT_TOKEN_MAP,
     _CORPORATE_STOPWORDS,
     has_non_ascii_or_indic,

@@ -42,21 +42,21 @@ warnings.filterwarnings("ignore", category=UserWarning)
 sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, str(Path.cwd()))
 
-from experiments.v3.src.features_v3 import compute_v3_features
-from experiments.v4.src.decoder_v4 import (
+from code.business_entity_resolution.src.features_v3 import compute_v3_features
+from code.business_entity_resolution.src.decoder_v4 import (
     compute_v41c_assignment_score,
     extract_v4_owner_record,
     resolve_v41c_conflict,
 )
-from experiments.v4.src.normalization_v4 import normalize_name_v4, parse_address_v4
-from experiments.v5.src.features_v5 import (
+from code.business_entity_resolution.src.normalization_v4 import normalize_name_v4, parse_address_v4
+from code.business_entity_resolution.src.features_v5 import (
     V5_ALL_NEW_FEATURES,
     compute_v5_features_for_df,
     mine_or_load_challenge_lexicons,
     prepare_v5_entity_cache,
 )
-from experiments.v5.src.run_v5_prototype_ablation import compute_v5_group_logit_delta
-from experiments.v5.src.transliteration_v5 import transliterate_indic_to_roman
+from code.business_entity_resolution.src.run_v5_prototype_ablation import compute_v5_group_logit_delta
+from code.business_entity_resolution.src.transliteration_v5 import transliterate_indic_to_roman
 
 # Paths
 V4_ROOT = Path("experiments/v4")

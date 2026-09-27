@@ -34,20 +34,20 @@ sys.stdout.reconfigure(encoding="utf-8")
 sys.path.insert(0, str(Path.cwd()))
 
 from code.business_entity_resolution.src.preprocessing import parse_match_ids
-from experiments.v3.src.run_v3_d_bakeoff import (
+from code.business_entity_resolution.src.run_v3_d_bakeoff import (
     apply_frozen_policy,
     evaluate_predictions_from_mask,
     prepare_eval_structures,
 )
-from experiments.v4.src.candidate_rescue_v4 import select_v4_rescued_mask_for_pool
-from experiments.v4.src.decoder_v4 import (
+from code.business_entity_resolution.src.candidate_rescue_v4 import select_v4_rescued_mask_for_pool
+from code.business_entity_resolution.src.decoder_v4 import (
     _logit_norm,
     apply_v4_entity_policy_and_exclusivity,
     compute_v41c_assignment_score,
     extract_v4_owner_record,
     resolve_v41c_conflict,
 )
-from experiments.v4.src.features_v4 import (
+from code.business_entity_resolution.src.features_v4 import (
     _POPCOUNT_TABLE,
     compute_v4_competition_features,
     compute_v4_extra_pair_features,

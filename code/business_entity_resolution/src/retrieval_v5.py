@@ -20,13 +20,13 @@ from typing import Dict, Optional, Tuple
 import numpy as np
 import pandas as pd
 
-from experiments.v3.src.benchmark_test_prefilter import select_prefilter_mask_for_pool
-from experiments.v4.src.candidate_rescue_v4 import (
+from code.business_entity_resolution.src.benchmark_test_prefilter import select_prefilter_mask_for_pool
+from code.business_entity_resolution.src.candidate_rescue_v4 import (
     V4EmbeddingRetriever,
     compute_candidate_recall_from_mask,
     select_v4_rescued_mask_for_pool,
 )
-from experiments.v5.src.features_v5 import (
+from code.business_entity_resolution.src.features_v5 import (
     compute_v5_features_for_df,
     prepare_v5_entity_cache,
 )
