@@ -361,7 +361,25 @@ def main():
         s1_c_cache = prepare_v5_entity_cache(rescue_df_skel["source1_entity_id"].tolist(), s1_raw_records)
         tgt_c_cache = prepare_v5_entity_cache(rescue_df_skel["candidate_entity_id"].tolist(), target_raw_records)
 
-        rescue_v3_df = compute_v3_features(rescue_df_skel, s1_raw_records, target_raw_records)
+        rescue_v3_df = compute_v3_features(
+            rescue_df_skel,
+            s1_raw_records,
+            target_raw_records,
+        )
+
+        # compute_v3_features returns only feature columns; V5 feature computation
+        # also requires the original pair identifiers.
+        rescue_v3_df.insert(
+            0,
+            "source1_entity_id",
+            rescue_df_skel["source1_entity_id"].to_numpy(),
+        )
+        rescue_v3_df.insert(
+            1,
+            "candidate_entity_id",
+            rescue_df_skel["candidate_entity_id"].to_numpy(),
+        )
+
         rescue_v5_df = compute_v5_features_for_df(
             rescue_v3_df,
             s1_lookup=s1_raw_records,
@@ -529,7 +547,24 @@ def main():
         for b_start in range(0, len(unique_nt_pairs), batch_size):
             b_pairs = unique_nt_pairs[b_start : b_start + batch_size]
             nt_df = pd.DataFrame(b_pairs, columns=["source1_entity_id", "candidate_entity_id"])
-            nt_v3 = compute_v3_features(nt_df, s1_raw_records, target_raw_records)
+            nt_v3 = compute_v3_features(
+                nt_df,
+                s1_raw_records,
+                target_raw_records,
+            )
+
+            # Preserve pair identifiers required by compute_v5_features_for_df().
+            nt_v3.insert(
+                0,
+                "source1_entity_id",
+                nt_df["source1_entity_id"].to_numpy(),
+            )
+            nt_v3.insert(
+                1,
+                "candidate_entity_id",
+                nt_df["candidate_entity_id"].to_numpy(),
+            )
+
             nt_raw = v3_ranker.predict(nt_v3[v3_active_cols])
             nt_pbase = v3_calibrator.predict_proba(nt_raw.reshape(-1, 1))[:, 1]
 
