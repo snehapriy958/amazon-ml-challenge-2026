@@ -38,3 +38,4 @@ submissions/*.csv
 .DS_Store
 Thumbs.db
 dataset/
+output/
